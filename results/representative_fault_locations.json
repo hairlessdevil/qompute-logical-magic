@@ -1,0 +1,354 @@
+{
+  "four": {
+    "code": "four",
+    "shots_per_case": 256,
+    "seed": 20261014,
+    "rows": [
+      {
+        "name": "control",
+        "description": "No error",
+        "events": 0,
+        "syndrome_probabilities": {
+          "000": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.9999999999999987,
+        "fidelity_after_recovery": 0.9999999999999983,
+        "codespace_after_recovery": 0.9999999999999987,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999984,
+        "syndrome_counts": {
+          "000": 256
+        }
+      },
+      {
+        "name": "storage_X0",
+        "description": "X on q0 after encoding (previous test)",
+        "location": 5,
+        "qubit": 0,
+        "pauli": "X",
+        "events": 1,
+        "after_operation": "cx",
+        "operation_qubits": [
+          2,
+          1
+        ],
+        "syndrome_probabilities": {
+          "010": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": 0.9999999999999983,
+        "codespace_after_recovery": 0.9999999999999987,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999984,
+        "syndrome_counts": {
+          "010": 256
+        }
+      },
+      {
+        "name": "input_Y0",
+        "description": "Y on q0 after magic preparation, before encoder",
+        "location": 0,
+        "qubit": 0,
+        "pauli": "Y",
+        "events": 1,
+        "after_operation": "ry",
+        "operation_qubits": [
+          0
+        ],
+        "syndrome_probabilities": {
+          "000": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.9999999999999987,
+        "fidelity_after_recovery": -8.731058665146404e-18,
+        "codespace_after_recovery": 0.9999999999999987,
+        "fidelity_after_hypothetical_ideal_round": -3.9553933096426845e-17,
+        "syndrome_counts": {
+          "000": 256
+        }
+      },
+      {
+        "name": "encoding_Z_target",
+        "description": "Z on q1 after the first encoder CX",
+        "location": 1,
+        "qubit": 1,
+        "pauli": "Z",
+        "events": 1,
+        "after_operation": "cx",
+        "operation_qubits": [
+          0,
+          1
+        ],
+        "syndrome_probabilities": {
+          "000": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.9999999999999987,
+        "fidelity_after_recovery": 0.4999999999999992,
+        "codespace_after_recovery": 0.9999999999999987,
+        "fidelity_after_hypothetical_ideal_round": 0.49999999999999917,
+        "syndrome_counts": {
+          "000": 256
+        }
+      },
+      {
+        "name": "ancilla_hook_X",
+        "description": "X on ancilla q4 after check 0's second coupling",
+        "location": 8,
+        "qubit": 4,
+        "pauli": "X",
+        "events": 1,
+        "after_operation": "cx",
+        "operation_qubits": [
+          4,
+          1
+        ],
+        "syndrome_probabilities": {
+          "000": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.9999999999999987,
+        "fidelity_after_recovery": 0.49999999999999917,
+        "codespace_after_recovery": 0.9999999999999987,
+        "fidelity_after_hypothetical_ideal_round": 0.49999999999999917,
+        "syndrome_counts": {
+          "000": 256
+        }
+      },
+      {
+        "name": "late_X0",
+        "description": "X on q0 after extraction, before ancilla readout",
+        "location": 19,
+        "qubit": 0,
+        "pauli": "X",
+        "events": 1,
+        "after_operation": "h",
+        "operation_qubits": [
+          6
+        ],
+        "syndrome_probabilities": {
+          "000": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.9999999999999987,
+        "fidelity_after_recovery": 0.0,
+        "codespace_after_recovery": 0.0,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999984,
+        "syndrome_counts": {
+          "000": 256
+        }
+      },
+      {
+        "name": "readout_flip",
+        "description": "Flip recorded syndrome bit 0; no data fault",
+        "readout_bit": 0,
+        "events": 1,
+        "syndrome_probabilities": {
+          "001": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": 0.0,
+        "codespace_after_recovery": 0.0,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999984,
+        "syndrome_counts": {
+          "001": 256
+        }
+      },
+      {
+        "name": "faulty_recovery",
+        "description": "Storage X0, then Z after the executed recovery gate",
+        "location": 5,
+        "qubit": 0,
+        "pauli": "X",
+        "recovery_fault": "Z",
+        "events": 2,
+        "after_operation": "cx",
+        "operation_qubits": [
+          2,
+          1
+        ],
+        "syndrome_probabilities": {
+          "010": 0.9999999999999987
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": 0.0,
+        "codespace_after_recovery": 0.0,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999984,
+        "syndrome_counts": {
+          "010": 256
+        }
+      }
+    ],
+    "scope": "Selected examples only; no fault rates, no idle timing model, no exhaustive guarantee",
+    "recovery_fault_example": "One storage error plus one recovery-gate fault: two events, separately labeled"
+  },
+  "five": {
+    "code": "five",
+    "shots_per_case": 256,
+    "seed": 20261014,
+    "rows": [
+      {
+        "name": "control",
+        "description": "No error",
+        "events": 0,
+        "syndrome_probabilities": {
+          "0000": 0.9999999999999968
+        },
+        "zero_syndrome_probability": 0.9999999999999968,
+        "fidelity_after_recovery": 0.9999999999999971,
+        "codespace_after_recovery": 0.9999999999999969,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999969,
+        "syndrome_counts": {
+          "0000": 256
+        }
+      },
+      {
+        "name": "storage_X0",
+        "description": "X on q0 after encoding (previous test)",
+        "location": 39,
+        "qubit": 0,
+        "pauli": "X",
+        "events": 1,
+        "after_operation": "x",
+        "operation_qubits": [
+          4
+        ],
+        "syndrome_probabilities": {
+          "1100": 0.9999999999999968
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": 0.999999999999997,
+        "codespace_after_recovery": 0.9999999999999969,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999969,
+        "syndrome_counts": {
+          "1100": 256
+        }
+      },
+      {
+        "name": "input_Y0",
+        "description": "Y on q0 after magic preparation, before encoder",
+        "location": 1,
+        "qubit": 0,
+        "pauli": "Y",
+        "events": 1,
+        "after_operation": "rz",
+        "operation_qubits": [
+          0
+        ],
+        "syndrome_probabilities": {
+          "0000": 0.999999999999997
+        },
+        "zero_syndrome_probability": 0.999999999999997,
+        "fidelity_after_recovery": 0.33333333333333226,
+        "codespace_after_recovery": 0.9999999999999969,
+        "fidelity_after_hypothetical_ideal_round": 0.3333333333333323,
+        "syndrome_counts": {
+          "0000": 256
+        }
+      },
+      {
+        "name": "encoding_Z_target",
+        "description": "Z on q2 after the first encoder CX",
+        "location": 7,
+        "qubit": 2,
+        "pauli": "Z",
+        "events": 1,
+        "after_operation": "cx",
+        "operation_qubits": [
+          1,
+          2
+        ],
+        "syndrome_probabilities": {
+          "0001": 0.999999999999997
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": 0.3333333333333322,
+        "codespace_after_recovery": 0.9999999999999969,
+        "fidelity_after_hypothetical_ideal_round": 0.33333333333333226,
+        "syndrome_counts": {
+          "0001": 256
+        }
+      },
+      {
+        "name": "ancilla_hook_X",
+        "description": "X on ancilla q5 after check 0's second coupling",
+        "location": 42,
+        "qubit": 5,
+        "pauli": "X",
+        "events": 1,
+        "after_operation": "cz",
+        "operation_qubits": [
+          5,
+          2
+        ],
+        "syndrome_probabilities": {
+          "0010": 0.9999999999999969
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": 0.3333333333333322,
+        "codespace_after_recovery": 0.9999999999999969,
+        "fidelity_after_hypothetical_ideal_round": 0.3333333333333322,
+        "syndrome_counts": {
+          "0010": 256
+        }
+      },
+      {
+        "name": "late_X0",
+        "description": "X on q0 after extraction, before ancilla readout",
+        "location": 63,
+        "qubit": 0,
+        "pauli": "X",
+        "events": 1,
+        "after_operation": "h",
+        "operation_qubits": [
+          8
+        ],
+        "syndrome_probabilities": {
+          "0000": 0.9999999999999968
+        },
+        "zero_syndrome_probability": 0.9999999999999968,
+        "fidelity_after_recovery": 5.777109480753117e-19,
+        "codespace_after_recovery": 4.336808689942018e-19,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999969,
+        "syndrome_counts": {
+          "0000": 256
+        }
+      },
+      {
+        "name": "readout_flip",
+        "description": "Flip recorded syndrome bit 0; no data fault",
+        "readout_bit": 0,
+        "events": 1,
+        "syndrome_probabilities": {
+          "0001": 0.9999999999999968
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": -7.719469407180407e-19,
+        "codespace_after_recovery": 0.0,
+        "fidelity_after_hypothetical_ideal_round": 0.999999999999997,
+        "syndrome_counts": {
+          "0001": 256
+        }
+      },
+      {
+        "name": "faulty_recovery",
+        "description": "Storage X0, then Z after the executed recovery gate",
+        "location": 39,
+        "qubit": 0,
+        "pauli": "X",
+        "recovery_fault": "Z",
+        "events": 2,
+        "after_operation": "x",
+        "operation_qubits": [
+          4
+        ],
+        "syndrome_probabilities": {
+          "1100": 0.9999999999999968
+        },
+        "zero_syndrome_probability": 0.0,
+        "fidelity_after_recovery": -1.6835580397125726e-17,
+        "codespace_after_recovery": -6.5052130349130266e-18,
+        "fidelity_after_hypothetical_ideal_round": 0.9999999999999969,
+        "syndrome_counts": {
+          "1100": 256
+        }
+      }
+    ],
+    "scope": "Selected examples only; no fault rates, no idle timing model, no exhaustive guarantee",
+    "recovery_fault_example": "One storage error plus one recovery-gate fault: two events, separately labeled"
+  }
+}

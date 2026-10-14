@@ -1,0 +1,13 @@
+qubit,pauli,data_pauli,predicted_syndrome,observed_syndrome,acceptance,fidelity,codespace_population,logical_bloch,attempts_per_accept
+0,X,IIIX,010,010,0.0,,,,
+0,Y,IIIY,011,011,0.0,,,,
+0,Z,IIIZ,001,001,0.0,,,,
+1,X,IIXI,010,010,0.0,,,,
+1,Y,IIYI,011,011,0.0,,,,
+1,Z,IIZI,001,001,0.0,,,,
+2,X,IXII,100,100,0.0,,,,
+2,Y,IYII,101,101,0.0,,,,
+2,Z,IZII,001,001,0.0,,,,
+3,X,XIII,100,100,0.0,,,,
+3,Y,YIII,101,101,0.0,,,,
+3,Z,ZIII,001,001,0.0,,,,

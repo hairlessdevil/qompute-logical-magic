@@ -1,0 +1,1567 @@
+{
+  "created_at_utc": "2026-10-14T21:36:32.280372+00:00",
+  "environment": {
+    "qiskit": "2.4.1",
+    "qiskit-aer": "0.17.2",
+    "qiskit-ibm-runtime": "0.47.0",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1"
+  },
+  "python_executable": "/Users/runzhemo/anaconda3/envs/quantum-jax/bin/python",
+  "seed": 20261014,
+  "shots_per_syndrome_circuit": 8192,
+  "backend": {
+    "device": "ibm_aachen",
+    "provider": "qiskit_ibm_runtime.fake_provider.FakeAachen",
+    "calibration_date": "2026-04-17T12:29:46+02:00",
+    "calibration_kind": "packaged snapshot, not a current live calibration",
+    "snapshot_files": {
+      "conf_aachen.json": {
+        "sha256": "e4b84b22da3304ed871243c82d6b951b951f29fe015622ecc1b7cf3a3daa9d5a",
+        "source_path": "/Users/runzhemo/anaconda3/envs/quantum-jax/lib/python3.11/site-packages/qiskit_ibm_runtime/fake_provider/backends/aachen/conf_aachen.json"
+      },
+      "props_aachen.json": {
+        "sha256": "ff432ea7e3e73c721fca1d4a63ddb8329d99ffbdb2e1657c20ee8c813919a1cc",
+        "source_path": "/Users/runzhemo/anaconda3/envs/quantum-jax/lib/python3.11/site-packages/qiskit_ibm_runtime/fake_provider/backends/aachen/props_aachen.json"
+      }
+    },
+    "physical_patch": [
+      3,
+      2,
+      4,
+      16,
+      1,
+      5,
+      23,
+      0,
+      6
+    ],
+    "dt_seconds": 4e-09,
+    "coupling_edges_local": [
+      [
+        7,
+        4
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        6,
+        3
+      ]
+    ],
+    "temperature_mK": 0,
+    "readout_model": "independent symmetric assignment errors from BackendV2 Target",
+    "qubits": [
+      {
+        "local": 0,
+        "physical": 3,
+        "t1_seconds": 0.0002309891514880848,
+        "t2_seconds": 0.0002529939860803684,
+        "effective_t2_seconds": 0.0002529939860803684,
+        "readout_error": 0.003173828125,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 1,
+        "physical": 2,
+        "t1_seconds": 0.0001781326072278409,
+        "t2_seconds": 0.00017284965570854972,
+        "effective_t2_seconds": 0.00017284965570854972,
+        "readout_error": 0.086669921875,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 2,
+        "physical": 4,
+        "t1_seconds": 0.00021289802349994704,
+        "t2_seconds": 0.00027150864193523024,
+        "effective_t2_seconds": 0.00027150864193523024,
+        "readout_error": 0.0069580078125,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 3,
+        "physical": 16,
+        "t1_seconds": 0.00021937251225333763,
+        "t2_seconds": 0.0004319540779532638,
+        "effective_t2_seconds": 0.0004319540779532638,
+        "readout_error": 0.0032958984375,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 4,
+        "physical": 1,
+        "t1_seconds": 0.0002739867165157833,
+        "t2_seconds": 0.00027946099580091914,
+        "effective_t2_seconds": 0.00027946099580091914,
+        "readout_error": 0.0035400390625,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 5,
+        "physical": 5,
+        "t1_seconds": 0.00018441040992919045,
+        "t2_seconds": 0.00019409634300575706,
+        "effective_t2_seconds": 0.00019409634300575706,
+        "readout_error": 0.0025634765625,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 6,
+        "physical": 23,
+        "t1_seconds": 0.00027062870738349696,
+        "t2_seconds": 0.0002740429438705624,
+        "effective_t2_seconds": 0.0002740429438705624,
+        "readout_error": 0.0029296875,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 7,
+        "physical": 0,
+        "t1_seconds": 0.0002563633844434256,
+        "t2_seconds": 0.0003995251384058541,
+        "effective_t2_seconds": 0.0003995251384058541,
+        "readout_error": 0.0076904296875,
+        "readout_duration_seconds": 2.584e-06
+      },
+      {
+        "local": 8,
+        "physical": 6,
+        "t1_seconds": 0.0001483401804640343,
+        "t2_seconds": 0.0001384765718477369,
+        "effective_t2_seconds": 0.0001384765718477369,
+        "readout_error": 0.0076904296875,
+        "readout_duration_seconds": 2.584e-06
+      }
+    ]
+  },
+  "idle_validation": {
+    "physical_qubit": 3,
+    "delay_seconds": 5e-05,
+    "observed_excited_population_and_x": [
+      0.8053644411108674,
+      0.8206708558377012
+    ],
+    "expected_exp_minus_t_over_t1_t2": [
+      0.8053644411108675,
+      0.8206708558377015
+    ],
+    "max_absolute_error": 3.3306690738754696e-16
+  },
+  "fidelity_type": "exact density-matrix target overlap, not finite-shot tomography",
+  "acceptance": "recorded all-zero syndrome; B0/B1 keep every preparation",
+  "timing": "ALAP, common terminal readout barrier, data delivered at end of syndrome readout",
+  "noise_modes": {
+    "full": "calibrated gate and readout noise plus all delay relaxation",
+    "no_delay": "same gate/readout noise and routing; only delay channels omitted",
+    "ideal": "same routed native circuit with noise disabled"
+  },
+  "rows": [
+    {
+      "code": "four",
+      "strategy": "B0",
+      "resources": {
+        "duration_seconds": 6.4e-08,
+        "syndrome_readout_wait_seconds": 0,
+        "delay_count": 8,
+        "idle_seconds_by_local_wire": [
+          0.0,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08
+        ],
+        "operation_counts": {
+          "delay": 8,
+          "rz": 2,
+          "sx": 2,
+          "barrier": 1
+        },
+        "two_qubit_gates": 0,
+        "initial_logical_to_physical": [
+          3
+        ],
+        "final_data_local_wires": [
+          0
+        ],
+        "final_data_physical_qubits": [
+          3
+        ],
+        "syndrome_local_wires_in_bit_order": [],
+        "syndrome_physical_qubits_in_bit_order": [],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 1.0,
+        "true_syndrome_probabilities": [
+          1.0
+        ],
+        "recorded_syndrome_probabilities": [
+          1.0
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 1.0,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 1.0,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7071067811865477,
+          2.1243197887715328e-17,
+          0.7071067811865475
+        ],
+        "unconditional_fidelity": 1.0,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.9999999999999991,
+        "true_syndrome_probabilities": [
+          0.9999999999999991
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999991
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9997918646162737,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9997918646162737,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7067474287037748,
+          -0.0001384898453168395,
+          0.7068774379043693
+        ],
+        "unconditional_fidelity": 0.9997918646162728,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.9999999999999994,
+        "true_syndrome_probabilities": [
+          0.9999999999999994
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999994
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9997918646162737,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9997918646162737,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7067474287037748,
+          -0.0001384898453168395,
+          0.7068774379043693
+        ],
+        "unconditional_fidelity": 0.9997918646162731,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      }
+    },
+    {
+      "code": "four",
+      "strategy": "B1",
+      "resources": {
+        "duration_seconds": 6.68e-07,
+        "syndrome_readout_wait_seconds": 0,
+        "delay_count": 13,
+        "idle_seconds_by_local_wire": [
+          3.2e-08,
+          4.68e-07,
+          2.3600000000000002e-07,
+          5.36e-07,
+          6.68e-07,
+          6.68e-07,
+          6.68e-07,
+          6.68e-07,
+          6.68e-07
+        ],
+        "operation_counts": {
+          "rz": 16,
+          "sx": 14,
+          "delay": 13,
+          "cz": 7,
+          "barrier": 1
+        },
+        "two_qubit_gates": 7,
+        "initial_logical_to_physical": [
+          3,
+          2,
+          4,
+          16
+        ],
+        "final_data_local_wires": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "final_data_physical_qubits": [
+          4,
+          2,
+          3,
+          16
+        ],
+        "syndrome_local_wires_in_bit_order": [],
+        "syndrome_physical_qubits_in_bit_order": [],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 0.999999999999998,
+        "true_syndrome_probabilities": [
+          0.999999999999998
+        ],
+        "recorded_syndrome_probabilities": [
+          0.999999999999998
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 1.0,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 1.0,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7071067811865479,
+          -1.4571677198205194e-16,
+          0.7071067811865472
+        ],
+        "unconditional_fidelity": 0.999999999999998,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.9999999999999912,
+        "true_syndrome_probabilities": [
+          0.9999999999999912
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999912
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9877736367756453,
+        "codespace_population": 0.9890494436979197,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9987100676003575,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7042349384346874,
+          -0.00013789091359254493,
+          0.7063301441501701
+        ],
+        "unconditional_fidelity": 0.9877736367756366,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.999999999999989,
+        "true_syndrome_probabilities": [
+          0.999999999999989
+        ],
+        "recorded_syndrome_probabilities": [
+          0.999999999999989
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9855893046284147,
+        "codespace_population": 0.9871776680295394,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9983910055377415,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7032938552608015,
+          -0.00013735830265869137,
+          0.7063687835316754
+        ],
+        "unconditional_fidelity": 0.9855893046284038,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      }
+    },
+    {
+      "code": "four",
+      "strategy": "B2_ED",
+      "resources": {
+        "duration_seconds": 5.424e-06,
+        "syndrome_readout_wait_seconds": 2.584e-06,
+        "delay_count": 31,
+        "idle_seconds_by_local_wire": [
+          2.9520000000000003e-06,
+          3.552e-06,
+          1.872e-06,
+          4.588e-06,
+          2.1400000000000003e-06,
+          5.0240000000000005e-06,
+          2.64e-06,
+          5.424e-06,
+          5.424e-06
+        ],
+        "operation_counts": {
+          "sx": 67,
+          "rz": 40,
+          "cz": 39,
+          "delay": 31,
+          "measure": 3,
+          "barrier": 1
+        },
+        "two_qubit_gates": 39,
+        "initial_logical_to_physical": [
+          3,
+          2,
+          4,
+          16,
+          1,
+          5,
+          23
+        ],
+        "final_data_local_wires": [
+          5,
+          0,
+          1,
+          3
+        ],
+        "final_data_physical_qubits": [
+          5,
+          3,
+          2,
+          16
+        ],
+        "syndrome_local_wires_in_bit_order": [
+          4,
+          2,
+          6
+        ],
+        "syndrome_physical_qubits_in_bit_order": [
+          1,
+          4,
+          23
+        ],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 0.9999999999999951,
+        "true_syndrome_probabilities": [
+          0.9999999999999951,
+          4.271756559592884e-17,
+          8.554355140910625e-17,
+          -1.0625181290357937e-17,
+          1.3010426069826053e-18,
+          -2.1467203015212963e-17,
+          1.9081958235744872e-17,
+          -1.084202172485506e-18
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999951,
+          4.271756559592884e-17,
+          8.554355140910625e-17,
+          -1.0625181290357937e-17,
+          1.3010426069826053e-18,
+          -2.1467203015212963e-17,
+          1.9081958235744872e-17,
+          -1.084202172485506e-18
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 1.0,
+        "codespace_population": 0.9999999999999999,
+        "fidelity_conditioned_on_codespace_diagnostic": 1.0000000000000002,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7071067811865478,
+          -1.4376520807157845e-16,
+          0.7071067811865475
+        ],
+        "unconditional_fidelity": 0.9999999999999949,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "000": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.9185842678381789,
+        "true_syndrome_probabilities": [
+          0.9308006260852465,
+          0.01718180876323943,
+          0.019770840938643168,
+          0.010011061050159687,
+          0.011536183562607752,
+          0.007456658596359203,
+          0.0014891011072764406,
+          0.0017537198964555742
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9185842678381789,
+          0.020306067594719795,
+          0.025981222537478418,
+          0.01009337845575562,
+          0.014117364304841553,
+          0.007469142018388103,
+          0.0016315957927867755,
+          0.0018169614578385637
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0002511447949699686,
+        "fidelity": 0.9800595827979106,
+        "codespace_population": 0.981935666695716,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9980894024308959,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7035623499788648,
+          -0.00013786651536587196,
+          0.7052472264053024
+        ],
+        "unconditional_fidelity": 0.9217597556683408,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "110": 21,
+          "001": 172,
+          "100": 130,
+          "101": 56,
+          "111": 16,
+          "011": 97,
+          "010": 223,
+          "000": 7477
+        },
+        "acceptance_sampled": 0.9127197265625,
+        "acceptance_wilson_95_interval": [
+          0.9064127013609335,
+          0.9186398614509621
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.9050514554992978,
+        "true_syndrome_probabilities": [
+          0.9170346542173728,
+          0.02037752842058714,
+          0.024197590129013978,
+          0.01127508190431617,
+          0.014025138483584273,
+          0.009580276617790037,
+          0.0016383242805145938,
+          0.0018714059468087684
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9050514554992978,
+          0.023425832913094687,
+          0.030258603880908112,
+          0.011378152682650014,
+          0.01654172918894695,
+          0.00958305204445434,
+          0.001809061240013527,
+          0.0019521125506224799
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0003091236881821408,
+        "fidelity": 0.943087830703684,
+        "codespace_population": 0.9453411091918889,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9976164386946728,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.7023690318464266,
+          -0.00014026923504527688,
+          0.7051028010771859
+        ],
+        "unconditional_fidelity": 0.875227295023778,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "110": 13,
+          "001": 205,
+          "100": 157,
+          "101": 82,
+          "000": 7365,
+          "010": 260,
+          "111": 14,
+          "011": 96
+        },
+        "acceptance_sampled": 0.8990478515625,
+        "acceptance_wilson_95_interval": [
+          0.8923358373041848,
+          0.905385791749967
+        ],
+        "aer_method": "density_matrix"
+      }
+    },
+    {
+      "code": "five",
+      "strategy": "B0",
+      "resources": {
+        "duration_seconds": 6.4e-08,
+        "syndrome_readout_wait_seconds": 0,
+        "delay_count": 8,
+        "idle_seconds_by_local_wire": [
+          0.0,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08,
+          6.4e-08
+        ],
+        "operation_counts": {
+          "delay": 8,
+          "sx": 2,
+          "rz": 2,
+          "barrier": 1
+        },
+        "two_qubit_gates": 0,
+        "initial_logical_to_physical": [
+          3
+        ],
+        "final_data_local_wires": [
+          0
+        ],
+        "final_data_physical_qubits": [
+          3
+        ],
+        "syndrome_local_wires_in_bit_order": [],
+        "syndrome_physical_qubits_in_bit_order": [],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 0.9999999999999999,
+        "true_syndrome_probabilities": [
+          0.9999999999999999
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999999
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 1.0000000000000002,
+        "codespace_population": 1.0000000000000002,
+        "fidelity_conditioned_on_codespace_diagnostic": 1.0,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5773502691896263,
+          0.5773502691896253,
+          0.5773502691896254
+        ],
+        "unconditional_fidelity": 0.9999999999999998,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.9999999999999992,
+        "true_syndrome_probabilities": [
+          0.9999999999999992
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999992
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9997838809550461,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9997838809550461,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5769589320073456,
+          0.5771547862248427,
+          0.5771884310040023
+        ],
+        "unconditional_fidelity": 0.9997838809550452,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.9999999999999993,
+        "true_syndrome_probabilities": [
+          0.9999999999999993
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999993
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9997838809550461,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9997838809550461,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5769589320073454,
+          0.5771547862248425,
+          0.5771884310040023
+        ],
+        "unconditional_fidelity": 0.9997838809550453,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      }
+    },
+    {
+      "code": "five",
+      "strategy": "B1",
+      "resources": {
+        "duration_seconds": 3.164e-06,
+        "syndrome_readout_wait_seconds": 0,
+        "delay_count": 25,
+        "idle_seconds_by_local_wire": [
+          3.32e-07,
+          1.56e-06,
+          2.16e-06,
+          2.696e-06,
+          2.6640000000000002e-06,
+          3.164e-06,
+          3.164e-06,
+          3.164e-06,
+          3.164e-06
+        ],
+        "operation_counts": {
+          "sx": 59,
+          "rz": 47,
+          "cz": 33,
+          "delay": 25,
+          "x": 1,
+          "barrier": 1
+        },
+        "two_qubit_gates": 33,
+        "initial_logical_to_physical": [
+          3,
+          2,
+          4,
+          16,
+          1
+        ],
+        "final_data_local_wires": [
+          1,
+          3,
+          0,
+          2,
+          4
+        ],
+        "final_data_physical_qubits": [
+          2,
+          16,
+          3,
+          4,
+          1
+        ],
+        "syndrome_local_wires_in_bit_order": [],
+        "syndrome_physical_qubits_in_bit_order": [],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 0.9999999999999956,
+        "true_syndrome_probabilities": [
+          0.9999999999999956
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999956
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 1.0,
+        "codespace_population": 1.0000000000000004,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9999999999999996,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5773502691896264,
+          0.577350269189626,
+          0.5773502691896252
+        ],
+        "unconditional_fidelity": 0.9999999999999959,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.999999999999985,
+        "true_syndrome_probabilities": [
+          0.999999999999985
+        ],
+        "recorded_syndrome_probabilities": [
+          0.999999999999985
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9261418673816129,
+        "codespace_population": 0.9300520670196154,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9957957196412316,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5713462700505701,
+          0.5713950779420486,
+          0.5747454051949572
+        ],
+        "unconditional_fidelity": 0.9261418673815989,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.9999999999999818,
+        "true_syndrome_probabilities": [
+          0.9999999999999818
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999818
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9089501461535292,
+        "codespace_population": 0.9134178691148678,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9951087852423252,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5691015667357824,
+          0.569152046909793,
+          0.5768535289812552
+        ],
+        "unconditional_fidelity": 0.9089501461535126,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      }
+    },
+    {
+      "code": "five",
+      "strategy": "B2_ED",
+      "resources": {
+        "duration_seconds": 1.0396e-05,
+        "syndrome_readout_wait_seconds": 2.584e-06,
+        "delay_count": 59,
+        "idle_seconds_by_local_wire": [
+          1.9040000000000001e-06,
+          6.920000000000001e-06,
+          7.124000000000001e-06,
+          8.12e-06,
+          5.5760000000000005e-06,
+          8.96e-06,
+          7.1440000000000005e-06,
+          7.2120000000000006e-06,
+          9.996e-06
+        ],
+        "operation_counts": {
+          "sx": 181,
+          "cz": 106,
+          "rz": 95,
+          "delay": 59,
+          "measure": 4,
+          "x": 2,
+          "barrier": 1
+        },
+        "two_qubit_gates": 106,
+        "initial_logical_to_physical": [
+          3,
+          2,
+          4,
+          16,
+          1,
+          5,
+          23,
+          0,
+          6
+        ],
+        "final_data_local_wires": [
+          8,
+          5,
+          2,
+          3,
+          1
+        ],
+        "final_data_physical_qubits": [
+          6,
+          5,
+          4,
+          16,
+          2
+        ],
+        "syndrome_local_wires_in_bit_order": [
+          7,
+          6,
+          4,
+          0
+        ],
+        "syndrome_physical_qubits_in_bit_order": [
+          0,
+          23,
+          1,
+          3
+        ],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 0.9999999999999892,
+        "true_syndrome_probabilities": [
+          0.9999999999999892,
+          1.6723818510588878e-17,
+          3.0086610286472686e-17,
+          -1.6805133673525288e-18,
+          8.630249292984613e-17,
+          -1.1085967213664261e-17,
+          3.241764495731652e-17,
+          5.96311194867025e-19,
+          4.9439619065339e-17,
+          2.7674260452692458e-17,
+          -2.645453300864626e-17,
+          -4.25007251614317e-17,
+          -3.816391647148975e-17,
+          2.219903948164067e-17,
+          1.4799359654427105e-17,
+          -2.2334564753201348e-17
+        ],
+        "recorded_syndrome_probabilities": [
+          0.9999999999999892,
+          1.6723818510588878e-17,
+          3.0086610286472686e-17,
+          -1.6805133673525288e-18,
+          8.630249292984613e-17,
+          -1.1085967213664261e-17,
+          3.241764495731652e-17,
+          5.96311194867025e-19,
+          4.9439619065339e-17,
+          2.7674260452692458e-17,
+          -2.645453300864626e-17,
+          -4.25007251614317e-17,
+          -3.816391647148975e-17,
+          2.219903948164067e-17,
+          1.4799359654427105e-17,
+          -2.2334564753201348e-17
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 1.0000000000000002,
+        "codespace_population": 1.0000000000000002,
+        "fidelity_conditioned_on_codespace_diagnostic": 1.0,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.577350269189627,
+          0.5773502691896261,
+          0.5773502691896255
+        ],
+        "unconditional_fidelity": 0.9999999999999893,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "0000": 8192
+        },
+        "acceptance_sampled": 1.0,
+        "acceptance_wilson_95_interval": [
+          0.9995312917117791,
+          1.0
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.7899792923316322,
+        "true_syndrome_probabilities": [
+          0.8034169145380743,
+          0.014752863495577192,
+          0.017068812854031834,
+          0.00671515429466703,
+          0.02055319923406235,
+          0.007788694893896663,
+          0.007950655386577264,
+          0.005018077469347503,
+          0.054408873215615994,
+          0.010220071987649518,
+          0.012897706260444354,
+          0.008234963671065524,
+          0.011103625271744227,
+          0.00738707371881948,
+          0.005658799451281217,
+          0.006824514257123367
+        ],
+        "recorded_syndrome_probabilities": [
+          0.7899792923316322,
+          0.02069894548686057,
+          0.019215439922409882,
+          0.006834115719058425,
+          0.023122690118442212,
+          0.007922597497824048,
+          0.007997557382065165,
+          0.005060903220558145,
+          0.05614044599957981,
+          0.010574422096466446,
+          0.012976660649215738,
+          0.008267779945594725,
+          0.011248956832162076,
+          0.007426594998202045,
+          0.005716729760663697,
+          0.0068168680392425365
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0005121624763377041,
+        "fidelity": 0.9489508104877151,
+        "codespace_population": 0.956629257458792,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.991973434942316,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5664504286997197,
+          0.5677570433502561,
+          0.5700384985385701
+        ],
+        "unconditional_fidelity": 0.7857215410740512,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "0101": 58,
+          "1010": 95,
+          "1111": 64,
+          "1101": 65,
+          "0110": 65,
+          "1011": 68,
+          "1001": 83,
+          "1110": 48,
+          "1000": 478,
+          "0100": 178,
+          "1100": 91,
+          "0001": 205,
+          "0011": 52,
+          "0111": 52,
+          "0010": 164,
+          "0000": 6426
+        },
+        "acceptance_sampled": 0.784423828125,
+        "acceptance_wilson_95_interval": [
+          0.7753867087065215,
+          0.7931943239322591
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.7442211739367559,
+        "true_syndrome_probabilities": [
+          0.7567938395208532,
+          0.016440091958324278,
+          0.021935484931229616,
+          0.007955892624905741,
+          0.025717845740185482,
+          0.009063519356710622,
+          0.013793833655930236,
+          0.005384083677572939,
+          0.0596802799882776,
+          0.011423663544180621,
+          0.01680861056262395,
+          0.009370808754388324,
+          0.01654582040674432,
+          0.009263579511503668,
+          0.011500767337620524,
+          0.008321878428930642
+        ],
+        "recorded_syndrome_probabilities": [
+          0.7442211739367559,
+          0.022014212258469994,
+          0.023905961694114772,
+          0.008099500036340372,
+          0.02807944780152272,
+          0.00922665612311242,
+          0.013792749597990553,
+          0.005478239778609354,
+          0.06121488473019747,
+          0.01181168386171795,
+          0.01687947152369023,
+          0.00942685916462487,
+          0.016662787646590738,
+          0.009325164918255689,
+          0.011517339593696628,
+          0.00834386733429215
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.000626529758701864,
+        "fidelity": 0.8868179573465138,
+        "codespace_population": 0.8949250637789917,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9909410220356952,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5638104506495041,
+          0.5650912261826927,
+          0.5717679105390348
+        ],
+        "unconditional_fidelity": 0.6957837600715865,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "1010": 135,
+          "0010": 222,
+          "0101": 78,
+          "0110": 112,
+          "1011": 93,
+          "0111": 50,
+          "0001": 209,
+          "0011": 57,
+          "1001": 100,
+          "1111": 70,
+          "1101": 66,
+          "1110": 87,
+          "1000": 494,
+          "1100": 149,
+          "0100": 207,
+          "0000": 6063
+        },
+        "acceptance_sampled": 0.7401123046875,
+        "acceptance_wilson_95_interval": [
+          0.7305041384219545,
+          0.7494953856984238
+        ],
+        "aer_method": "density_matrix"
+      }
+    },
+    {
+      "code": "five",
+      "strategy": "B2_BK",
+      "resources": {
+        "duration_seconds": 6.224e-06,
+        "syndrome_readout_wait_seconds": 2.584e-06,
+        "delay_count": 43,
+        "idle_seconds_by_local_wire": [
+          4.3600000000000004e-07,
+          4.32e-06,
+          3.824e-06,
+          5.12e-06,
+          2.336e-06,
+          5.02e-06,
+          2.9400000000000002e-06,
+          2.9400000000000002e-06,
+          5.8240000000000005e-06
+        ],
+        "operation_counts": {
+          "sx": 119,
+          "cz": 67,
+          "rz": 53,
+          "delay": 43,
+          "measure": 4,
+          "barrier": 1
+        },
+        "two_qubit_gates": 67,
+        "initial_logical_to_physical": [
+          3,
+          2,
+          4,
+          16,
+          1,
+          5,
+          23,
+          0,
+          6
+        ],
+        "final_data_local_wires": [
+          8,
+          5,
+          2,
+          3,
+          1
+        ],
+        "final_data_physical_qubits": [
+          6,
+          5,
+          4,
+          16,
+          2
+        ],
+        "syndrome_local_wires_in_bit_order": [
+          4,
+          6,
+          7,
+          0
+        ],
+        "syndrome_physical_qubits_in_bit_order": [
+          1,
+          23,
+          0,
+          3
+        ],
+        "seed_transpiler": 20261014,
+        "optimization_level": 1,
+        "scheduling_method": "alap"
+      },
+      "ideal": {
+        "mode": "ideal",
+        "acceptance": 0.16666666666666577,
+        "true_syndrome_probabilities": [
+          0.16666666666666577,
+          0.05555555555555532,
+          0.055555555555555136,
+          0.05555555555555532,
+          0.0555555555555552,
+          0.05555555555555522,
+          0.05555555555555533,
+          0.05555555555555523,
+          0.05555555555555532,
+          0.05555555555555518,
+          0.05555555555555522,
+          0.0555555555555552,
+          0.05555555555555536,
+          0.055555555555555206,
+          0.055555555555555226,
+          0.055555555555555206
+        ],
+        "recorded_syndrome_probabilities": [
+          0.16666666666666577,
+          0.05555555555555532,
+          0.055555555555555136,
+          0.05555555555555532,
+          0.0555555555555552,
+          0.05555555555555522,
+          0.05555555555555533,
+          0.05555555555555523,
+          0.05555555555555532,
+          0.05555555555555518,
+          0.05555555555555522,
+          0.0555555555555552,
+          0.05555555555555536,
+          0.055555555555555206,
+          0.055555555555555226,
+          0.055555555555555206
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.0,
+        "fidelity": 0.9999999999999998,
+        "codespace_population": 1.0,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9999999999999998,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896258
+        ],
+        "unconditional_fidelity": 0.16666666666666574,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "1110": 427,
+          "0010": 433,
+          "1001": 450,
+          "0110": 459,
+          "0100": 429,
+          "1100": 451,
+          "1000": 489,
+          "1011": 446,
+          "1010": 438,
+          "0111": 477,
+          "0001": 430,
+          "0011": 436,
+          "1111": 472,
+          "1101": 498,
+          "0000": 1405,
+          "0101": 452
+        },
+        "acceptance_sampled": 0.1715087890625,
+        "acceptance_wilson_95_interval": [
+          0.16350039576948466,
+          0.17982511546186364
+        ],
+        "aer_method": "density_matrix"
+      },
+      "no_delay": {
+        "mode": "no_delay",
+        "acceptance": 0.15017145795238956,
+        "true_syndrome_probabilities": [
+          0.15179571322120347,
+          0.05676687511690637,
+          0.05625540971473735,
+          0.056153311690710375,
+          0.05683291604454901,
+          0.05595711575408168,
+          0.05604405048662438,
+          0.055686387229105724,
+          0.06125208448217886,
+          0.05676566813234161,
+          0.05619858750081992,
+          0.055902557133238835,
+          0.056914316149989486,
+          0.055879162405583355,
+          0.05580413075145736,
+          0.05579171418646126
+        ],
+        "recorded_syndrome_probabilities": [
+          0.15017145795238956,
+          0.05709070897672694,
+          0.05652918847428064,
+          0.056152070327005685,
+          0.05755118001248829,
+          0.05596794309857476,
+          0.05604809311227769,
+          0.055692371127244567,
+          0.061471580495998886,
+          0.05677309875659373,
+          0.05621020570019797,
+          0.055906085019757565,
+          0.056942530616392976,
+          0.05588970383141765,
+          0.05581119976043532,
+          0.055792582738206774
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.006599532404064874,
+        "fidelity": 0.9134660371022801,
+        "codespace_population": 0.9155405754970407,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9977340836110575,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5753782210979256,
+          0.5745233648768284,
+          0.5742998569714205
+        ],
+        "unconditional_fidelity": 0.14794148896431186,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "1110": 441,
+          "1001": 468,
+          "0010": 433,
+          "0110": 472,
+          "1100": 469,
+          "0100": 453,
+          "0000": 1248,
+          "1011": 456,
+          "1010": 435,
+          "1101": 479,
+          "1111": 470,
+          "0001": 437,
+          "0011": 444,
+          "0111": 478,
+          "0101": 465,
+          "1000": 544
+        },
+        "acceptance_sampled": 0.15234375,
+        "acceptance_wilson_95_interval": [
+          0.14472510190207735,
+          0.16028829682957627
+        ],
+        "aer_method": "density_matrix"
+      },
+      "full": {
+        "mode": "full",
+        "acceptance": 0.14707449758792063,
+        "true_syndrome_probabilities": [
+          0.14863813126388822,
+          0.05735084885795598,
+          0.05648856186833419,
+          0.05632473127318236,
+          0.05716174331180308,
+          0.05578936013725196,
+          0.056212007009662925,
+          0.05587920271934194,
+          0.06156910867510612,
+          0.05676381053663351,
+          0.05615772484700689,
+          0.056394199155091085,
+          0.05731464915658875,
+          0.05620671246032716,
+          0.05595083972465127,
+          0.055798369003166585
+        ],
+        "recorded_syndrome_probabilities": [
+          0.14707449758792063,
+          0.05765284004087428,
+          0.05675098594239671,
+          0.05632601196838901,
+          0.05785147977682467,
+          0.05581018007164423,
+          0.05621694862937366,
+          0.05588333206084388,
+          0.06177622076108732,
+          0.05677809484222116,
+          0.056174512173816644,
+          0.05638972260920755,
+          0.057340899333001634,
+          0.05621252875707722,
+          0.05595680900372996,
+          0.05580493644158347
+        ],
+        "accepted_fraction_from_nonzero_true_syndrome": 0.006780784182866173,
+        "fidelity": 0.8545243418388537,
+        "codespace_population": 0.8568085377336997,
+        "fidelity_conditioned_on_codespace_diagnostic": 0.9973340649698849,
+        "bloch_conditioned_on_codespace_diagnostic": [
+          0.5750098969322455,
+          0.5740452961599449,
+          0.5737605446330128
+        ],
+        "unconditional_fidelity": 0.13935744476698775,
+        "shots": 8192,
+        "seed_simulator": 20261014,
+        "syndrome_counts": {
+          "0110": 473,
+          "1110": 456,
+          "0111": 462,
+          "1001": 441,
+          "0011": 434,
+          "0001": 473,
+          "1100": 442,
+          "0100": 443,
+          "1000": 518,
+          "1011": 478,
+          "1010": 441,
+          "1101": 518,
+          "1111": 476,
+          "0101": 460,
+          "0010": 436,
+          "0000": 1241
+        },
+        "acceptance_sampled": 0.1514892578125,
+        "acceptance_wilson_95_interval": [
+          0.14388893783057483,
+          0.15941627754121984
+        ],
+        "aer_method": "density_matrix"
+      }
+    }
+  ]
+}

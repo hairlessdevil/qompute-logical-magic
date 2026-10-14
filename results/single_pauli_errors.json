@@ -1,0 +1,1185 @@
+{
+  "four": {
+    "code": "four",
+    "shots_per_error": 256,
+    "seed": 20261014,
+    "total_shots": 3328,
+    "recovery_uses_injected_error": false,
+    "postselection": false,
+    "assumptions": "One data Pauli after encoding; perfect checks and correction",
+    "decoder": "First syndrome representative in qubit order, then X/Y/Z; identity for no error",
+    "nonzero_syndromes": 5,
+    "detected_errors": 12,
+    "corrected_errors": 6,
+    "total_errors": 12,
+    "rows": [
+      {
+        "qubit": null,
+        "pauli": "I",
+        "label": "IIII",
+        "syndrome": "000",
+        "syndrome_counts": {
+          "000": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.3322676295501878e-15,
+        "candidate_errors": [
+          "IIII"
+        ],
+        "recovery": "IIII",
+        "fidelity_before": 0.9999999999999993,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 0,
+        "pauli": "X",
+        "label": "IIIX",
+        "syndrome": "010",
+        "syndrome_counts": {
+          "010": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIX",
+          "IIXI"
+        ],
+        "recovery": "IIIX",
+        "fidelity_before": 0.0,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 0,
+        "pauli": "Y",
+        "label": "IIIY",
+        "syndrome": "011",
+        "syndrome_counts": {
+          "011": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIY",
+          "IIYI"
+        ],
+        "recovery": "IIIY",
+        "fidelity_before": 0.0,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 0,
+        "pauli": "Z",
+        "label": "IIIZ",
+        "syndrome": "001",
+        "syndrome_counts": {
+          "001": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIZ",
+          "IIZI",
+          "IZII",
+          "ZIII"
+        ],
+        "recovery": "IIIZ",
+        "fidelity_before": 0.0,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 1,
+        "pauli": "X",
+        "label": "IIXI",
+        "syndrome": "010",
+        "syndrome_counts": {
+          "010": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIX",
+          "IIXI"
+        ],
+        "recovery": "IIIX",
+        "fidelity_before": 0.0,
+        "fidelity_after": 0.5000000000000013,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": false,
+        "residual_logical_real": [
+          [
+            0.0,
+            0.9999999999999998
+          ],
+          [
+            0.9999999999999998,
+            0.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 1,
+        "pauli": "Y",
+        "label": "IIYI",
+        "syndrome": "011",
+        "syndrome_counts": {
+          "011": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIY",
+          "IIYI"
+        ],
+        "recovery": "IIIY",
+        "fidelity_before": 0.0,
+        "fidelity_after": 0.5000000000000013,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": false,
+        "residual_logical_real": [
+          [
+            0.0,
+            -0.9999999999999998
+          ],
+          [
+            -0.9999999999999998,
+            0.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 1,
+        "pauli": "Z",
+        "label": "IIZI",
+        "syndrome": "001",
+        "syndrome_counts": {
+          "001": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIZ",
+          "IIZI",
+          "IZII",
+          "ZIII"
+        ],
+        "recovery": "IIIZ",
+        "fidelity_before": 0.0,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 2,
+        "pauli": "X",
+        "label": "IXII",
+        "syndrome": "100",
+        "syndrome_counts": {
+          "100": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IXII",
+          "XIII"
+        ],
+        "recovery": "IXII",
+        "fidelity_before": 0.0,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 2,
+        "pauli": "Y",
+        "label": "IYII",
+        "syndrome": "101",
+        "syndrome_counts": {
+          "101": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IYII",
+          "YIII"
+        ],
+        "recovery": "IYII",
+        "fidelity_before": 0.0,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 2,
+        "pauli": "Z",
+        "label": "IZII",
+        "syndrome": "001",
+        "syndrome_counts": {
+          "001": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIZ",
+          "IIZI",
+          "IZII",
+          "ZIII"
+        ],
+        "recovery": "IIIZ",
+        "fidelity_before": 0.0,
+        "fidelity_after": 0.5000000000000007,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": false,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 3,
+        "pauli": "X",
+        "label": "XIII",
+        "syndrome": "100",
+        "syndrome_counts": {
+          "100": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IXII",
+          "XIII"
+        ],
+        "recovery": "IXII",
+        "fidelity_before": 0.0,
+        "fidelity_after": 0.5000000000000013,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": false,
+        "residual_logical_real": [
+          [
+            0.0,
+            0.9999999999999998
+          ],
+          [
+            0.9999999999999998,
+            0.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 3,
+        "pauli": "Y",
+        "label": "YIII",
+        "syndrome": "101",
+        "syndrome_counts": {
+          "101": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IYII",
+          "YIII"
+        ],
+        "recovery": "IYII",
+        "fidelity_before": 0.0,
+        "fidelity_after": 0.5000000000000013,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": false,
+        "residual_logical_real": [
+          [
+            0.0,
+            -0.9999999999999998
+          ],
+          [
+            -0.9999999999999998,
+            0.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 3,
+        "pauli": "Z",
+        "label": "ZIII",
+        "syndrome": "001",
+        "syndrome_counts": {
+          "001": 256
+        },
+        "syndrome_probability": 0.9999999999999987,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIZ",
+          "IIZI",
+          "IZII",
+          "ZIII"
+        ],
+        "recovery": "IIIZ",
+        "fidelity_before": 0.0,
+        "fidelity_after": 0.5000000000000007,
+        "codespace_after": 1.0000000000000022,
+        "corrects_arbitrary_logical_state": false,
+        "residual_logical_real": [
+          [
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9999999999999998
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ]
+  },
+  "five": {
+    "code": "five",
+    "shots_per_error": 256,
+    "seed": 20261014,
+    "total_shots": 4096,
+    "recovery_uses_injected_error": false,
+    "postselection": false,
+    "assumptions": "One data Pauli after encoding; perfect checks and correction",
+    "decoder": "First syndrome representative in qubit order, then X/Y/Z; identity for no error",
+    "nonzero_syndromes": 15,
+    "detected_errors": 15,
+    "corrected_errors": 15,
+    "total_errors": 15,
+    "rows": [
+      {
+        "qubit": null,
+        "pauli": "I",
+        "label": "IIIII",
+        "syndrome": "0000",
+        "syndrome_counts": {
+          "0000": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 3.1086244689504383e-15,
+        "candidate_errors": [
+          "IIIII"
+        ],
+        "recovery": "IIIII",
+        "fidelity_before": 0.9999999999999998,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 0,
+        "pauli": "X",
+        "label": "IIIIX",
+        "syndrome": "1100",
+        "syndrome_counts": {
+          "1100": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIIX"
+        ],
+        "recovery": "IIIIX",
+        "fidelity_before": 5.454177023457645e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 0,
+        "pauli": "Y",
+        "label": "IIIIY",
+        "syndrome": "1110",
+        "syndrome_counts": {
+          "1110": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIIY"
+        ],
+        "recovery": "IIIIY",
+        "fidelity_before": 5.603698276975505e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 0,
+        "pauli": "Z",
+        "label": "IIIIZ",
+        "syndrome": "0010",
+        "syndrome_counts": {
+          "0010": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIIZ"
+        ],
+        "recovery": "IIIIZ",
+        "fidelity_before": 1.2037062152420224e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 1,
+        "pauli": "X",
+        "label": "IIIXI",
+        "syndrome": "0110",
+        "syndrome_counts": {
+          "0110": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIXI"
+        ],
+        "recovery": "IIIXI",
+        "fidelity_before": 1.2037062152420224e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 1,
+        "pauli": "Y",
+        "label": "IIIYI",
+        "syndrome": "1111",
+        "syndrome_counts": {
+          "1111": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIYI"
+        ],
+        "recovery": "IIIYI",
+        "fidelity_before": 2.241479310790202e-34,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 1,
+        "pauli": "Z",
+        "label": "IIIZI",
+        "syndrome": "1001",
+        "syndrome_counts": {
+          "1001": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIIZI"
+        ],
+        "recovery": "IIIZI",
+        "fidelity_before": 1.2037062152420224e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 2,
+        "pauli": "X",
+        "label": "IIXII",
+        "syndrome": "0011",
+        "syndrome_counts": {
+          "0011": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIXII"
+        ],
+        "recovery": "IIXII",
+        "fidelity_before": 5.454177023457645e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 2,
+        "pauli": "Y",
+        "label": "IIYII",
+        "syndrome": "0111",
+        "syndrome_counts": {
+          "0111": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIYII"
+        ],
+        "recovery": "IIYII",
+        "fidelity_before": 1.0495621346837044e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 2,
+        "pauli": "Z",
+        "label": "IIZII",
+        "syndrome": "0100",
+        "syndrome_counts": {
+          "0100": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IIZII"
+        ],
+        "recovery": "IIZII",
+        "fidelity_before": 1.07023518112473e-36,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 3,
+        "pauli": "X",
+        "label": "IXIII",
+        "syndrome": "0001",
+        "syndrome_counts": {
+          "0001": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IXIII"
+        ],
+        "recovery": "IXIII",
+        "fidelity_before": 1.6131727490146472e-34,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 3,
+        "pauli": "Y",
+        "label": "IYIII",
+        "syndrome": "1011",
+        "syndrome_counts": {
+          "1011": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IYIII"
+        ],
+        "recovery": "IYIII",
+        "fidelity_before": 2.030886157855606e-34,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 3,
+        "pauli": "Z",
+        "label": "IZIII",
+        "syndrome": "1010",
+        "syndrome_counts": {
+          "1010": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "IZIII"
+        ],
+        "recovery": "IZIII",
+        "fidelity_before": 4.944436451901571e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 4,
+        "pauli": "X",
+        "label": "XIIII",
+        "syndrome": "1000",
+        "syndrome_counts": {
+          "1000": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "XIIII"
+        ],
+        "recovery": "XIIII",
+        "fidelity_before": 2.9909028767008344e-37,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 4,
+        "pauli": "Y",
+        "label": "YIIII",
+        "syndrome": "1101",
+        "syndrome_counts": {
+          "1101": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "YIIII"
+        ],
+        "recovery": "YIIII",
+        "fidelity_before": 1.6130974376292342e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "qubit": 4,
+        "pauli": "Z",
+        "label": "ZIIII",
+        "syndrome": "0101",
+        "syndrome_counts": {
+          "0101": 256
+        },
+        "syndrome_probability": 0.9999999999999969,
+        "detection_probability": 1.0,
+        "candidate_errors": [
+          "ZIIII"
+        ],
+        "recovery": "ZIIII",
+        "fidelity_before": 4.944436451901571e-35,
+        "fidelity_after": 1.0000000000000027,
+        "codespace_after": 1.0000000000000049,
+        "corrects_arbitrary_logical_state": true,
+        "residual_logical_real": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "residual_logical_imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ]
+  }
+}

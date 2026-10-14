@@ -1,0 +1,9 @@
+{
+  "added": {
+    "qiskit-aer": "0.17.2"
+  },
+  "changed_existing_packages": {},
+  "pip_check": "No broken requirements found",
+  "qiskit": "2.4.1",
+  "qiskit_aer": "0.17.2"
+}
