@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-15T05:06:53.075297+00:00",
+  "instance": "qzh-eu",
+  "backend": "ibm_aachen",
+  "calibration_source": "live",
+  "calibration_date": "2026-10-14T21:32:08-07:00",
+  "backend_status_at_preparation": {
+    "backend_name": "ibm_aachen",
+    "backend_version": "",
+    "operational": true,
+    "pending_jobs": 2,
+    "status_msg": "active"
+  },
+  "code": "[[5,1,3]]",
+  "strategy": "B2_ED",
+  "code_name": "five",
+  "n_data": 5,
+  "n_syndrome": 4,
+  "dt_seconds": 4e-09,
+  "target": "encoded positive tetrahedral state",
+  "stabilizers_in_syndrome_bit_order": [
+    "XZZXI",
+    "IXZZX",
+    "XIXZZ",
+    "ZXIXZ"
+  ],
+  "shots_per_circuit": 2048,
+  "number_of_circuits": 64,
+  "total_shots": 131072,
+  "physical_patch": [
+    3,
+    2,
+    4,
+    16,
+    1,
+    5,
+    23,
+    0,
+    6
+  ],
+  "resources": {
+    "duration_seconds": 9.992e-06,
+    "syndrome_readout_wait_seconds": 2.1800000000000003e-06,
+    "delay_count": 59,
+    "idle_seconds_by_local_wire": [
+      1.9040000000000001e-06,
+      6.516000000000001e-06,
+      6.72e-06,
+      7.716e-06,
+      5.5760000000000005e-06,
+      8.556e-06,
+      7.1440000000000005e-06,
+      7.2120000000000006e-06,
+      9.592e-06
+    ],
+    "operation_counts": {
+      "sx": 181,
+      "cz": 106,
+      "rz": 95,
+      "delay": 59,
+      "measure": 4,
+      "x": 2,
+      "barrier": 1
+    },
+    "two_qubit_gates": 106,
+    "initial_logical_to_physical": [
+      3,
+      2,
+      4,
+      16,
+      1,
+      5,
+      23,
+      0,
+      6
+    ],
+    "final_data_local_wires": [
+      8,
+      5,
+      2,
+      3,
+      1
+    ],
+    "final_data_physical_qubits": [
+      6,
+      5,
+      4,
+      16,
+      2
+    ],
+    "syndrome_local_wires_in_bit_order": [
+      7,
+      6,
+      4,
+      0
+    ],
+    "syndrome_physical_qubits_in_bit_order": [
+      0,
+      23,
+      1,
+      3
+    ],
+    "seed_transpiler": 20261014,
+    "optimization_level": 1,
+    "scheduling_method": "alap"
+  },
+  "sampler_options": {
+    "max_execution_time": 300,
+    "environment": {
+      "job_tags": [
+        "b2ed-five-20261015T050652Z"
+      ]
+    },
+    "execution": {
+      "init_qubits": true,
+      "rep_delay": 0.00025,
+      "meas_type": "classified"
+    },
+    "twirling": {
+      "enable_gates": false,
+      "enable_measure": false
+    },
+    "dynamical_decoupling": {
+      "enable": false
+    }
+  },
+  "settings": [
+    {
+      "kind": "acceptance",
+      "pauli": null,
+      "coefficient": null,
+      "pub_index": 0,
+      "circuit_name": "five_B2_ED",
+      "estimated_circuit_seconds": 9.992000000000002e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIXYX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 1,
+      "circuit_name": "five_B2_ED_IIXYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIYZY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 2,
+      "circuit_name": "five_B2_ED_IIYZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIZXZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 3,
+      "circuit_name": "five_B2_ED_IIZXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXIYY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 4,
+      "circuit_name": "five_B2_ED_IXIYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXXIZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 5,
+      "circuit_name": "five_B2_ED_IXXIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXYXI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 6,
+      "circuit_name": "five_B2_ED_IXYXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXZZX",
+      "coefficient": 0.03125,
+      "pub_index": 7,
+      "circuit_name": "five_B2_ED_IXZZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYIZZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 8,
+      "circuit_name": "five_B2_ED_IYIZZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYXXY",
+      "coefficient": 0.03125,
+      "pub_index": 9,
+      "circuit_name": "five_B2_ED_IYXXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYYIX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 10,
+      "circuit_name": "five_B2_ED_IYYIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYZYI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 11,
+      "circuit_name": "five_B2_ED_IYZYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZIXX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 12,
+      "circuit_name": "five_B2_ED_IZIXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZXZI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 13,
+      "circuit_name": "five_B2_ED_IZXZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZYYZ",
+      "coefficient": 0.03125,
+      "pub_index": 14,
+      "circuit_name": "five_B2_ED_IZYYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZZIY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 15,
+      "circuit_name": "five_B2_ED_IZZIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIIXY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 16,
+      "circuit_name": "five_B2_ED_XIIXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIXZZ",
+      "coefficient": 0.03125,
+      "pub_index": 17,
+      "circuit_name": "five_B2_ED_XIXZZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIYYI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 18,
+      "circuit_name": "five_B2_ED_XIYYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIZIX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 19,
+      "circuit_name": "five_B2_ED_XIZIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXIZI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 20,
+      "circuit_name": "five_B2_ED_XXIZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXXXX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 21,
+      "circuit_name": "five_B2_ED_XXXXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXYIY",
+      "coefficient": 0.03125,
+      "pub_index": 22,
+      "circuit_name": "five_B2_ED_XXYIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXZYZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 23,
+      "circuit_name": "five_B2_ED_XXZYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYIYX",
+      "coefficient": 0.03125,
+      "pub_index": 24,
+      "circuit_name": "five_B2_ED_XYIYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYXII",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 25,
+      "circuit_name": "five_B2_ED_XYXII",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYYXZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 26,
+      "circuit_name": "five_B2_ED_XYYXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYZZY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 27,
+      "circuit_name": "five_B2_ED_XYZZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZIIZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 28,
+      "circuit_name": "five_B2_ED_XZIIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZXYY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 29,
+      "circuit_name": "five_B2_ED_XZXYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZYZX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 30,
+      "circuit_name": "five_B2_ED_XZYZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZZXI",
+      "coefficient": 0.03125,
+      "pub_index": 31,
+      "circuit_name": "five_B2_ED_XZZXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIIYZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 32,
+      "circuit_name": "five_B2_ED_YIIYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIXIY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 33,
+      "circuit_name": "five_B2_ED_YIXIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIYXX",
+      "coefficient": 0.03125,
+      "pub_index": 34,
+      "circuit_name": "five_B2_ED_YIYXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIZZI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 35,
+      "circuit_name": "five_B2_ED_YIZZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXIIX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 36,
+      "circuit_name": "five_B2_ED_YXIIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXXYI",
+      "coefficient": 0.03125,
+      "pub_index": 37,
+      "circuit_name": "five_B2_ED_YXXYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXYZZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 38,
+      "circuit_name": "five_B2_ED_YXYZZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXZXY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 39,
+      "circuit_name": "five_B2_ED_YXZXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYIXI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 40,
+      "circuit_name": "five_B2_ED_YYIXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYXZX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 41,
+      "circuit_name": "five_B2_ED_YYXZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYYYY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 42,
+      "circuit_name": "five_B2_ED_YYYYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYZIZ",
+      "coefficient": 0.03125,
+      "pub_index": 43,
+      "circuit_name": "five_B2_ED_YYZIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZIZY",
+      "coefficient": 0.03125,
+      "pub_index": 44,
+      "circuit_name": "five_B2_ED_YZIZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZXXZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 45,
+      "circuit_name": "five_B2_ED_YZXXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZYII",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 46,
+      "circuit_name": "five_B2_ED_YZYII",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZZYX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 47,
+      "circuit_name": "five_B2_ED_YZZYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIIZX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 48,
+      "circuit_name": "five_B2_ED_ZIIZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIXXI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 49,
+      "circuit_name": "five_B2_ED_ZIXXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIYIZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 50,
+      "circuit_name": "five_B2_ED_ZIYIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIZYY",
+      "coefficient": 0.03125,
+      "pub_index": 51,
+      "circuit_name": "five_B2_ED_ZIZYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXIXZ",
+      "coefficient": 0.03125,
+      "pub_index": 52,
+      "circuit_name": "five_B2_ED_ZXIXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXXZY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 53,
+      "circuit_name": "five_B2_ED_ZXXZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXYYX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 54,
+      "circuit_name": "five_B2_ED_ZXYYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXZII",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 55,
+      "circuit_name": "five_B2_ED_ZXZII",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYIIY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 56,
+      "circuit_name": "five_B2_ED_ZYIIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYXYZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 57,
+      "circuit_name": "five_B2_ED_ZYXYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYYZI",
+      "coefficient": 0.03125,
+      "pub_index": 58,
+      "circuit_name": "five_B2_ED_ZYYZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYZXX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 59,
+      "circuit_name": "five_B2_ED_ZYZXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZIYI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 60,
+      "circuit_name": "five_B2_ED_ZZIYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZXIX",
+      "coefficient": 0.03125,
+      "pub_index": 61,
+      "circuit_name": "five_B2_ED_ZZXIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZYXY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 62,
+      "circuit_name": "five_B2_ED_ZZYXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZZZZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 63,
+      "circuit_name": "five_B2_ED_ZZZZZ",
+      "estimated_circuit_seconds": 1.2172000000000001e-05
+    }
+  ],
+  "identity_coefficient": 0.03125,
+  "estimated_usage_seconds": 36.65293824,
+  "usage_estimate_note": "Approximation including one 2 s subjob overhead; not a bill or queue estimate",
+  "ideal_validation": {
+    "method": "exact local statevector, noise disabled",
+    "max_absolute_error": 1.9984014443252818e-15,
+    "acceptance": 0.9999999999999984,
+    "settings_verified": 64
+  },
+  "isa_validation": "passed",
+  "environment": {
+    "qiskit": "2.4.1",
+    "qiskit-ibm-runtime": "0.47.0",
+    "qiskit-aer": "0.17.2",
+    "numpy": "1.26.4"
+  },
+  "acceptance": "Only recorded syndrome 0000; no correction and no extra codespace filtering",
+  "analysis": "Raw full-target-projector estimate; analysis/readout errors are not corrected",
+  "timing": "Frozen ALAP preparation, ordinary syndrome measure, then data analysis/readout",
+  "files": {
+    "circuits.qpy": "3f4d01ff74256a27dca449e70306a8685684781db8cf7b1fe4005999431e6b8f",
+    "local_circuits.qpy": "f44d5018026fb964ff4895d6296031bedf5c242aeb2a21d217c797c7d31635f3",
+    "calibration.json": "e5b3844f37d62437b462eb7816e832c67a98b157bf19f4a59e5b639eacb875b6",
+    "preparation.txt": "3cccbfde1140c957ed860b93f80825d7e9352ef30b4b8fa3fa43372d3b0e6659"
+  }
+}

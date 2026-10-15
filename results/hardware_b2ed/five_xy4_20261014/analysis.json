@@ -1,0 +1,1293 @@
+{
+  "job_id": "db8622rkbioc73chut2g",
+  "retrieved_at_utc": "2026-10-15T05:21:31.552709+00:00",
+  "acceptance_only_circuit": {
+    "kind": "acceptance",
+    "pauli": null,
+    "coefficient": null,
+    "pub_index": 0,
+    "circuit_name": "five_B2_ED",
+    "estimated_circuit_seconds": 9.992000000000002e-06,
+    "shots": 2048,
+    "accepted_shots": 790,
+    "acceptance": 0.3857421875,
+    "acceptance_wilson_95_interval": [
+      0.36489299072278514,
+      0.40701921136860575
+    ]
+  },
+  "terms": [
+    {
+      "kind": "pauli",
+      "pauli": "IIXYX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 1,
+      "circuit_name": "five_B2_ED_IIXYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 850,
+      "acceptance": 0.4150390625,
+      "acceptance_wilson_95_interval": [
+        0.39387768474987234,
+        0.43651856808731576
+      ],
+      "raw": {
+        "expectation": -0.47058823529411764,
+        "variance_of_mean": 0.0009170161517111521,
+        "accepted_shots": 850
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIYZY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 2,
+      "circuit_name": "five_B2_ED_IIYZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 758,
+      "acceptance": 0.3701171875,
+      "acceptance_wilson_95_interval": [
+        0.34946714693531594,
+        0.3912535614249831
+      ],
+      "raw": {
+        "expectation": -0.46965699208443273,
+        "variance_of_mean": 0.0010296199600874545,
+        "accepted_shots": 758
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIZXZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 3,
+      "circuit_name": "five_B2_ED_IIZXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 781,
+      "acceptance": 0.38134765625,
+      "acceptance_wilson_95_interval": [
+        0.3605521392159316,
+        0.4025874552635897
+      ],
+      "raw": {
+        "expectation": -0.5364916773367477,
+        "variance_of_mean": 0.0009130470258312858,
+        "accepted_shots": 781
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXIYY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 4,
+      "circuit_name": "five_B2_ED_IXIYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 818,
+      "acceptance": 0.3994140625,
+      "acceptance_wilson_95_interval": [
+        0.3784093720446805,
+        0.4207953870614157
+      ],
+      "raw": {
+        "expectation": -0.4963325183374083,
+        "variance_of_mean": 0.0009224651545175596,
+        "accepted_shots": 818
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXXIZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 5,
+      "circuit_name": "five_B2_ED_IXXIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 789,
+      "acceptance": 0.38525390625,
+      "acceptance_wilson_95_interval": [
+        0.3644105844149597,
+        0.4065268834973345
+      ],
+      "raw": {
+        "expectation": -0.4828897338403042,
+        "variance_of_mean": 0.0009731186611061423,
+        "accepted_shots": 789
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXYXI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 6,
+      "circuit_name": "five_B2_ED_IXYXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 806,
+      "acceptance": 0.3935546875,
+      "acceptance_wilson_95_interval": [
+        0.37261451606854507,
+        0.4148934328883917
+      ],
+      "raw": {
+        "expectation": -0.4913151364764268,
+        "variance_of_mean": 0.0009423719710175779,
+        "accepted_shots": 806
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IXZZX",
+      "coefficient": 0.03125,
+      "pub_index": 7,
+      "circuit_name": "five_B2_ED_IXZZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 796,
+      "acceptance": 0.388671875,
+      "acceptance_wilson_95_interval": [
+        0.3677878966459052,
+        0.4099727105200654
+      ],
+      "raw": {
+        "expectation": 0.8090452261306532,
+        "variance_of_mean": 0.000434523046635472,
+        "accepted_shots": 796
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYIZZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 8,
+      "circuit_name": "five_B2_ED_IYIZZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 813,
+      "acceptance": 0.39697265625,
+      "acceptance_wilson_95_interval": [
+        0.3759944639813215,
+        0.41833662422929163
+      ],
+      "raw": {
+        "expectation": -0.5055350553505535,
+        "variance_of_mean": 0.0009167910194725527,
+        "accepted_shots": 813
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYXXY",
+      "coefficient": 0.03125,
+      "pub_index": 9,
+      "circuit_name": "five_B2_ED_IYXXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 790,
+      "acceptance": 0.3857421875,
+      "acceptance_wilson_95_interval": [
+        0.36489299072278514,
+        0.40701921136860575
+      ],
+      "raw": {
+        "expectation": 0.8126582278481013,
+        "variance_of_mean": 0.0004304012733976977,
+        "accepted_shots": 790
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYYIX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 10,
+      "circuit_name": "five_B2_ED_IYYIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 814,
+      "acceptance": 0.3974609375,
+      "acceptance_wilson_95_interval": [
+        0.3764774016975659,
+        0.4188284206921438
+      ],
+      "raw": {
+        "expectation": -0.47174447174447176,
+        "variance_of_mean": 0.0009562818614742058,
+        "accepted_shots": 814
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IYZYI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 11,
+      "circuit_name": "five_B2_ED_IYZYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 789,
+      "acceptance": 0.38525390625,
+      "acceptance_wilson_95_interval": [
+        0.3644105844149597,
+        0.4065268834973345
+      ],
+      "raw": {
+        "expectation": -0.4879594423320659,
+        "variance_of_mean": 0.0009668725668007352,
+        "accepted_shots": 789
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZIXX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 12,
+      "circuit_name": "five_B2_ED_IZIXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 773,
+      "acceptance": 0.37744140625,
+      "acceptance_wilson_95_interval": [
+        0.35669513151448773,
+        0.3986465895322606
+      ],
+      "raw": {
+        "expectation": -0.4333764553686934,
+        "variance_of_mean": 0.0010520529118291022,
+        "accepted_shots": 773
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZXZI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 13,
+      "circuit_name": "five_B2_ED_IZXZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 793,
+      "acceptance": 0.38720703125,
+      "acceptance_wilson_95_interval": [
+        0.36634034347567496,
+        0.4084960611530058
+      ],
+      "raw": {
+        "expectation": -0.4905422446406053,
+        "variance_of_mean": 0.000958798366443127,
+        "accepted_shots": 793
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZYYZ",
+      "coefficient": 0.03125,
+      "pub_index": 14,
+      "circuit_name": "five_B2_ED_IZYYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 800,
+      "acceptance": 0.390625,
+      "acceptance_wilson_95_interval": [
+        0.3697182785845533,
+        0.4119412652978037
+      ],
+      "raw": {
+        "expectation": 0.825,
+        "variance_of_mean": 0.00039971839799749696,
+        "accepted_shots": 800
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZZIY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 15,
+      "circuit_name": "five_B2_ED_IZZIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 774,
+      "acceptance": 0.3779296875,
+      "acceptance_wilson_95_interval": [
+        0.35717717857229253,
+        0.3991392766535525
+      ],
+      "raw": {
+        "expectation": -0.42118863049095606,
+        "variance_of_mean": 0.0010641657665525909,
+        "accepted_shots": 774
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIIXY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 16,
+      "circuit_name": "five_B2_ED_XIIXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 779,
+      "acceptance": 0.38037109375,
+      "acceptance_wilson_95_interval": [
+        0.3595877521939883,
+        0.4016023739273398
+      ],
+      "raw": {
+        "expectation": -0.3735558408215661,
+        "variance_of_mean": 0.0011059846192649008,
+        "accepted_shots": 779
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIXZZ",
+      "coefficient": 0.03125,
+      "pub_index": 17,
+      "circuit_name": "five_B2_ED_XIXZZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 796,
+      "acceptance": 0.388671875,
+      "acceptance_wilson_95_interval": [
+        0.3677878966459052,
+        0.4099727105200654
+      ],
+      "raw": {
+        "expectation": 0.6884422110552764,
+        "variance_of_mean": 0.0006616947447010343,
+        "accepted_shots": 796
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIYYI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 18,
+      "circuit_name": "five_B2_ED_XIYYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 815,
+      "acceptance": 0.39794921875,
+      "acceptance_wilson_95_interval": [
+        0.3769603613756918,
+        0.4193201951931146
+      ],
+      "raw": {
+        "expectation": -0.37668711656441717,
+        "variance_of_mean": 0.00105418527790465,
+        "accepted_shots": 815
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XIZIX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 19,
+      "circuit_name": "five_B2_ED_XIZIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 809,
+      "acceptance": 0.39501953125,
+      "acceptance_wilson_95_interval": [
+        0.3740629330121083,
+        0.41636921848211833
+      ],
+      "raw": {
+        "expectation": -0.3695920889987639,
+        "variance_of_mean": 0.0010685664452345666,
+        "accepted_shots": 809
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXIZI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 20,
+      "circuit_name": "five_B2_ED_XXIZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 792,
+      "acceptance": 0.38671875,
+      "acceptance_wilson_95_interval": [
+        0.36585787026878885,
+        0.40800380018079524
+      ],
+      "raw": {
+        "expectation": -0.4116161616161616,
+        "variance_of_mean": 0.0010500279841926397,
+        "accepted_shots": 792
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXXXX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 21,
+      "circuit_name": "five_B2_ED_XXXXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 763,
+      "acceptance": 0.37255859375,
+      "acceptance_wilson_95_interval": [
+        0.35187590656364304,
+        0.39371847269213917
+      ],
+      "raw": {
+        "expectation": 0.3761467889908257,
+        "variance_of_mean": 0.0011266582587032693,
+        "accepted_shots": 763
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXYIY",
+      "coefficient": 0.03125,
+      "pub_index": 22,
+      "circuit_name": "five_B2_ED_XXYIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 764,
+      "acceptance": 0.373046875,
+      "acceptance_wilson_95_interval": [
+        0.35235772687917083,
+        0.3942113865557079
+      ],
+      "raw": {
+        "expectation": 0.6780104712041884,
+        "variance_of_mean": 0.0007081281794724435,
+        "accepted_shots": 764
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXZYZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 23,
+      "circuit_name": "five_B2_ED_XXZYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 818,
+      "acceptance": 0.3994140625,
+      "acceptance_wilson_95_interval": [
+        0.3784093720446805,
+        0.4207953870614157
+      ],
+      "raw": {
+        "expectation": 0.3691931540342298,
+        "variance_of_mean": 0.0010571559547298132,
+        "accepted_shots": 818
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYIYX",
+      "coefficient": 0.03125,
+      "pub_index": 24,
+      "circuit_name": "five_B2_ED_XYIYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 774,
+      "acceptance": 0.3779296875,
+      "acceptance_wilson_95_interval": [
+        0.35717717857229253,
+        0.3991392766535525
+      ],
+      "raw": {
+        "expectation": 0.6434108527131783,
+        "variance_of_mean": 0.0007581144561589919,
+        "accepted_shots": 774
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYXII",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 25,
+      "circuit_name": "five_B2_ED_XYXII",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 784,
+      "acceptance": 0.3828125,
+      "acceptance_wilson_95_interval": [
+        0.3619988881611669,
+        0.4040649088556443
+      ],
+      "raw": {
+        "expectation": -0.37755102040816324,
+        "variance_of_mean": 0.0010950896896408106,
+        "accepted_shots": 784
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYYXZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 26,
+      "circuit_name": "five_B2_ED_XYYXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 813,
+      "acceptance": 0.39697265625,
+      "acceptance_wilson_95_interval": [
+        0.3759944639813215,
+        0.41833662422929163
+      ],
+      "raw": {
+        "expectation": 0.3677736777367774,
+        "variance_of_mean": 0.0010649538447832082,
+        "accepted_shots": 813
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYZZY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 27,
+      "circuit_name": "five_B2_ED_XYZZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 808,
+      "acceptance": 0.39453125,
+      "acceptance_wilson_95_interval": [
+        0.37358010531368613,
+        0.41587731200144396
+      ],
+      "raw": {
+        "expectation": 0.36386138613861385,
+        "variance_of_mean": 0.0010750989983609497,
+        "accepted_shots": 808
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZIIZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 28,
+      "circuit_name": "five_B2_ED_XZIIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 785,
+      "acceptance": 0.38330078125,
+      "acceptance_wilson_95_interval": [
+        0.36248118265391366,
+        0.40455734854199416
+      ],
+      "raw": {
+        "expectation": -0.37070063694267513,
+        "variance_of_mean": 0.0011002309155233353,
+        "accepted_shots": 785
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZXYY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 29,
+      "circuit_name": "five_B2_ED_XZXYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 792,
+      "acceptance": 0.38671875,
+      "acceptance_wilson_95_interval": [
+        0.36585787026878885,
+        0.40800380018079524
+      ],
+      "raw": {
+        "expectation": 0.3611111111111111,
+        "variance_of_mean": 0.0010993663279798974,
+        "accepted_shots": 792
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZYZX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 30,
+      "circuit_name": "five_B2_ED_XZYZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 804,
+      "acceptance": 0.392578125,
+      "acceptance_wilson_95_interval": [
+        0.3716490151212229,
+        0.41390946547752067
+      ],
+      "raw": {
+        "expectation": 0.36318407960199006,
+        "variance_of_mean": 0.0010810676517106542,
+        "accepted_shots": 804
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XZZXI",
+      "coefficient": 0.03125,
+      "pub_index": 31,
+      "circuit_name": "five_B2_ED_XZZXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 842,
+      "acceptance": 0.4111328125,
+      "acceptance_wilson_95_interval": [
+        0.39000852605321695,
+        0.4325898533511982
+      ],
+      "raw": {
+        "expectation": 0.6033254156769596,
+        "variance_of_mean": 0.0007562407167636432,
+        "accepted_shots": 842
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIIYZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 32,
+      "circuit_name": "five_B2_ED_YIIYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 778,
+      "acceptance": 0.3798828125,
+      "acceptance_wilson_95_interval": [
+        0.3591055924151558,
+        0.4011097995270756
+      ],
+      "raw": {
+        "expectation": -0.4318766066838046,
+        "variance_of_mean": 0.0010469531487764252,
+        "accepted_shots": 778
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIXIY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 33,
+      "circuit_name": "five_B2_ED_YIXIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 774,
+      "acceptance": 0.3779296875,
+      "acceptance_wilson_95_interval": [
+        0.35717717857229253,
+        0.3991392766535525
+      ],
+      "raw": {
+        "expectation": -0.3669250645994832,
+        "variance_of_mean": 0.001119490293620524,
+        "accepted_shots": 774
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIYXX",
+      "coefficient": 0.03125,
+      "pub_index": 34,
+      "circuit_name": "five_B2_ED_YIYXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 787,
+      "acceptance": 0.38427734375,
+      "acceptance_wilson_95_interval": [
+        0.36344583880853504,
+        0.405542160745566
+      ],
+      "raw": {
+        "expectation": 0.6442185514612452,
+        "variance_of_mean": 0.0007442524910345738,
+        "accepted_shots": 787
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YIZZI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 35,
+      "circuit_name": "five_B2_ED_YIZZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 818,
+      "acceptance": 0.3994140625,
+      "acceptance_wilson_95_interval": [
+        0.3784093720446805,
+        0.4207953870614157
+      ],
+      "raw": {
+        "expectation": -0.38875305623471884,
+        "variance_of_mean": 0.0010390098669132994,
+        "accepted_shots": 818
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXIIX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 36,
+      "circuit_name": "five_B2_ED_YXIIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 837,
+      "acceptance": 0.40869140625,
+      "acceptance_wilson_95_interval": [
+        0.38759100374272343,
+        0.43013370476620855
+      ],
+      "raw": {
+        "expectation": -0.4432497013142174,
+        "variance_of_mean": 0.0009611599309627477,
+        "accepted_shots": 837
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXXYI",
+      "coefficient": 0.03125,
+      "pub_index": 37,
+      "circuit_name": "five_B2_ED_YXXYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 788,
+      "acceptance": 0.384765625,
+      "acceptance_wilson_95_interval": [
+        0.3639282004382562,
+        0.4060345332949415
+      ],
+      "raw": {
+        "expectation": 0.6573604060913706,
+        "variance_of_mean": 0.0007215721683651694,
+        "accepted_shots": 788
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXYZZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 38,
+      "circuit_name": "five_B2_ED_YXYZZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 771,
+      "acceptance": 0.37646484375,
+      "acceptance_wilson_95_interval": [
+        0.3557311052023428,
+        0.39766114748621234
+      ],
+      "raw": {
+        "expectation": 0.3748378728923476,
+        "variance_of_mean": 0.0011162293104487536,
+        "accepted_shots": 771
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXZXY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 39,
+      "circuit_name": "five_B2_ED_YXZXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 800,
+      "acceptance": 0.390625,
+      "acceptance_wilson_95_interval": [
+        0.3697182785845533,
+        0.4119412652978037
+      ],
+      "raw": {
+        "expectation": 0.3675,
+        "variance_of_mean": 0.0010825328535669586,
+        "accepted_shots": 800
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYIXI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 40,
+      "circuit_name": "five_B2_ED_YYIXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 798,
+      "acceptance": 0.3896484375,
+      "acceptance_wilson_95_interval": [
+        0.36875304323075897,
+        0.41095703229340486
+      ],
+      "raw": {
+        "expectation": -0.3383458646616541,
+        "variance_of_mean": 0.0011110691039728452,
+        "accepted_shots": 798
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYXZX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 41,
+      "circuit_name": "five_B2_ED_YYXZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 837,
+      "acceptance": 0.40869140625,
+      "acceptance_wilson_95_interval": [
+        0.38759100374272343,
+        0.43013370476620855
+      ],
+      "raw": {
+        "expectation": 0.3859020310633214,
+        "variance_of_mean": 0.0010180378258626834,
+        "accepted_shots": 837
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYYYY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 42,
+      "circuit_name": "five_B2_ED_YYYYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 803,
+      "acceptance": 0.39208984375,
+      "acceptance_wilson_95_interval": [
+        0.37116629779538035,
+        0.41341744862426655
+      ],
+      "raw": {
+        "expectation": 0.29514321295143214,
+        "variance_of_mean": 0.001138267436220331,
+        "accepted_shots": 803
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYZIZ",
+      "coefficient": 0.03125,
+      "pub_index": 43,
+      "circuit_name": "five_B2_ED_YYZIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 803,
+      "acceptance": 0.39208984375,
+      "acceptance_wilson_95_interval": [
+        0.37116629779538035,
+        0.41341744862426655
+      ],
+      "raw": {
+        "expectation": 0.6463262764632628,
+        "variance_of_mean": 0.0007260128981959277,
+        "accepted_shots": 803
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZIZY",
+      "coefficient": 0.03125,
+      "pub_index": 44,
+      "circuit_name": "five_B2_ED_YZIZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 804,
+      "acceptance": 0.392578125,
+      "acceptance_wilson_95_interval": [
+        0.3716490151212229,
+        0.41390946547752067
+      ],
+      "raw": {
+        "expectation": 0.6169154228855721,
+        "variance_of_mean": 0.0007713765392352623,
+        "accepted_shots": 804
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZXXZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 45,
+      "circuit_name": "five_B2_ED_YZXXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 794,
+      "acceptance": 0.3876953125,
+      "acceptance_wilson_95_interval": [
+        0.3668228389510978,
+        0.4089882998566796
+      ],
+      "raw": {
+        "expectation": 0.3224181360201511,
+        "variance_of_mean": 0.0011299452024782991,
+        "accepted_shots": 794
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZYII",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 46,
+      "circuit_name": "five_B2_ED_YZYII",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 765,
+      "acceptance": 0.37353515625,
+      "acceptance_wilson_95_interval": [
+        0.3528395699488603,
+        0.3947042776651151
+      ],
+      "raw": {
+        "expectation": -0.38300653594771245,
+        "variance_of_mean": 0.001116892661546248,
+        "accepted_shots": 765
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YZZYX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 47,
+      "circuit_name": "five_B2_ED_YZZYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 780,
+      "acceptance": 0.380859375,
+      "acceptance_wilson_95_interval": [
+        0.3600699344664624,
+        0.4020949258339622
+      ],
+      "raw": {
+        "expectation": 0.4025641025641026,
+        "variance_of_mean": 0.0010756638553616926,
+        "accepted_shots": 780
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIIZX",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 48,
+      "circuit_name": "five_B2_ED_ZIIZX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 818,
+      "acceptance": 0.3994140625,
+      "acceptance_wilson_95_interval": [
+        0.3784093720446805,
+        0.4207953870614157
+      ],
+      "raw": {
+        "expectation": -0.3765281173594132,
+        "variance_of_mean": 0.0010504609263620268,
+        "accepted_shots": 818
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIXXI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 49,
+      "circuit_name": "five_B2_ED_ZIXXI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 764,
+      "acceptance": 0.373046875,
+      "acceptance_wilson_95_interval": [
+        0.35235772687917083,
+        0.3942113865557079
+      ],
+      "raw": {
+        "expectation": -0.44502617801047123,
+        "variance_of_mean": 0.0010510507219992037,
+        "accepted_shots": 764
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIYIZ",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 50,
+      "circuit_name": "five_B2_ED_ZIYIZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 789,
+      "acceptance": 0.38525390625,
+      "acceptance_wilson_95_interval": [
+        0.3644105844149597,
+        0.4065268834973345
+      ],
+      "raw": {
+        "expectation": -0.4093789607097592,
+        "variance_of_mean": 0.0010563564296043116,
+        "accepted_shots": 789
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIZYY",
+      "coefficient": 0.03125,
+      "pub_index": 51,
+      "circuit_name": "five_B2_ED_ZIZYY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 778,
+      "acceptance": 0.3798828125,
+      "acceptance_wilson_95_interval": [
+        0.3591055924151558,
+        0.4011097995270756
+      ],
+      "raw": {
+        "expectation": 0.6169665809768637,
+        "variance_of_mean": 0.0007971071273587117,
+        "accepted_shots": 778
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXIXZ",
+      "coefficient": 0.03125,
+      "pub_index": 52,
+      "circuit_name": "five_B2_ED_ZXIXZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 785,
+      "acceptance": 0.38330078125,
+      "acceptance_wilson_95_interval": [
+        0.36248118265391366,
+        0.40455734854199416
+      ],
+      "raw": {
+        "expectation": 0.7171974522292993,
+        "variance_of_mean": 0.0006194232328007678,
+        "accepted_shots": 785
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXXZY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 53,
+      "circuit_name": "five_B2_ED_ZXXZY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 771,
+      "acceptance": 0.37646484375,
+      "acceptance_wilson_95_interval": [
+        0.3557311052023428,
+        0.39766114748621234
+      ],
+      "raw": {
+        "expectation": 0.33073929961089493,
+        "variance_of_mean": 0.0011566383320686944,
+        "accepted_shots": 771
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXYYX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 54,
+      "circuit_name": "five_B2_ED_ZXYYX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 798,
+      "acceptance": 0.3896484375,
+      "acceptance_wilson_95_interval": [
+        0.36875304323075897,
+        0.41095703229340486
+      ],
+      "raw": {
+        "expectation": 0.38596491228070173,
+        "variance_of_mean": 0.0010677930821683188,
+        "accepted_shots": 798
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZXZII",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 55,
+      "circuit_name": "five_B2_ED_ZXZII",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 815,
+      "acceptance": 0.39794921875,
+      "acceptance_wilson_95_interval": [
+        0.3769603613756918,
+        0.4193201951931146
+      ],
+      "raw": {
+        "expectation": -0.3914110429447853,
+        "variance_of_mean": 0.001040291640615326,
+        "accepted_shots": 815
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYIIY",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 56,
+      "circuit_name": "five_B2_ED_ZYIIY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 832,
+      "acceptance": 0.40625,
+      "acceptance_wilson_95_interval": [
+        0.3851740230949766,
+        0.4276770145184723
+      ],
+      "raw": {
+        "expectation": -0.38221153846153844,
+        "variance_of_mean": 0.0010275744162056124,
+        "accepted_shots": 832
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYXYZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 57,
+      "circuit_name": "five_B2_ED_ZYXYZ",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 816,
+      "acceptance": 0.3984375,
+      "acceptance_wilson_95_interval": [
+        0.3774433430019916,
+        0.4198119477459114
+      ],
+      "raw": {
+        "expectation": 0.3799019607843137,
+        "variance_of_mean": 0.00104990736219906,
+        "accepted_shots": 816
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYYZI",
+      "coefficient": 0.03125,
+      "pub_index": 58,
+      "circuit_name": "five_B2_ED_ZYYZI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 763,
+      "acceptance": 0.37255859375,
+      "acceptance_wilson_95_interval": [
+        0.35187590656364304,
+        0.39371847269213917
+      ],
+      "raw": {
+        "expectation": 0.6618610747051114,
+        "variance_of_mean": 0.0007374539603545867,
+        "accepted_shots": 763
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZYZXX",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 59,
+      "circuit_name": "five_B2_ED_ZYZXX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 831,
+      "acceptance": 0.40576171875,
+      "acceptance_wilson_95_interval": [
+        0.3846906920978539,
+        0.42718561133649835
+      ],
+      "raw": {
+        "expectation": 0.3285198555956679,
+        "variance_of_mean": 0.0010747888005775922,
+        "accepted_shots": 831
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZIYI",
+      "coefficient": -0.018042195912175804,
+      "pub_index": 60,
+      "circuit_name": "five_B2_ED_ZZIYI",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 822,
+      "acceptance": 0.4013671875,
+      "acceptance_wilson_95_interval": [
+        0.3803416929138191,
+        0.42276200290866367
+      ],
+      "raw": {
+        "expectation": -0.36253041362530414,
+        "variance_of_mean": 0.0010579436043808355,
+        "accepted_shots": 822
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZXIX",
+      "coefficient": 0.03125,
+      "pub_index": 61,
+      "circuit_name": "five_B2_ED_ZZXIX",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 799,
+      "acceptance": 0.39013671875,
+      "acceptance_wilson_95_interval": [
+        0.3692356498190554,
+        0.4114491598842051
+      ],
+      "raw": {
+        "expectation": 0.6120150187734669,
+        "variance_of_mean": 0.000783756412024703,
+        "accepted_shots": 799
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZYXY",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 62,
+      "circuit_name": "five_B2_ED_ZZYXY",
+      "estimated_circuit_seconds": 1.2204000000000002e-05,
+      "shots": 2048,
+      "accepted_shots": 771,
+      "acceptance": 0.37646484375,
+      "acceptance_wilson_95_interval": [
+        0.3557311052023428,
+        0.39766114748621234
+      ],
+      "raw": {
+        "expectation": 0.36964980544747084,
+        "variance_of_mean": 0.0011212454822501908,
+        "accepted_shots": 771
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZZZZ",
+      "coefficient": 0.018042195912175804,
+      "pub_index": 63,
+      "circuit_name": "five_B2_ED_ZZZZZ",
+      "estimated_circuit_seconds": 1.2172000000000001e-05,
+      "shots": 2048,
+      "accepted_shots": 799,
+      "acceptance": 0.39013671875,
+      "acceptance_wilson_95_interval": [
+        0.3692356498190554,
+        0.4114491598842051
+      ],
+      "raw": {
+        "expectation": 0.4067584480600751,
+        "variance_of_mean": 0.0010457989535485703,
+        "accepted_shots": 799
+      }
+    }
+  ],
+  "raw_fidelity_estimate": 0.6993774994135967,
+  "standard_error": 0.005118880224485396,
+  "normal_approx_95_interval": [
+    0.6893446784532934,
+    0.7094103203739001
+  ],
+  "conservative_95_interval": [
+    0.5120388043354359,
+    0.8867161944917575
+  ],
+  "interpretation": "Full target projector from recorded-0000 shots. Raw measurement estimate, not an exact state fidelity. Intervals describe finite-shot uncertainty only; basis/readout bias and drift remain. No readout mitigation, active recovery, or extra codespace filtering. Estimates are not clipped.",
+  "sufficient_accepted_shots": true
+}

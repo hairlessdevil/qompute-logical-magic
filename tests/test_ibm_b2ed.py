@@ -15,17 +15,21 @@ from logical_magic.ibm_b2ed import (
 )
 
 
-@pytest.fixture(scope="module")
-def prepared(tmp_path_factory):
+@pytest.fixture(scope="module", params=("four", "five"))
+def prepared(tmp_path_factory, request):
     directory = tmp_path_factory.mktemp("ibm-b2ed") / "prepared"
-    manifest = prepare_bundle(FakeAachen(), directory, shots=2048, live=False)
+    manifest = prepare_bundle(FakeAachen(), directory, shots=2048, live=False, code_name=request.param)
     return directory, manifest
 
 
 def test_full_projector_compilation_and_ideal_validation(prepared):
     directory, manifest = prepared
-    assert manifest["number_of_circuits"] == 24
-    assert manifest["total_shots"] == 49152
+    expected_circuits = 24 if manifest["code_name"] == "four" else 64
+    assert manifest["number_of_circuits"] == expected_circuits
+    assert manifest["total_shots"] == expected_circuits*2048
+    assert manifest["n_syndrome"] == manifest["n_data"]-1
+    assert manifest["identity_coefficient"] == pytest.approx(1/2**manifest["n_data"])
+    assert manifest["target"] == ("encoded H state" if manifest["code_name"] == "four" else "encoded positive tetrahedral state")
     assert manifest["ideal_validation"]["max_absolute_error"] < 1e-10
     _, _, physical = load_bundle(directory)
     with (directory / "local_circuits.qpy").open("rb") as handle:
@@ -89,7 +93,7 @@ def test_submission_exits_without_status_or_result_and_blocks_duplicate(prepared
     service.return_value.backend.assert_called_once_with("ibm_aachen")
     sampler.return_value.run.assert_called_once()
     assert sampler.return_value.run.call_args.kwargs == {"shots": 2048}
-    assert len(sampler.return_value.run.call_args.args[0]) == 24
+    assert len(sampler.return_value.run.call_args.args[0]) == manifest["number_of_circuits"]
     assert receipt["job_id"] == "test-job-id"
     assert [call[0] for call in job.mock_calls] == ["job_id"]
     with pytest.raises(FileExistsError, match="already attempted"):
@@ -131,6 +135,24 @@ def test_joint_runtime_register_order_and_postselection():
     assert not result["sufficient_accepted_shots"]
 
 
+def test_five_qubit_register_order_rejects_fourth_syndrome_bit():
+    pub = SamplerPubResult(DataBin(
+        syndrome=BitArray.from_samples(["0000", "0000", "1000", "0010"], num_bits=4),
+        quality_readout=BitArray.from_samples(["00000", "10000", "00001", "11111"], num_bits=5),
+    ))
+    joint = joint_runtime_counts(pub, n_syndrome=4, n_data=5)
+    assert joint == {"000000000": 1, "100000000": 1, "000011000": 1, "111110010": 1}
+    manifest = {"n_data": 5, "n_syndrome": 4, "identity_coefficient": .5, "settings": [
+        {"kind": "acceptance"}, {"kind": "pauli", "pauli": "ZIIII", "coefficient": .5}]}
+    result = analyze_counts(manifest, [pub.data.syndrome.get_counts(), joint])
+    assert result["acceptance_only_circuit"]["accepted_shots"] == 2
+    assert result["terms"][0]["raw"]["expectation"] == 0
+    assert result["raw_fidelity_estimate"] == .5
+    assert "recorded-0000" in result["interpretation"]
+    with pytest.raises(ValueError, match="Expected 3 syndrome bits"):
+        joint_runtime_counts(pub)
+
+
 def test_retrieval_does_not_wait_for_pending_job(prepared, tmp_path):
     directory = copytree(prepared[0], tmp_path / "bundle")
     write_json(directory / "submission.json", {"job_id": "test-job",
@@ -151,10 +173,13 @@ def test_completed_result_archived_and_analyzed(prepared, tmp_path):
     write_json(directory / "submission.json", {"job_id": "test-job",
                                                "manifest_sha256": file_hash(directory / "manifest.json")})
     pubs = []
+    n_data, n_syndrome = manifest["n_data"], manifest["n_syndrome"]
     for setting in manifest["settings"]:
-        data = {"syndrome": BitArray.from_samples(["000", "000", "000", "001"], num_bits=3)}
+        # The highest syndrome bit alone must reject a shot for either code.
+        data = {"syndrome": BitArray.from_samples(
+            ["0"*n_syndrome]*3 + ["1"+"0"*(n_syndrome-1)], num_bits=n_syndrome)}
         if setting["kind"] == "pauli":
-            data["quality_readout"] = BitArray.from_samples(["0000", "0001", "0010", "0011"], num_bits=4)
+            data["quality_readout"] = BitArray.from_samples([format(i, f"0{n_data}b") for i in range(4)], num_bits=n_data)
         pubs.append(SamplerPubResult(DataBin(**data)))
     service = Mock()
     job = service.return_value.job.return_value

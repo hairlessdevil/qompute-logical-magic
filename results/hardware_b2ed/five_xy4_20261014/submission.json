@@ -1,0 +1,9 @@
+{
+  "job_id": "db8622rkbioc73chut2g",
+  "submitted_at_utc": "2026-10-15T05:13:48.115098+00:00",
+  "instance": "qzh-eu",
+  "backend": "ibm_aachen",
+  "bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/five_xy4_20261014",
+  "manifest_sha256": "7626ad2f232af019b8643b4956ae4e00be497674affbff0824add3b4e7d3f522",
+  "total_shots": 131072
+}

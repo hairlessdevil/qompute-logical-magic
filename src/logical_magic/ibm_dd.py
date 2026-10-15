@@ -134,11 +134,14 @@ def prepare_xy4_bundle(source, output, backend, *, live=True, minimum_idle_secon
     if "dd" in original["resources"]:
         raise ValueError("Expected the original no-DD bundle")
     saved_calibration = json.loads((source/"calibration.json").read_text())
-    validate_saved_durations(source_physical, saved_calibration, backend, 4e-9)
+    validate_saved_durations(source_physical, saved_calibration, backend, original.get("dt_seconds", 4e-9))
     patch = LivePatch(backend)
     with (source/"local_circuits.qpy").open("rb") as handle:
         source_local = qpy.load(handle)
-    prep = build_preparation(CODES["four"], "B2_ED")
+    code_name = original.get("code_name", {"[[4,1,2]]": "four", "[[5,1,3]]": "five"}.get(original["code"]))
+    if code_name not in CODES or original["strategy"] != "B2_ED":
+        raise ValueError("XY4 preparation requires a four- or five-qubit B2_ED bundle")
+    prep = build_preparation(CODES[code_name], "B2_ED")
     resources = original["resources"]
     scheduled = ScheduledPreparation(prep, source_local[0], tuple(resources["final_data_local_wires"]),
                                      tuple(resources["syndrome_local_wires_in_bit_order"]), resources)
@@ -177,7 +180,7 @@ def prepare_xy4_bundle(source, output, backend, *, live=True, minimum_idle_secon
                      "source_circuits_sha256": file_hash(source/"circuits.qpy"),
                      "comparison_limit": "Separate jobs; changes between runs can include calibration drift"})
     manifest["sampler_options"]["environment"]["job_tags"] = [
-        "b2ed-four-xy4-"+datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")]
+        f"b2ed-{code_name}-xy4-"+datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")]
     manifest["sampler_options"]["dynamical_decoupling"] = {"enable": False}
     output.mkdir(parents=True)
     for name, circuits in (("circuits.qpy", physical), ("local_circuits.qpy", local)):

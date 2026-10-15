@@ -118,27 +118,30 @@ def ideal_validation(circuits, scheduled, settings):
             "acceptance": acceptances[0], "settings_verified": len(settings)}
 
 
-def prepare_bundle(backend, output, shots=2048, *, live=True):
+def prepare_bundle(backend, output, shots=2048, *, live=True, code_name="four"):
     """Compile and validate only. No Sampler is constructed and no job is sent."""
     if shots < 2:
         raise ValueError("At least two shots per setting are required")
     output = Path(output).resolve()
     if output.exists():
         raise FileExistsError(f"Use a new bundle directory: {output}")
+    if code_name not in CODES:
+        raise ValueError(f"Unknown code: {code_name}")
+    code = CODES[code_name]
     patch = LivePatch(backend)
-    prep = build_preparation(CODES["four"], "B2_ED")
+    prep = build_preparation(code, "B2_ED")
     scheduled = schedule_preparation(prep, patch, seed=DEFAULT_SEED)
     settings = [{"kind": "acceptance", "pauli": None, "coefficient": None}]
     identity = 0.0
     for label, coefficient in prep.fidelity_observable.to_list():
-        if label == "IIII":
+        if label == "I" * prep.n_data:
             identity += float(coefficient.real)
         else:
             settings.append({"kind": "pauli", "pauli": label, "coefficient": float(coefficient.real)})
     local = [scheduled.circuit]
     for setting in settings[1:]:
         circuit = measurement_circuit(scheduled, patch, setting["pauli"])
-        circuit.name = f"four_B2_ED_{setting['pauli']}"
+        circuit.name = f"{code_name}_B2_ED_{setting['pauli']}"
         local.append(circuit)
     validation = ideal_validation(local, scheduled, settings)
     physical = [embed_physical(circuit, patch, backend) for circuit in local]
@@ -155,7 +158,7 @@ def prepare_bundle(backend, output, shots=2048, *, live=True):
     # IBM's approximate single-subjob overhead formula, including initialization.
     reset = max(backend.target["reset"][(q,)].duration for q in patch.physical_qubits)
     estimated_usage = 2 + shots * sum(s["estimated_circuit_seconds"] + reset + rep_delay for s in settings)
-    tag = "b2ed-four-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    tag = f"b2ed-{code_name}-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     options = {
         "max_execution_time": 300,
         "environment": {"job_tags": [tag]},
@@ -174,8 +177,11 @@ def prepare_bundle(backend, output, shots=2048, *, live=True):
         "schema_version": 1, "created_at_utc": utc_now(), "instance": INSTANCE, "backend": BACKEND,
         "calibration_source": "live" if live else "offline_fake_backend_DO_NOT_SUBMIT",
         "calibration_date": backend.properties().last_update_date.isoformat(),
-        "backend_status_at_preparation": status, "code": "[[4,1,2]]", "strategy": "B2_ED",
-        "target": "encoded H state", "stabilizers_in_syndrome_bit_order": list(prep.checks),
+        "backend_status_at_preparation": status, "code": f"[[{code.n},1,{code.distance}]]", "strategy": "B2_ED",
+        "code_name": code_name, "n_data": prep.n_data, "n_syndrome": prep.n_checks,
+        "dt_seconds": backend.dt,
+        "target": "encoded H state" if code.magic == "H" else "encoded positive tetrahedral state",
+        "stabilizers_in_syndrome_bit_order": list(prep.checks),
         "shots_per_circuit": shots, "number_of_circuits": len(physical), "total_shots": len(physical)*shots,
         "physical_patch": list(patch.physical_qubits), "resources": scheduled.resources,
         "sampler_options": options, "settings": settings, "identity_coefficient": identity,
@@ -183,7 +189,7 @@ def prepare_bundle(backend, output, shots=2048, *, live=True):
         "usage_estimate_note": "Approximation including one 2 s subjob overhead; not a bill or queue estimate",
         "ideal_validation": validation, "isa_validation": "passed",
         "environment": {p: version(p) for p in ("qiskit", "qiskit-ibm-runtime", "qiskit-aer", "numpy")},
-        "acceptance": "Only recorded syndrome 000; no correction and no extra codespace filtering",
+        "acceptance": f"Only recorded syndrome {'0' * prep.n_checks}; no correction and no extra codespace filtering",
         "analysis": "Raw full-target-projector estimate; analysis/readout errors are not corrected",
         "timing": "Frozen ALAP preparation, ordinary syndrome measure, then data analysis/readout",
         "files": {name: file_hash(output / name) for name in
@@ -242,16 +248,29 @@ def submit_bundle(path, approved_manifest_sha256, *, service_factory=QiskitRunti
     return receipt
 
 
+def bundle_dimensions(manifest):
+    """Read explicit dimensions, retaining compatibility with archived four-qubit bundles."""
+    labels = [s["pauli"] for s in manifest["settings"] if s["kind"] == "pauli"]
+    n_data = manifest.get("n_data", len(labels[0]))
+    checks = manifest.get("stabilizers_in_syndrome_bit_order", [])
+    n_syndrome = manifest.get("n_syndrome", len(checks) if checks else n_data-1)
+    if (n_data, n_syndrome) not in {(4, 3), (5, 4)} or any(len(p) != n_data for p in labels):
+        raise ValueError("Expected complete B2_ED checks for four or five data qubits")
+    return n_data, n_syndrome
+
+
 def analyze_counts(manifest, counts_by_setting):
     """Postselect JOINT counts: data MSBs, syndrome LSBs, as in Qiskit counts."""
     if len(counts_by_setting) != len(manifest["settings"]):
         raise ValueError("Result PUB count differs from manifest")
+    _, n_syndrome = bundle_dimensions(manifest)
+    syndrome_mask = (1 << n_syndrome)-1
     rows = []
     estimate, variance, radius = manifest["identity_coefficient"], 0.0, 0.0
     enough = True
     for setting, counts in zip(manifest["settings"], counts_by_setting):
         total = sum(counts.values())
-        accepted = sum(count for bits, count in counts.items() if int(bits.replace(" ", ""), 2) & 7 == 0)
+        accepted = sum(count for bits, count in counts.items() if int(bits.replace(" ", ""), 2) & syndrome_mask == 0)
         row = {**setting, "shots": total, "accepted_shots": accepted,
                "acceptance": accepted/total if total else None,
                "acceptance_wilson_95_interval": list(wilson_interval(accepted, total)) if total else None}
@@ -260,7 +279,7 @@ def analyze_counts(manifest, counts_by_setting):
                 enough = False
                 row["raw"] = None
             else:
-                score = accepted_score(counts, 3, parity_weights(setting["pauli"]))
+                score = accepted_score(counts, n_syndrome, parity_weights(setting["pauli"]))
                 row["raw"] = score
                 coefficient = setting["coefficient"]
                 estimate += coefficient*score["expectation"]
@@ -274,19 +293,19 @@ def analyze_counts(manifest, counts_by_setting):
         "standard_error": standard_error if enough else None,
         "normal_approx_95_interval": [estimate-1.959964*standard_error, estimate+1.959964*standard_error] if enough else None,
         "conservative_95_interval": [estimate-radius, estimate+radius] if enough else None,
-        "interpretation": "Full target projector from recorded-000 shots. Raw measurement estimate, not an exact state fidelity. "
+        "interpretation": f"Full target projector from recorded-{'0' * n_syndrome} shots. Raw measurement estimate, not an exact state fidelity. "
                           "Intervals describe finite-shot uncertainty only; basis/readout bias and drift remain. "
                           "No readout mitigation, active recovery, or extra codespace filtering. Estimates are not clipped.",
         "sufficient_accepted_shots": enough,
     }
 
 
-def joint_runtime_counts(pub):
+def joint_runtime_counts(pub, n_syndrome=3, n_data=4):
     """Concatenate per-shot displayed strings, independent of SDK join ordering."""
     syndrome = pub.data.syndrome
     data = pub.data.quality_readout
-    if syndrome.num_bits != 3 or data.num_bits != 4 or syndrome.shape != () or data.shape != ():
-        raise ValueError("Expected three syndrome bits and four data bits in a scalar PUB")
+    if syndrome.num_bits != n_syndrome or data.num_bits != n_data or syndrome.shape != () or data.shape != ():
+        raise ValueError(f"Expected {n_syndrome} syndrome bits and {n_data} data bits in a scalar PUB")
     # Do not multiply marginal counts: their shot correlations are essential.
     return dict(Counter(d + s for d, s in zip(data.get_bitstrings(), syndrome.get_bitstrings(), strict=True)))
 
@@ -311,12 +330,15 @@ def retrieve_bundle(path, *, service_factory=QiskitRuntimeService):
     (path / "runtime_result.json").write_text(json.dumps(result, cls=RuntimeEncoder))
     if len(result) != len(manifest["settings"]):
         raise ValueError("Unexpected number of PUB results; raw result was saved")
+    n_data, n_syndrome = bundle_dimensions(manifest)
     counts_by_setting = []
     for pub, setting in zip(result, manifest["settings"]):
+        if pub.data.syndrome.num_bits != n_syndrome or pub.data.syndrome.shape != ():
+            raise ValueError("Unexpected syndrome register; raw result was saved")
         if setting["kind"] == "acceptance":
             counts = pub.data.syndrome.get_counts()
         else:
-            counts = joint_runtime_counts(pub)
+            counts = joint_runtime_counts(pub, n_syndrome=n_syndrome, n_data=n_data)
         counts_by_setting.append(counts)
     write_json(path / "joint_counts.json", counts_by_setting)
     summary = {"job_id": receipt["job_id"], "retrieved_at_utc": utc_now(),

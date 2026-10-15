@@ -1,0 +1,9 @@
+{
+  "job_id": "db865b5bgg3c73emfbkg",
+  "submitted_at_utc": "2026-10-15T05:20:45.072549+00:00",
+  "instance": "qzh-eu",
+  "backend": "ibm_aachen",
+  "bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/five_pilot_20261014",
+  "manifest_sha256": "f625266a9c7b5882a7815964a2fce39b91e703d8f403563b4c846efc5be3f8c5",
+  "total_shots": 131072
+}
