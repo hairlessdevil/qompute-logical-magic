@@ -111,13 +111,24 @@ calibrated durations plus explicit delay channels.
 | `src/logical_magic/fault_examples.py` | Representative insertion points and actual versus ideal-next-round recovery |
 | `src/logical_magic/aachen_noise.py` | Calibrated target patch, scheduling, idle noise, exact recorded-syndrome conditioning |
 | `src/logical_magic/noisy_fidelity.py` | Count-based Pauli fidelity, data assignment correction, uncertainty and measurement-bias diagnostics |
+| `src/logical_magic/delay_ablation.py` | Selective idle-channel suppression within a time window, preserving gate noise and schedule |
+| `src/logical_magic/decoupling.py` | Qiskit DD insertion with unchanged original gate times and a Markovian echo check |
+| `src/logical_magic/syndrome_schedule.py` | Native-gate retiming, early syndrome readout, and exact handling of stored measurement outcomes |
 | `scripts/run_ideal.py` | Reproducible experiment, exports, plots, report |
 | `scripts/run_noisy.py` | Reproducible Aachen noisy experiment and delay-noise ablation |
 | `scripts/analyze_readout.py` | Readout-only ablation and finite-shot quality measurements of the saved preparations |
+| `scripts/draw_timelines.py` | Qiskit timelines of the saved schedules, plus separate stage timing diagnostics |
+| `scripts/analyze_syndrome_delays.py` | Matched full/readout-only/extraction-only/all-idle controls on the saved stage-separated circuits |
+| `scripts/analyze_dd.py` | Full-noise DD comparison on original saved circuits: no DD and 2/4/8 native X pulses per eligible idle |
+| `scripts/analyze_syndrome_schedules.py` | Early-readout schedules and three representative check orders with full noise |
 | `docs/model.md` | Equations, assumptions, fidelity definition, limitations |
 | `notebooks/01_ideal_magic_states.ipynb` | Executed, editable walkthrough |
 | `notebooks/02_noisy_aachen.ipynb` | Executed noisy walkthrough, calibration, delay checks, and QPY replay |
 | `results/noisy_aachen/` | Report, exact states, raw counts, calibration snapshots, QPY circuits, and plots |
+| `results/noisy_aachen/timelines/timing_report.md` | Full circuit timing, individual-check diagnostics, and PNG/PDF/SVG exports |
+| `results/noisy_aachen/syndrome_delay_ablation/report.md` | Extraction-phase delay suppression, matched noisy baseline, and conditional logical-state quality |
+| `results/noisy_aachen/dd_full_noise/report.md` | Full-noise DD results, pulse cost, timing plots, and model interpretation |
+| `results/noisy_aachen/syndrome_schedules/report.md` | Matched scheduling and check-order results, states, and Qiskit timelines |
 | `results/ideal/ideal_results.json` | Exact results, finite-shot estimates, raw counts, metadata |
 | `results/ideal/reference_states.npz` | Independent logical bases, targets, codespace projectors |
 | `results/ideal/faults_*.csv` | Individual circuit-fault outcomes |
@@ -140,7 +151,34 @@ the ideal references and validates delay noise against analytic T1/T2 decay.
 The no-delay ablation isolates the effect of idle relaxation while preserving
 the compiled gate sequence and gate/readout noise.
 
-Further comparisons could optimize physical placement or check order, or align
+Notebook Section 9 shows the full schedules using Qiskit's `timeline_drawer`.
+The snapshot supplies instruction durations, not analog pulse waveforms.
+The original circuits all include 2.584 µs of syndrome readout and concurrent
+data idle. Separate compilations with stage barriers expose individual check
+durations; their altered timings are not used for the original noisy results.
+Regenerate the figures with `conda run -n quantum-jax python scripts/draw_timelines.py`.
+
+Notebook Section 10 uses those stage-separated circuits for a matched noise
+ablation: disable delay T1/T2 relaxation after preparation through syndrome
+readout, retaining preparation idles, gate noise, and assignment errors.
+The full-noise baseline is recomputed on the same circuit. Run
+`conda run -n quantum-jax python scripts/analyze_syndrome_delays.py` to reproduce.
+
+Section 11 restores full noise on the original optimized circuits and compares
+native DD sequences, including errors on every added pulse. In the current
+memoryless T1/T2 model the tested sequences lower fidelity. Slow correlated
+dephasing is absent, so this does not predict DD's benefit on hardware. Run
+`conda run -n quantum-jax python scripts/analyze_dd.py` to reproduce.
+
+Section 12 tests early readout and native-gate retiming on the original circuits,
+then recompiles a frozen source preparation in three representative check orders.
+All data delays through delivery remain noisy. Post-measurement ancilla decay
+cannot change a stored syndrome bit. These local-model schedules assume readout
+can overlap gates on other wires; hardware controller constraints and measurement
+crosstalk are not certified. Run
+`conda run -n quantum-jax python scripts/analyze_syndrome_schedules.py` to reproduce.
+
+Further comparisons could optimize physical placement or additional check orders, or align
 the strategies to a common downstream consumption time. The present rows deliver
 B0/B1 at preparation completion and B2 after syndrome readout, so delivery times
 differ. The snapshot model does not include crosstalk, leakage, drift, correlated

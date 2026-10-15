@@ -299,6 +299,329 @@ for name, matrices in [('raw', None), ('data_readout_mitigated', assignment)]:
 print('Accepted shots across settings:', sample['total_accepted_shots'])
 print('First setting:', sample['terms'][0]['pauli'])
 print('Its raw joint data/syndrome counts:', sample['terms'][0]['counts'])"""),
+        md("""## 9. Visualize the full circuit timing with Qiskit
+
+The figures below use **Qiskit's `timeline_drawer`** with the exact saved native
+circuits and calibrated Aachen durations. They show gates, delays, and readout;
+the local snapshot does not supply analog pulse waveforms. Qiskit 2.4.1 no longer
+includes Qiskit Pulse.
+
+QPY preserves the gates and explicit delays, but not their start-time metadata.
+`ALAPScheduleAnalysis` reconstructs those timestamps without recompilation.
+Instruction identity, total duration, per-wire idle totals, and source-file
+hashes are checked. Durations are in **microseconds**.
+
+Blue bars are CZ gates, teal bars are native one-qubit gates, gray bars are
+delays, and orange bars are ancilla readout. Virtual Rz updates have zero
+duration and their symbols are hidden for readability. Each row is a physical
+IBM qubit; D/S labels give its data/syndrome role **at output**, because routing
+moves states between physical wires.
+
+The first timing column includes input preparation/encoding and coherent
+syndrome mapping. It is **not syndrome extraction alone**: the optimized
+original circuit does not retain boundaries between those source stages.
+All ancillas are measured together at the end. The data wait throughout that
+**2.584 µs** readout window, so their state can change after syndrome mapping."""),
+        code("""from draw_timelines import run_timelines
+
+TIMELINES = OUTPUT / 'timelines'
+timing_path = TIMELINES / 'timing_summary.json'
+if not timing_path.exists():
+    timing = run_timelines(OUTPUT)
+else:
+    timing = json.loads(timing_path.read_text())
+table = ['| Protocol | Preparation + syndrome mapping (µs) | Readout / data wait (µs) | Total (µs) |',
+         '|---|---:|---:|---:|']
+for row in timing['rows']:
+    r = row['original']
+    table.append(f\"| {row['code']}/{row['strategy']} | {r['coherent_phase_us']:.3f} | {r['readout_duration_us']:.3f} | {r['total_us']:.3f} |\")
+display(Markdown('\\n'.join(table)))
+for row in timing['rows']:
+    label = f\"{row['code']}_{row['strategy']}\"
+    display(Image(filename=str(TIMELINES / (label + '_original.png'))))"""),
+        md("""### Time each stabilizer check in a separate diagnostic compilation
+
+To expose the stages, this diagnostic inserts barriers after preparation and
+after every check, then compiles and schedules again. The P band is preparation;
+S0, S1, etc. are the coherent stabilizer-mapping blocks. These extra barriers
+prevent overlap/fusion across stages and can change routing, so **these durations
+describe a different compilation**. They must not replace the timings of the
+original noisy results. Section 10 runs a separate matched noise experiment on
+these circuits.
+
+The diagnostic's syndrome-extraction duration is the sum of the check blocks
+plus the terminal readout. Ideal simulation verifies fidelity 1 and acceptance
+1 for B2_ED, or 1/6 for B2_BK. The original result circuits remain unchanged.
+Full plots, gate-region zooms, and PDF/SVG exports are in `results/noisy_aachen/timelines`."""),
+        code("""table = ['| Protocol | Preparation (µs) | Check blocks (µs) | Readout (µs) | Checks + readout (µs) | Total (µs) |',
+         '|---|---:|---:|---:|---:|---:|']
+for row in timing['rows']:
+    r = row['stage_diagnostic']
+    assert np.isclose(r['ideal_validation']['fidelity'], 1)
+    assert np.isclose(r['ideal_validation']['acceptance'], 1/6 if row['strategy'] == 'B2_BK' else 1)
+    table.append(f\"| {row['code']}/{row['strategy']} | {r['stages'][0]['duration_us']:.3f} | {r['syndrome_mapping_us']:.3f} | {r['readout_duration_us']:.3f} | {r['syndrome_mapping_and_readout_us']:.3f} | {r['total_us']:.3f} |\")
+display(Markdown('\\n'.join(table)))
+for row in timing['rows']:
+    label = f\"{row['code']}_{row['strategy']}\"
+    display(Image(filename=str(TIMELINES / (label + '_staged.png'))))
+    checks = ['| Source stage | Duration (µs) |', '|---|---:|']
+    for stage in row['stage_diagnostic']['stages']:
+        checks.append(f\"| {stage['stage']} | {stage['duration_us']:.3f} |\")
+    display(Markdown('\\n'.join(checks)))"""),
+        md(r"""## 10. Remove delay noise only during syndrome extraction
+
+This test disables **T1/T2 relaxation on Delay instructions from the end of
+preparation/encoding through completion of syndrome readout**, on all physical
+wires. It includes ancilla idles and the final data-qubit readout wait.
+Preparation-phase delay noise, gate errors, gate-duration relaxation, and
+syndrome readout assignment errors remain enabled. All gates and delays retain
+their scheduled durations; no dynamical-decoupling pulses are inserted.
+
+**Matched baseline:** the optimized original circuits have no clean preparation
+boundary, so this test uses the **saved stage-separated circuits from Section 9**.
+Their full-noise baseline is recomputed. The baseline and each ablation use the
+same QPY circuit, routing, and timings; they are not compared against the earlier
+original-circuit numbers. These additional stage barriers can change the noise
+and performance of the circuit.
+
+For the accepted state $\rho_A$ (recorded zero syndrome), define
+
+$$p_{\rm code}=\mathrm{Tr}(P\rho_A),\qquad
+F_{\rm code}=\frac{\langle\psi_L|P\rho_A P|\psi_L\rangle}{p_{\rm code}}.$$
+
+These are the requested codespace population and fidelity within the codespace.
+The full accepted-state fidelity is $F=p_{\rm code}F_{\rm code}$. This extra
+codespace projection is a diagnostic only; it does not change the acceptance
+rule or physically correct the delivered state.
+
+**Arrows mean full noise → extraction/readout delay noise off.** These state
+metrics come from exact density matrices, not finite-shot fidelity estimates."""),
+        code("""from analyze_syndrome_delays import run_analysis as run_delay_analysis, comparison_table, modes_table
+
+DELAY_ABLATION = OUTPUT / 'syndrome_delay_ablation'
+RERUN_EXTRACTION_DELAYS = False
+if RERUN_EXTRACTION_DELAYS or not (DELAY_ABLATION / 'results.json').exists():
+    delay_study = run_delay_analysis(OUTPUT)
+else:
+    delay_study = json.loads((DELAY_ABLATION / 'results.json').read_text())
+display(Markdown(comparison_table(delay_study)))
+for row in delay_study['rows']:
+    for mode in row['modes'].values():
+        assert np.isclose(mode['fidelity'], mode['codespace_population'] * mode['fidelity_conditioned_on_codespace_diagnostic'])
+    assert max(row['validation'].values()) < 1e-11
+print('Explicit delay channels agree with the existing full/no-delay implementations.')"""),
+        md("""### Separate the final readout wait from earlier extraction idles
+
+The readout-only control disables Delay relaxation only during the final
+2.584 µs window. The extraction-only ablation additionally disables idle noise
+during all stabilizer-mapping blocks. The all-delay-off control also removes
+preparation idles, which remain noisy in the requested experiment.
+
+The explicit-channel implementation is checked against the existing full-noise
+and all-delay-off models, including density matrices and syndrome distributions.
+Boundary-crossing delays retain the correct amount of preparation noise.
+Readout-only suppression leaves exact acceptance unchanged. All 8,192-shot
+syndrome counts per mode, per-delay noise durations, accepted density matrices,
+and the frozen QPY inputs are saved in `results/noisy_aachen/syndrome_delay_ablation`.
+This is a channel-removal diagnostic, not a prediction of DD performance."""),
+        code("""display(Markdown(modes_table(delay_study)))
+for row in delay_study['rows']:
+    full = row['modes']['full']
+    readout_off = row['modes']['readout_delay_off']
+    assert np.isclose(full['acceptance'], readout_off['acceptance'], atol=1e-11, rtol=0)
+    print(f\"{row['code']}/{row['strategy']}: extraction starts at {row['timing']['extraction_start_us']:.3f} µs; output delivered at {row['timing']['delivery_us']:.3f} µs\")"""),
+        md("""### Why does some accepted population still lie outside the code?
+
+Extraction-delay suppression leaves noise on the gates themselves, including
+gate-duration T1/T2 relaxation. The following controls use exactly the same
+frozen circuits and start from the extraction-delay-off model in Section 10.
+Each column removes the additional named channel; preparation noise remains
+unless explicitly disabled in the detailed report.
+
+**Every table entry below is the accepted population outside the code subspace.**
+The controls identify extraction-gate noise as the main source of the residual
+loss. A later faulty gate can damage data after a relevant stabilizer has already
+been mapped onto an ancilla. That earlier parity is not measured again. Ancilla
+gate faults can also corrupt the syndrome or propagate to data. Perfect classical
+assignment cannot repair these quantum-circuit faults.
+
+Ideal extraction gates plus ideal syndrome assignment restore unit codespace
+population even with noisy preparation, because complete ideal stabilizer
+projection rejects the outside-code component. The logical state inside the
+code can still be distorted. These control differences are not additive source
+fractions: changing noise can also change acceptance.
+
+Here codespace loss stays inside the modeled two-level qubit Hilbert space;
+physical leakage into higher transmon levels is not modeled."""),
+        code("""from analyze_residual_codespace_loss import run_analysis as run_residual_analysis, summary_table as residual_table
+
+residual_path = DELAY_ABLATION / 'residual_codespace_loss.json'
+if residual_path.exists():
+    residual = json.loads(residual_path.read_text())
+else:
+    residual = run_residual_analysis(DELAY_ABLATION)
+display(Markdown(residual_table(residual)))
+for row in residual['rows']:
+    assert row['baseline_max_density_matrix_difference'] < 1e-11
+    assert abs(row['modes']['perfect_extraction_gates_and_readout']['outside_code_population']) < 1e-11
+    cz = row['modes']['perfect_extraction_cz']['outside_code_population']
+    print(f\"{row['code']}/{row['strategy']}: making extraction CZ gates ideal leaves {100*cz:.4f}% outside code (other gate noise and assignment errors retained).\")"""),
+        md("""## 11. Restore full noise and test dynamical decoupling
+
+This experiment uses **the original optimized saved Aachen circuits**, restoring
+the baseline from Sections 3–8. The stage-separated circuits used for the phase
+ablations have different baselines. Every variant here runs with **full noise**:
+gate depolarization, gate-duration T1/T2 relaxation, relaxation during every
+remaining Delay, and syndrome readout assignment errors. No ablation remains
+active in this experiment.
+
+Qiskit's `PadDynamicalDecoupling` inserts balanced **2-, 4-, or 8-X sequences**
+inside sufficiently long idles. Native X pulses last 32 ns and include their
+calibrated errors. The original gates, measurement times, and overall duration
+are preserved. Initial ground-state idles are skipped, and short windows that
+cannot fit the chosen sequence are left alone. All data qubits receive DD
+during the 2.584 µs syndrome-readout window. The settings specify a pulse count
+per eligible idle, not a uniform repetition rate across the full circuit.
+
+The table gives **full accepted-state fidelity**, including codespace loss.
+The no-DD replay matches the original saved density matrix, and all inserted
+sequences preserve ideal target fidelity and acceptance."""),
+        code("""from analyze_dd import run_analysis as run_dd_analysis, fidelity_table as dd_fidelity_table, quality_table as dd_quality_table
+
+DD_OUTPUT = OUTPUT / 'dd_full_noise'
+RERUN_DD = False
+if RERUN_DD or not (DD_OUTPUT / 'results.json').exists():
+    dd_study = run_dd_analysis(OUTPUT)
+else:
+    dd_study = json.loads((DD_OUTPUT / 'results.json').read_text())
+assert dd_study['noise_mode'] == 'full'
+display(Markdown(dd_fidelity_table(dd_study)))
+display(Image(filename=str(DD_OUTPUT / 'comparison.png')))
+for row in dd_study['rows']:
+    for name, variant in row['variants'].items():
+        assert variant['metrics']['mode'] == 'full'
+        assert np.isclose(variant['ideal_validation']['fidelity'], 1)
+        assert np.isclose(variant['ideal_validation']['acceptance'], 1/6 if row['strategy'] == 'B2_BK' else 1)
+print('Full noise enabled for every DD variant; ideal references verified.')"""),
+        md(r"""### Interpret the DD result in the noise model we actually have
+
+The current calibrated idle model uses **memoryless exponential T1/T2 decay**.
+It has no explicit slow detuning or temporal noise correlations. Those are
+important for the phase-refocusing mechanism of DD. In these runs, additional
+DD pulses lower fidelity; increasing pulse density adds further calibrated
+gate noise. This is not evidence that DD cannot help the physical Aachen device.
+
+For a one-qubit |+〉 state, ideal instantaneous X pulses leave the transverse
+coherence at $\langle X\rangle=e^{-t/T_2}$ under this memoryless channel. The
+sanity check below verifies this for zero, two, four, and eight pulses. A separate
+constant-Z-detuning toy model refocuses exactly, showing that the echo sequence
+works when the relevant coherent noise is present. **The toy model is not added
+to the Aachen experiment and assumes no hardware detuning value.**
+
+To assess DD's expected hardware benefit, the next modeling step is to separate
+refocusable, correlated idle noise from irreversible relaxation, with measured
+parameters or clearly stated sensitivity assumptions. Removing all Delay noise
+is not a physical model of DD.
+
+Sources: [IBM explanation of DD and slow noise](https://quantum.cloud.ibm.com/learning/en/courses/tools-for-quantum-advantage/error-suppression),
+[Markovian limits of DD](https://arxiv.org/abs/1710.11133)."""),
+        code("""display(Markdown(dd_quality_table(dd_study)))
+sanity = dd_study['echo_sanity']
+table = ['| Ideal instantaneous X pulses | Memoryless T1/T2: X coherence | Constant-detuning toy: X coherence |',
+         '|---:|---:|---:|']
+for row in sanity['rows']:
+    assert np.isclose(row['markovian_x_coherence'], sanity['expected_markovian_x_coherence'], atol=1e-12, rtol=0)
+    table.append(f\"| {row['ideal_instantaneous_x_pulses']} | {row['markovian_x_coherence']:.8f} | {row['constant_detuning_toy_x_coherence']:.8f} |\")
+display(Markdown('\\n'.join(table)))
+display(Image(filename=str(DD_OUTPUT / 'four_B2_ED_x8_timeline.png')))
+print('All three DD timelines and native QPY circuits are saved in:', DD_OUTPUT)"""),
+        md("""## 12. Earlier readout and representative check-order changes
+
+Ordinary `measure` and IBM `MidCircuitMeasure` implement the same logical
+Z-basis measurement. A measurement is *mid-circuit* when computation continues
+after it; ordinary `measure` can also be used in that position. IBM's special
+`MidCircuitMeasure` maps to `measure_2` and is tuned for lower overhead during
+ongoing computation. The actual duration and errors depend on calibration.
+Our Aachen snapshot only exposes ordinary `measure`, lasting 2.584 µs on this
+patch. We retain that duration; no faster measurement is assumed.
+[IBM measurement documentation](https://quantum.cloud.ibm.com/docs/en/guides/execute-dynamic-circuits).
+
+First, the exact original native circuits are retimed without changing gates,
+physical mapping, or per-wire operation order:
+
+1. Original simultaneous terminal readout.
+2. Read each ancilla after its last gate, keeping all gate times fixed.
+3. Move gates as early as dependencies allow (ASAP), then read ancillas early.
+4. Keep those early readout deadlines but move gates as late as possible (ALAP).
+
+All data idles through final delivery, pre-readout ancilla idles, gate noise, and
+assignment errors remain enabled. After an ancilla is measured, its subsequent
+relaxation cannot alter the stored bit. The exact deferred-measurement analysis
+therefore discards only those unused, already-measured ancilla idles and rejects
+any circuit that reuses a measured ancilla.
+
+These are local-model candidate schedules. The model omits measurement-induced
+crosstalk and does not certify hardware controller/readout-group constraints on
+overlapping measurements with other gates. No hardware job is submitted."""),
+        code("""from analyze_syndrome_schedules import (
+    run_analysis as run_schedule_analysis, summary_table as schedule_table,
+    timing_table as schedule_timing_table, check_order_table,
+)
+
+SCHEDULE_OUTPUT = OUTPUT / 'syndrome_schedules'
+RERUN_SCHEDULES = False
+if RERUN_SCHEDULES or not (SCHEDULE_OUTPUT / 'results.json').exists():
+    schedule_study = run_schedule_analysis(OUTPUT)
+else:
+    schedule_study = json.loads((SCHEDULE_OUTPUT / 'results.json').read_text())
+assert schedule_study['noise_mode'] == 'full'
+display(Markdown(schedule_table(schedule_study)))
+for row in schedule_study['rows']:
+    original = row['variants']['original']
+    for variant in row['variants'].values():
+        assert np.isclose(variant['ideal_validation']['fidelity'], 1, atol=1e-11, rtol=0)
+        assert np.isclose(variant['ideal_validation']['acceptance'], 1/6 if row['strategy'] == 'B2_BK' else 1, atol=1e-11, rtol=0)
+        assert np.isclose(variant['resources']['duration_seconds'], original['resources']['duration_seconds'], atol=1e-13, rtol=0)
+    assert np.isclose(row['variants']['fixed']['metrics']['unconditional_fidelity'],
+                      original['metrics']['unconditional_fidelity'], atol=1e-11, rtol=0)
+print('Exact state metrics at delivery; 8,192 sampled syndromes per schedule are saved separately.')"""),
+        md("""### What earlier readout changes
+
+The last ancilla remains on the critical path in the frozen native circuits,
+so early readout does not shorten their total delivery time. With fixed gate
+times it mainly changes how faithfully the earlier syndrome is stored; the
+unconditional data state is unchanged. Earlier checks still cannot detect later
+data faults. Moving every gate earlier can prepare fragile states too soon and
+worsen their exposure to noise. The deadline-based ALAP schedule avoids some of
+that exposure; it can also move independent data-only gates into readout waits.
+The timeline below shows the original and deadline-based ALAP schedules."""),
+        code("""display(Markdown(schedule_timing_table(schedule_study)))
+display(Image(filename=str(SCHEDULE_OUTPUT / 'five_B2_ED_timelines.png')))"""),
+        md("""### Change whole-check order: a separate matched compilation comparison
+
+For each protocol we freeze one source preparation and try three whole-check
+orders: reference, reverse, and a one-step rotation. Source preparation gates,
+source ancilla assignments, initial placement, optimization level, and compiler
+seed stay fixed. Gate count, routing, and final physical placement may change.
+Whole stabilizer checks commute ideally; we do not arbitrarily interleave their
+individual controlled-Pauli gates.
+
+The newly compiled reference is the matched baseline for this table. It can
+differ from the original archived circuit because encoder synthesis was not
+frozen before the original run. The new source QPY is cached for reproduction.
+Check indices refer to the stabilizer lists printed below. Each order has a
+terminal-readout and an early deadline-based ALAP variant, both with full noise.
+Fidelity is the complete accepted-state fidelity, including codespace loss.
+Shorter circuits need not have better fidelity because routing changes which
+physical gate and readout errors affect the data and acceptance."""),
+        code("""display(Markdown(check_order_table(schedule_study)))
+for row in schedule_study['order_study']:
+    print(row['code'], row['strategy'], 'check indices:', dict(enumerate(row['checks_in_bit_order'])))
+    for case in row['orders'].values():
+        for variant in case['variants'].values():
+            assert np.isclose(variant['ideal_validation']['fidelity'], 1, atol=1e-11, rtol=0)
+            assert np.isclose(variant['ideal_validation']['acceptance'], 1/6 if row['strategy'] == 'B2_BK' else 1, atol=1e-11, rtol=0)
+print('Saved report, states, native schedules, source circuits, and timelines:', SCHEDULE_OUTPUT)"""),
         md("""## Scope and saved artifacts
 
 This is a first noisy comparison of the existing bare circuits on one fixed
@@ -313,6 +636,20 @@ and copied calibration files. `readout_and_fidelity.json` / `.md` add the
 readout-only ablation, finite-shot measurement results, raw counts, statistical
 intervals, and systematic-bias diagnostics. No IBM job is submitted and no
 credentials are used.
+
+`timelines/timing_report.md` and `timing_summary.json` add the Qiskit timing
+figures and instruction timestamps. Diagnostic circuits with stage barriers
+are saved separately in that folder.
+
+`syndrome_delay_ablation/report.md` and `results.json` contain the matched
+extraction-phase delay-noise ablation; its frozen inputs and accepted density
+matrices are stored alongside them.
+`syndrome_delay_ablation/residual_codespace_loss.md` adds separate extraction-gate,
+CZ-gate, readout-assignment, and preparation-noise controls.
+`dd_full_noise/report.md` adds full-noise DD results on the original circuits,
+native DD circuit QPY files, pulse timestamps, timing plots, and model checks.
+`syndrome_schedules/report.md` adds earlier readout, native-gate retiming, and
+three representative whole-check orders, with full noise and saved timelines.
 
 References: [FakeAachen](https://quantum.cloud.ibm.com/docs/en/api/qiskit-ibm-runtime/fake-provider-fake-aachen),
 [Aer NoiseModel](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.noise.NoiseModel.html),

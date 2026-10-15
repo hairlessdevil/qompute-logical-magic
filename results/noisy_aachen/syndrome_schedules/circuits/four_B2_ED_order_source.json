@@ -1,0 +1,29 @@
+{
+  "stages": [
+    "magic_input",
+    "encoding",
+    "encoding",
+    "encoding",
+    "encoding",
+    "encoding",
+    "check_0_XXXX",
+    "check_0_XXXX",
+    "check_0_XXXX",
+    "check_0_XXXX",
+    "check_0_XXXX",
+    "check_0_XXXX",
+    "check_1_IIZZ",
+    "check_1_IIZZ",
+    "check_1_IIZZ",
+    "check_1_IIZZ",
+    "check_2_ZZII",
+    "check_2_ZZII",
+    "check_2_ZZII",
+    "check_2_ZZII"
+  ],
+  "checks_in_bit_order": [
+    "XXXX",
+    "IIZZ",
+    "ZZII"
+  ]
+}

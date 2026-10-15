@@ -1,0 +1,72 @@
+{
+  "created_at_utc": "2026-10-15T00:29:49.982628+00:00",
+  "source": "noisy_results.json",
+  "calibration_date": "2026-04-17T12:29:46+02:00",
+  "definition": "Bad means outside the code subspace at original output delivery time, including the readout wait.",
+  "interpretation": "Joint quantum populations, equivalent to an ideal final codespace test on data plus the recorded syndrome; not labels of sampled fault trajectories.",
+  "rows": [
+    {
+      "code": "four",
+      "strategy": "B2_ED",
+      "source_qpy_sha256": "bb00ac647842b01c92d93715a0c40bfc9613903c8f5378454f553796c71cb553",
+      "joint_population_per_attempt": {
+        "accepted_inside_code": 0.8555823468174397,
+        "accepted_outside_code": 0.04946910868185794,
+        "rejected_inside_code": 0.022554322769746928,
+        "rejected_outside_code": 0.0723942217309432
+      },
+      "acceptance": 0.9050514554992978,
+      "rejection": 0.09494854450070223,
+      "unconditional_outside_code": 0.12186333041280115,
+      "fraction_of_outside_code_population_rejected": 0.5940607522026047,
+      "outside_code_fraction_among_rejected": 0.7624574142935681,
+      "outside_code_fraction_among_accepted": 0.054658890808110885,
+      "unconditional_target_fidelity": 0.875227295023778,
+      "accepted_target_fidelity": 0.943087830703684,
+      "original_sampled_rejected_shots": 827,
+      "original_sampled_total_shots": 8192
+    },
+    {
+      "code": "five",
+      "strategy": "B2_ED",
+      "source_qpy_sha256": "3533cd07e69c8b6d62a9571c9ba03f6ed9f74a4fc89bc9b62764f06798977366",
+      "joint_population_per_attempt": {
+        "accepted_inside_code": 0.6660221815510274,
+        "accepted_outside_code": 0.07819899238572836,
+        "rejected_inside_code": 0.03691293512309751,
+        "rejected_outside_code": 0.21886589094012837
+      },
+      "acceptance": 0.7442211739367559,
+      "rejection": 0.2557788260632441,
+      "unconditional_outside_code": 0.29706488332585673,
+      "fraction_of_outside_code_population_rejected": 0.7367612371067427,
+      "outside_code_fraction_among_rejected": 0.855684163965986,
+      "outside_code_fraction_among_accepted": 0.10507493622100804,
+      "unconditional_target_fidelity": 0.6957837600715865,
+      "accepted_target_fidelity": 0.8868179573465138,
+      "original_sampled_rejected_shots": 2129,
+      "original_sampled_total_shots": 8192
+    },
+    {
+      "code": "five",
+      "strategy": "B2_BK",
+      "source_qpy_sha256": "737ef91dc9325ed1bb6442c2c4a02f98d0184eabe6a10df7c4341596df454074",
+      "joint_population_per_attempt": {
+        "accepted_inside_code": 0.12601468521622483,
+        "accepted_outside_code": 0.021059812371695796,
+        "rejected_inside_code": 0.015518385972961976,
+        "rejected_outside_code": 0.8374071164391095
+      },
+      "acceptance": 0.14707449758792063,
+      "rejection": 0.8529255024120794,
+      "unconditional_outside_code": 0.8584669288108053,
+      "fraction_of_outside_code_population_rejected": 0.9754681145366089,
+      "outside_code_fraction_among_rejected": 0.9818056958912779,
+      "outside_code_fraction_among_accepted": 0.1431914622663002,
+      "unconditional_target_fidelity": 0.13935744476698775,
+      "accepted_target_fidelity": 0.8545243418388537,
+      "original_sampled_rejected_shots": 6951,
+      "original_sampled_total_shots": 8192
+    }
+  ]
+}
