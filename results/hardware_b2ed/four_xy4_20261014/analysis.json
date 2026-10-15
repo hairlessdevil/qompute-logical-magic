@@ -1,0 +1,493 @@
+{
+  "job_id": "db84p30331ic73fu5tm0",
+  "retrieved_at_utc": "2026-10-15T03:48:00.791601+00:00",
+  "acceptance_only_circuit": {
+    "kind": "acceptance",
+    "pauli": null,
+    "coefficient": null,
+    "pub_index": 0,
+    "circuit_name": "four_B2_ED",
+    "estimated_circuit_seconds": 5.020000000000001e-06,
+    "shots": 2048,
+    "accepted_shots": 1044,
+    "acceptance": 0.509765625,
+    "acceptance_wilson_95_interval": [
+      0.4881169941613543,
+      0.5313776894205781
+    ]
+  },
+  "terms": [
+    {
+      "kind": "pauli",
+      "pauli": "IIXX",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 1,
+      "circuit_name": "four_B2_ED_IIXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1021,
+      "acceptance": 0.49853515625,
+      "acceptance_wilson_95_interval": [
+        0.4769035246595249,
+        0.5201722728031851
+      ],
+      "raw": {
+        "expectation": 0.5592556317335945,
+        "variance_of_mean": 0.0006737579787982923,
+        "accepted_shots": 1021
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIYY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 2,
+      "circuit_name": "four_B2_ED_IIYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1043,
+      "acceptance": 0.50927734375,
+      "acceptance_wilson_95_interval": [
+        0.48762922542371406,
+        0.5308907239791218
+      ],
+      "raw": {
+        "expectation": -0.6241610738255033,
+        "variance_of_mean": 0.0005858185738205322,
+        "accepted_shots": 1043
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIZZ",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 3,
+      "circuit_name": "four_B2_ED_IIZZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1006,
+      "acceptance": 0.4912109375,
+      "acceptance_wilson_95_interval": [
+        0.4695962620665665,
+        0.5128585227096942
+      ],
+      "raw": {
+        "expectation": 0.9423459244532804,
+        "variance_of_mean": 0.00011142702354854967,
+        "accepted_shots": 1006
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZIZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 4,
+      "circuit_name": "four_B2_ED_IZIZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1026,
+      "acceptance": 0.5009765625,
+      "acceptance_wilson_95_interval": [
+        0.47934030862308824,
+        0.522609159735105
+      ],
+      "raw": {
+        "expectation": 0.4853801169590643,
+        "variance_of_mean": 0.0007457620898154195,
+        "accepted_shots": 1026
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZZI",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 5,
+      "circuit_name": "four_B2_ED_IZZI",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1035,
+      "acceptance": 0.50537109375,
+      "acceptance_wilson_95_interval": [
+        0.483727817190906,
+        0.5269942587791568
+      ],
+      "raw": {
+        "expectation": 0.5323671497584541,
+        "variance_of_mean": 0.0006930224544081815,
+        "accepted_shots": 1035
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXII",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 6,
+      "circuit_name": "four_B2_ED_XXII",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1003,
+      "acceptance": 0.48974609375,
+      "acceptance_wilson_95_interval": [
+        0.4681353657433453,
+        0.5113952164956255
+      ],
+      "raw": {
+        "expectation": 0.46360917248255235,
+        "variance_of_mean": 0.0007834995361178074,
+        "accepted_shots": 1003
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXXX",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 7,
+      "circuit_name": "four_B2_ED_XXXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1040,
+      "acceptance": 0.5078125,
+      "acceptance_wilson_95_interval": [
+        0.4861660428318887,
+        0.5294297040336572
+      ],
+      "raw": {
+        "expectation": 0.6846153846153846,
+        "variance_of_mean": 0.0005113587826255332,
+        "accepted_shots": 1040
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXYY",
+      "coefficient": -0.06249999999999998,
+      "pub_index": 8,
+      "circuit_name": "four_B2_ED_XXYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1035,
+      "acceptance": 0.50537109375,
+      "acceptance_wilson_95_interval": [
+        0.483727817190906,
+        0.5269942587791568
+      ],
+      "raw": {
+        "expectation": -0.6676328502415458,
+        "variance_of_mean": 0.0005360409838281911,
+        "accepted_shots": 1035
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXZZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 9,
+      "circuit_name": "four_B2_ED_XXZZ",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1047,
+      "acceptance": 0.51123046875,
+      "acceptance_wilson_95_interval": [
+        0.4895804240114402,
+        0.5328384621077821
+      ],
+      "raw": {
+        "expectation": 0.45367717287488063,
+        "variance_of_mean": 0.0007592514558434567,
+        "accepted_shots": 1047
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYXY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 10,
+      "circuit_name": "four_B2_ED_XYXY",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1039,
+      "acceptance": 0.50732421875,
+      "acceptance_wilson_95_interval": [
+        0.48567835650487906,
+        0.5289426561815701
+      ],
+      "raw": {
+        "expectation": -0.46487006737247355,
+        "variance_of_mean": 0.0007551982856080076,
+        "accepted_shots": 1039
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYYX",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 11,
+      "circuit_name": "four_B2_ED_XYYX",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1035,
+      "acceptance": 0.50537109375,
+      "acceptance_wilson_95_interval": [
+        0.483727817190906,
+        0.5269942587791568
+      ],
+      "raw": {
+        "expectation": -0.45120772946859905,
+        "variance_of_mean": 0.0007702239698914811,
+        "accepted_shots": 1035
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXXY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 12,
+      "circuit_name": "four_B2_ED_YXXY",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1001,
+      "acceptance": 0.48876953125,
+      "acceptance_wilson_95_interval": [
+        0.46716153789221787,
+        0.5104195759885598
+      ],
+      "raw": {
+        "expectation": -0.45054945054945056,
+        "variance_of_mean": 0.0007970051926095883,
+        "accepted_shots": 1001
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXYX",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 13,
+      "circuit_name": "four_B2_ED_YXYX",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1021,
+      "acceptance": 0.49853515625,
+      "acceptance_wilson_95_interval": [
+        0.4769035246595249,
+        0.5201722728031851
+      ],
+      "raw": {
+        "expectation": -0.4338883447600392,
+        "variance_of_mean": 0.0007958244159621505,
+        "accepted_shots": 1021
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYII",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 14,
+      "circuit_name": "four_B2_ED_YYII",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1027,
+      "acceptance": 0.50146484375,
+      "acceptance_wilson_95_interval": [
+        0.47982772719681477,
+        0.523096475340475
+      ],
+      "raw": {
+        "expectation": -0.5170399221032133,
+        "variance_of_mean": 0.0007141030399137458,
+        "accepted_shots": 1027
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYXX",
+      "coefficient": -0.06249999999999998,
+      "pub_index": 15,
+      "circuit_name": "four_B2_ED_YYXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1010,
+      "acceptance": 0.4931640625,
+      "acceptance_wilson_95_interval": [
+        0.471544412270747,
+        0.5148093092219002
+      ],
+      "raw": {
+        "expectation": -0.6712871287128713,
+        "variance_of_mean": 0.0005444733308468077,
+        "accepted_shots": 1010
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYYY",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 16,
+      "circuit_name": "four_B2_ED_YYYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1027,
+      "acceptance": 0.50146484375,
+      "acceptance_wilson_95_interval": [
+        0.47982772719681477,
+        0.523096475340475
+      ],
+      "raw": {
+        "expectation": 0.6592015579357352,
+        "variance_of_mean": 0.0005511240799367441,
+        "accepted_shots": 1027
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYZZ",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 17,
+      "circuit_name": "four_B2_ED_YYZZ",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1027,
+      "acceptance": 0.50146484375,
+      "acceptance_wilson_95_interval": [
+        0.47982772719681477,
+        0.523096475340475
+      ],
+      "raw": {
+        "expectation": -0.4878286270691334,
+        "variance_of_mean": 0.0007427127004014079,
+        "accepted_shots": 1027
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIIZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 18,
+      "circuit_name": "four_B2_ED_ZIIZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1003,
+      "acceptance": 0.48974609375,
+      "acceptance_wilson_95_interval": [
+        0.4681353657433453,
+        0.5113952164956255
+      ],
+      "raw": {
+        "expectation": 0.6191425722831505,
+        "variance_of_mean": 0.0006154316119626784,
+        "accepted_shots": 1003
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIZI",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 19,
+      "circuit_name": "four_B2_ED_ZIZI",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1018,
+      "acceptance": 0.4970703125,
+      "acceptance_wilson_95_interval": [
+        0.47544170140755976,
+        0.5187098935178605
+      ],
+      "raw": {
+        "expectation": 0.6404715127701375,
+        "variance_of_mean": 0.0005799373071090773,
+        "accepted_shots": 1018
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZII",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 20,
+      "circuit_name": "four_B2_ED_ZZII",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1031,
+      "acceptance": 0.50341796875,
+      "acceptance_wilson_95_interval": [
+        0.481777607432845,
+        0.5250455318208314
+      ],
+      "raw": {
+        "expectation": 0.7419980601357905,
+        "variance_of_mean": 0.00043634842597545996,
+        "accepted_shots": 1031
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZXX",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 21,
+      "circuit_name": "four_B2_ED_ZZXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1002,
+      "acceptance": 0.4892578125,
+      "acceptance_wilson_95_interval": [
+        0.46764844151385543,
+        0.5109074065460188
+      ],
+      "raw": {
+        "expectation": 0.46107784431137727,
+        "variance_of_mean": 0.000786620600884289,
+        "accepted_shots": 1002
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZYY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 22,
+      "circuit_name": "four_B2_ED_ZZYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 1042,
+      "acceptance": 0.5087890625,
+      "acceptance_wilson_95_interval": [
+        0.48714147729030577,
+        0.5304037379334334
+      ],
+      "raw": {
+        "expectation": -0.5470249520153551,
+        "variance_of_mean": 0.0006731639787440908,
+        "accepted_shots": 1042
+      }
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZZZ",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 23,
+      "circuit_name": "four_B2_ED_ZZZZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06,
+      "shots": 2048,
+      "accepted_shots": 1013,
+      "acceptance": 0.49462890625,
+      "acceptance_wilson_95_interval": [
+        0.47300574122084316,
+        0.5162721828090939
+      ],
+      "raw": {
+        "expectation": 0.7156959526159921,
+        "variance_of_mean": 0.0004819953590998889,
+        "accepted_shots": 1013
+      }
+    }
+  ],
+  "raw_fidelity_estimate": 0.7421923974937891,
+  "standard_error": 0.005899031495523716,
+  "normal_approx_95_interval": [
+    0.7306305081276965,
+    0.7537542868598817
+  ],
+  "conservative_95_interval": [
+    0.6100311305934474,
+    0.8743536643941308
+  ],
+  "interpretation": "Full target projector from recorded-000 shots. Raw measurement estimate, not an exact state fidelity. Intervals describe finite-shot uncertainty only; basis/readout bias and drift remain. No readout mitigation, active recovery, or extra codespace filtering. Estimates are not clipped.",
+  "sufficient_accepted_shots": true
+}

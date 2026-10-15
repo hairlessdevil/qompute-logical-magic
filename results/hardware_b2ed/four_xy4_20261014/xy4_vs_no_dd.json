@@ -1,0 +1,268 @@
+{
+  "baseline_job_id": "db84dj8331ic73fu5jfg",
+  "xy4_job_id": "db84p30331ic73fu5tm0",
+  "baseline_bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/four_pilot_20261014",
+  "submission_gap_minutes": 24.5026298,
+  "identical_saved_calibration": true,
+  "matched_layout_timing_and_measurement_settings": true,
+  "metrics": {
+    "raw_fidelity_accepted": {
+      "no_dd": 0.6970853078159385,
+      "xy4": 0.7421923974937891,
+      "difference": 0.0451070896778506,
+      "standard_error": 0.008554100637246662,
+      "normal_95_interval": [
+        0.02834136037647008,
+        0.061872818979231116
+      ],
+      "independent_bootstrap_95_interval": [
+        0.028628130900174093,
+        0.0619380207903492
+      ]
+    },
+    "raw_fidelity_all": {
+      "no_dd": 0.5252001804485433,
+      "xy4": 0.5556305170291083,
+      "difference": 0.030430336580564932,
+      "standard_error": 0.00676983533977121,
+      "normal_95_interval": [
+        0.01716170302868559,
+        0.043698970132444274
+      ]
+    },
+    "raw_fidelity_rejected": {
+      "no_dd": 0.3620702509934494,
+      "xy4": 0.36869667986644394,
+      "difference": 0.0066264288729945275,
+      "standard_error": 0.010044013430478378,
+      "normal_95_interval": [
+        -0.013059475866259596,
+        0.02631233361224865
+      ]
+    },
+    "primary_acceptance": {
+      "no_dd": 0.484375,
+      "xy4": 0.509765625,
+      "difference": 0.025390625,
+      "standard_error": 0.015619694285795687,
+      "normal_95_interval": [
+        -0.005223413491165261,
+        0.05600466349116526
+      ]
+    },
+    "pooled_acceptance": {
+      "no_dd": 0.4887288411458333,
+      "xy4": 0.5004069010416666,
+      "difference": 0.011678059895833315,
+      "standard_error": 0.0031890340320621037,
+      "normal_95_interval": [
+        0.005427667998216746,
+        0.017928451793449884
+      ]
+    },
+    "accepted_codespace_score": {
+      "no_dd": 0.7105841635472094,
+      "xy4": 0.760347107338825,
+      "difference": 0.04976294379161561,
+      "standard_error": 0.010410124968571646,
+      "normal_95_interval": [
+        0.02935947361771405,
+        0.07016641396551718
+      ]
+    }
+  },
+  "baseline_summary": {
+    "groups": {
+      "accepted": {
+        "raw_fidelity": 0.6970853078159385,
+        "raw_codespace_score": 0.7105841635472094,
+        "standard_error": 0.0061946803894117886,
+        "normal_95_interval": [
+          0.6849439572611854,
+          0.7092266583706915
+        ],
+        "bootstrap_95_interval": [
+          0.6850637873901779,
+          0.7092619198001279
+        ],
+        "codespace_standard_error": 0.007667868157590997
+      },
+      "all": {
+        "raw_fidelity": 0.5252001804485433,
+        "raw_codespace_score": 0.54052734375,
+        "standard_error": 0.004815988166778611,
+        "normal_95_interval": [
+          0.5157610170172312,
+          0.5346393438798555
+        ],
+        "bootstrap_95_interval": [
+          0.5158442330251468,
+          0.5348638577370295
+        ],
+        "codespace_standard_error": 0.006367118626289949
+      },
+      "rejected": {
+        "raw_fidelity": 0.3620702509934494,
+        "raw_codespace_score": 0.3794975648051456,
+        "standard_error": 0.007074824178036219,
+        "normal_95_interval": [
+          0.34820385029816886,
+          0.37593665168873
+        ],
+        "bootstrap_95_interval": [
+          0.3482976759812762,
+          0.37607440412988163
+        ],
+        "codespace_standard_error": 0.009575225365317203
+      }
+    },
+    "primary_acceptance": {
+      "kind": "acceptance",
+      "pauli": null,
+      "coefficient": null,
+      "pub_index": 0,
+      "circuit_name": "four_B2_ED",
+      "estimated_circuit_seconds": 5.020000000000001e-06,
+      "shots": 2048,
+      "accepted_shots": 992,
+      "acceptance": 0.484375,
+      "acceptance_wilson_95_interval": [
+        0.4627803328889163,
+        0.5060281733799917
+      ]
+    },
+    "pooled_acceptance": {
+      "accepted": 24022,
+      "attempted": 49152,
+      "estimate": 0.4887288411458333,
+      "wilson_95_interval": [
+        0.4843107610200506,
+        0.49314868292155695
+      ]
+    },
+    "syndrome_bit_one_probabilities": [
+      0.06949869791666667,
+      0.19950358072916666,
+      0.3615519205729167
+    ],
+    "saved_calibration_replay": {
+      "dt_seconds": 4e-09,
+      "dt_source": "Live backend inspection at preparation: 4 ns",
+      "calibration_date": "2026-10-14T20:06:27-07:00",
+      "acceptance": 0.9144135958191795,
+      "raw_measurement_score": 0.8427659835124981,
+      "exact_model_preparation_fidelity": 0.9460292255109916,
+      "syndrome_probabilities": [
+        0.9144135958191795,
+        0.01791163810637624,
+        0.02675654768438311,
+        0.008336419780992685,
+        0.019884079243270143,
+        0.009539895816802833,
+        0.0015407791422138322,
+        0.0016170444067954953
+      ],
+      "terms": [
+        {
+          "pauli": "IIXX",
+          "expectation": 0.6550361564850995
+        },
+        {
+          "pauli": "IIYY",
+          "expectation": -0.6548970812743082
+        },
+        {
+          "pauli": "IIZZ",
+          "expectation": 0.9440820640987672
+        },
+        {
+          "pauli": "IZIZ",
+          "expectation": 0.6289092088568704
+        },
+        {
+          "pauli": "IZZI",
+          "expectation": 0.6217143242036142
+        },
+        {
+          "pauli": "XXII",
+          "expectation": 0.5948174522355216
+        },
+        {
+          "pauli": "XXXX",
+          "expectation": 0.7915387327238033
+        },
+        {
+          "pauli": "XXYY",
+          "expectation": -0.7913125801811353
+        },
+        {
+          "pauli": "XXZZ",
+          "expectation": 0.5615346858404843
+        },
+        {
+          "pauli": "XYXY",
+          "expectation": -0.5594620121360626
+        },
+        {
+          "pauli": "XYYX",
+          "expectation": -0.5595451342382292
+        },
+        {
+          "pauli": "YXXY",
+          "expectation": -0.5594830945960986
+        },
+        {
+          "pauli": "YXYX",
+          "expectation": -0.5595767038509756
+        },
+        {
+          "pauli": "YYII",
+          "expectation": -0.5954406171684201
+        },
+        {
+          "pauli": "YYXX",
+          "expectation": -0.791618906894008
+        },
+        {
+          "pauli": "YYYY",
+          "expectation": 0.7913779233339051
+        },
+        {
+          "pauli": "YYZZ",
+          "expectation": -0.5621216935505365
+        },
+        {
+          "pauli": "ZIIZ",
+          "expectation": 0.6411043318104215
+        },
+        {
+          "pauli": "ZIZI",
+          "expectation": 0.6335870676523887
+        },
+        {
+          "pauli": "ZZII",
+          "expectation": 0.8500316307384524
+        },
+        {
+          "pauli": "ZZXX",
+          "expectation": 0.5588833899319359
+        },
+        {
+          "pauli": "ZZYY",
+          "expectation": -0.5587659689417673
+        },
+        {
+          "pauli": "ZZZZ",
+          "expectation": 0.803329557580217
+        }
+      ],
+      "assumptions": "Saved gate errors, T1/T2, asymmetric independent assignment, zero temperature. Frozen circuit delays retained; ancilla readout deferred only in this independent-channel model. No added initialization error, coherent/correlated noise, crosstalk, or unreported runtime latency. Model predictions, not hardware-corrected estimates."
+    }
+  },
+  "bootstrap_samples": 10000,
+  "independent_bootstrap_seeds": [
+    20261015,
+    20261016
+  ],
+  "interpretation": "Observed difference between two independent sequential jobs. Sampling intervals are pointwise; they omit drift and systematic readout/basis error. This was not an interleaved randomized DD/no-DD comparison. Identical saved calibration does not imply identical physical noise during execution."
+}

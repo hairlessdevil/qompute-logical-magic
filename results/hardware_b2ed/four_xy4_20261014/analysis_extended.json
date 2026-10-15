@@ -1,0 +1,839 @@
+{
+  "job_id": "db84p30331ic73fu5tm0",
+  "total_shots": 49152,
+  "number_of_circuits": 24,
+  "variant": "XY4",
+  "independent_archive_and_estimator_validation": "passed",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 20261014,
+    "method": "Per-setting multinomial resampling of joint acceptance/parity categories"
+  },
+  "primary_acceptance": {
+    "kind": "acceptance",
+    "pauli": null,
+    "coefficient": null,
+    "pub_index": 0,
+    "circuit_name": "four_B2_ED",
+    "estimated_circuit_seconds": 5.020000000000001e-06,
+    "shots": 2048,
+    "accepted_shots": 1044,
+    "acceptance": 0.509765625,
+    "acceptance_wilson_95_interval": [
+      0.4881169941613543,
+      0.5313776894205781
+    ]
+  },
+  "pooled_acceptance": {
+    "accepted": 24596,
+    "attempted": 49152,
+    "estimate": 0.5004069010416666,
+    "wilson_95_interval": [
+      0.4959867866544872,
+      0.5048269518313753
+    ]
+  },
+  "acceptance_across_settings": {
+    "minimum": 0.48876953125,
+    "maximum": 0.51123046875,
+    "chi_square": 9.983079528198992,
+    "dof": 23,
+    "p_value": 0.9913807685294748,
+    "minimum_expected_cell_count": 1023.1666666666666
+  },
+  "syndrome_counts": {
+    "000": 24596,
+    "001": 1093,
+    "010": 6104,
+    "011": 719,
+    "100": 12024,
+    "101": 932,
+    "110": 3141,
+    "111": 543
+  },
+  "syndrome_bit_one_probabilities": [
+    0.06687418619791667,
+    0.21376546223958334,
+    0.3385416666666667
+  ],
+  "groups": {
+    "accepted": {
+      "raw_fidelity": 0.7421923974937891,
+      "raw_codespace_score": 0.760347107338825,
+      "standard_error": 0.005899031495523716,
+      "normal_95_interval": [
+        0.7306305081276965,
+        0.7537542868598817
+      ],
+      "bootstrap_95_interval": [
+        0.7305058001482999,
+        0.753686597412714
+      ],
+      "codespace_standard_error": 0.007040916117884153
+    },
+    "all": {
+      "raw_fidelity": 0.5556305170291083,
+      "raw_codespace_score": 0.5653076171875,
+      "standard_error": 0.004757828128995789,
+      "normal_95_interval": [
+        0.5463053451780892,
+        0.5649556888801274
+      ],
+      "bootstrap_95_interval": [
+        0.5463077805351741,
+        0.5648601463403656
+      ],
+      "codespace_standard_error": 0.006256672228607392
+    },
+    "rejected": {
+      "raw_fidelity": 0.36869667986644394,
+      "raw_codespace_score": 0.3718448830313934,
+      "standard_error": 0.0071294507952228805,
+      "normal_95_interval": [
+        0.3547232129680357,
+        0.38267014676485217
+      ],
+      "bootstrap_95_interval": [
+        0.3547539070078321,
+        0.3827007608057361
+      ],
+      "codespace_standard_error": 0.009638686598754291
+    }
+  },
+  "per_pauli": [
+    {
+      "pauli": "IIXX",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1021,
+      "total_shots": 2048,
+      "accepted_expectation": 0.5592556317335945,
+      "accepted_standard_error": 0.02595684839880012,
+      "all_expectation": 0.5498046875,
+      "all_standard_error": 0.01846205532600032,
+      "rejected_expectation": 0.5404089581304771,
+      "rejected_standard_error": 0.02626818794338094
+    },
+    {
+      "pauli": "IIYY",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1043,
+      "total_shots": 2048,
+      "accepted_expectation": -0.6241610738255033,
+      "accepted_standard_error": 0.024203689260534896,
+      "all_expectation": -0.3779296875,
+      "all_standard_error": 0.020463237513860855,
+      "rejected_expectation": -0.12238805970149254,
+      "rejected_standard_error": 0.031322464394417396
+    },
+    {
+      "pauli": "IIZZ",
+      "coefficient": 0.06249999999999998,
+      "accepted_shots": 1006,
+      "total_shots": 2048,
+      "accepted_expectation": 0.9423459244532804,
+      "accepted_standard_error": 0.010555899940249039,
+      "all_expectation": 0.5517578125,
+      "all_standard_error": 0.01843356834122276,
+      "rejected_expectation": 0.1746641074856046,
+      "rejected_standard_error": 0.030517352263902158
+    },
+    {
+      "pauli": "IZIZ",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1026,
+      "total_shots": 2048,
+      "accepted_expectation": 0.4853801169590643,
+      "accepted_standard_error": 0.02730864496483521,
+      "all_expectation": 0.4501953125,
+      "all_standard_error": 0.01973597317905531,
+      "rejected_expectation": 0.41487279843444225,
+      "rejected_standard_error": 0.02847547462917316
+    },
+    {
+      "pauli": "IZZI",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1035,
+      "total_shots": 2048,
+      "accepted_expectation": 0.5323671497584541,
+      "accepted_standard_error": 0.026325319644938436,
+      "all_expectation": 0.310546875,
+      "all_standard_error": 0.021009694164016938,
+      "rejected_expectation": 0.08390918065153011,
+      "rejected_standard_error": 0.031323873148985645
+    },
+    {
+      "pauli": "XXII",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1003,
+      "total_shots": 2048,
+      "accepted_expectation": 0.46360917248255235,
+      "accepted_standard_error": 0.02799106171830228,
+      "all_expectation": 0.43359375,
+      "all_standard_error": 0.01991673507587349,
+      "rejected_expectation": 0.4047846889952153,
+      "rejected_standard_error": 0.02830034177181233
+    },
+    {
+      "pauli": "XXXX",
+      "coefficient": 0.06249999999999998,
+      "accepted_shots": 1040,
+      "total_shots": 2048,
+      "accepted_expectation": 0.6846153846153846,
+      "accepted_standard_error": 0.02261324352289015,
+      "all_expectation": 0.580078125,
+      "all_standard_error": 0.0180038177693741,
+      "rejected_expectation": 0.4722222222222222,
+      "rejected_standard_error": 0.027777777777777776
+    },
+    {
+      "pauli": "XXYY",
+      "coefficient": -0.06249999999999998,
+      "accepted_shots": 1035,
+      "total_shots": 2048,
+      "accepted_expectation": -0.6676328502415458,
+      "accepted_standard_error": 0.02315255890453993,
+      "all_expectation": -0.3974609375,
+      "all_standard_error": 0.02028166107221925,
+      "rejected_expectation": -0.12142152023692004,
+      "rejected_standard_error": 0.031202146196949426
+    },
+    {
+      "pauli": "XXZZ",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1047,
+      "total_shots": 2048,
+      "accepted_expectation": 0.45367717287488063,
+      "accepted_standard_error": 0.027554517884431525,
+      "all_expectation": 0.2822265625,
+      "all_standard_error": 0.021203968706826903,
+      "rejected_expectation": 0.1028971028971029,
+      "rejected_standard_error": 0.03145492308392095
+    },
+    {
+      "pauli": "XYXY",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1039,
+      "total_shots": 2048,
+      "accepted_expectation": -0.46487006737247355,
+      "accepted_standard_error": 0.0274808712672653,
+      "all_expectation": -0.4150390625,
+      "all_standard_error": 0.020108919055931557,
+      "rejected_expectation": -0.36372646184340934,
+      "rejected_standard_error": 0.029339674993514742
+    },
+    {
+      "pauli": "XYYX",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1035,
+      "total_shots": 2048,
+      "accepted_expectation": -0.45120772946859905,
+      "accepted_standard_error": 0.027752909214918013,
+      "all_expectation": -0.2578125,
+      "all_standard_error": 0.021355308501490214,
+      "rejected_expectation": -0.060217176702862786,
+      "rejected_standard_error": 0.0313776860436283
+    },
+    {
+      "pauli": "YXXY",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1001,
+      "total_shots": 2048,
+      "accepted_expectation": -0.45054945054945056,
+      "accepted_standard_error": 0.028231280392670616,
+      "all_expectation": -0.3974609375,
+      "all_standard_error": 0.02028166107221925,
+      "rejected_expectation": -0.3467048710601719,
+      "rejected_standard_error": 0.029001808679391897
+    },
+    {
+      "pauli": "YXYX",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1021,
+      "total_shots": 2048,
+      "accepted_expectation": -0.4338883447600392,
+      "accepted_standard_error": 0.028210360082107255,
+      "all_expectation": -0.2421875,
+      "all_standard_error": 0.021444480922011927,
+      "rejected_expectation": -0.05160662122687439,
+      "rejected_standard_error": 0.031177926737339892
+    },
+    {
+      "pauli": "YYII",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1027,
+      "total_shots": 2048,
+      "accepted_expectation": -0.5170399221032133,
+      "accepted_standard_error": 0.02672270644814529,
+      "all_expectation": -0.4755859375,
+      "all_standard_error": 0.019442875581319304,
+      "rejected_expectation": -0.4338883447600392,
+      "rejected_standard_error": 0.028210360082107255
+    },
+    {
+      "pauli": "YYXX",
+      "coefficient": -0.06249999999999998,
+      "accepted_shots": 1010,
+      "total_shots": 2048,
+      "accepted_expectation": -0.6712871287128713,
+      "accepted_standard_error": 0.023333952319459464,
+      "all_expectation": -0.5498046875,
+      "all_standard_error": 0.01846205532600032,
+      "rejected_expectation": -0.43159922928709055,
+      "rejected_standard_error": 0.028012294195810212
+    },
+    {
+      "pauli": "YYYY",
+      "coefficient": 0.06249999999999998,
+      "accepted_shots": 1027,
+      "total_shots": 2048,
+      "accepted_expectation": 0.6592015579357352,
+      "accepted_standard_error": 0.023476032031345163,
+      "all_expectation": 0.36328125,
+      "all_standard_error": 0.020592431454750117,
+      "rejected_expectation": 0.06562193927522038,
+      "rejected_standard_error": 0.031243725034087188
+    },
+    {
+      "pauli": "YYZZ",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1027,
+      "total_shots": 2048,
+      "accepted_expectation": -0.4878286270691334,
+      "accepted_standard_error": 0.02725275583131746,
+      "all_expectation": -0.279296875,
+      "all_standard_error": 0.021222910899589095,
+      "rejected_expectation": -0.06953966699314397,
+      "rejected_standard_error": 0.03123541596496507
+    },
+    {
+      "pauli": "ZIIZ",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1003,
+      "total_shots": 2048,
+      "accepted_expectation": 0.6191425722831505,
+      "accepted_standard_error": 0.024807894146071294,
+      "all_expectation": 0.5712890625,
+      "all_standard_error": 0.018140589847994368,
+      "rejected_expectation": 0.5253588516746411,
+      "rejected_standard_error": 0.0263340985806004
+    },
+    {
+      "pauli": "ZIZI",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1018,
+      "total_shots": 2048,
+      "accepted_expectation": 0.6404715127701375,
+      "accepted_standard_error": 0.024081887532107556,
+      "all_expectation": 0.3955078125,
+      "all_standard_error": 0.020300304904463842,
+      "rejected_expectation": 0.1533980582524272,
+      "rejected_standard_error": 0.030805023944448756
+    },
+    {
+      "pauli": "ZZII",
+      "coefficient": 0.06249999999999998,
+      "accepted_shots": 1031,
+      "total_shots": 2048,
+      "accepted_expectation": 0.7419980601357905,
+      "accepted_standard_error": 0.020888954640562077,
+      "all_expectation": 0.7060546875,
+      "all_standard_error": 0.015652035430616953,
+      "rejected_expectation": 0.6696165191740413,
+      "rejected_standard_error": 0.023300791554287152
+    },
+    {
+      "pauli": "ZZXX",
+      "coefficient": 0.04419417382415921,
+      "accepted_shots": 1002,
+      "total_shots": 2048,
+      "accepted_expectation": 0.46107784431137727,
+      "accepted_standard_error": 0.02804675740409734,
+      "all_expectation": 0.419921875,
+      "all_standard_error": 0.020059335759128518,
+      "rejected_expectation": 0.38049713193116635,
+      "rejected_standard_error": 0.028607589794809565
+    },
+    {
+      "pauli": "ZZYY",
+      "coefficient": -0.04419417382415921,
+      "accepted_shots": 1042,
+      "total_shots": 2048,
+      "accepted_expectation": -0.5470249520153551,
+      "accepted_standard_error": 0.025945403807689924,
+      "all_expectation": -0.318359375,
+      "all_standard_error": 0.020952493644238998,
+      "rejected_expectation": -0.08151093439363817,
+      "rejected_standard_error": 0.031439050527709275
+    },
+    {
+      "pauli": "ZZZZ",
+      "coefficient": 0.06249999999999998,
+      "accepted_shots": 1013,
+      "total_shots": 2048,
+      "accepted_expectation": 0.7156959526159921,
+      "accepted_standard_error": 0.021954392706241933,
+      "all_expectation": 0.3740234375,
+      "all_standard_error": 0.02049826887731318,
+      "rejected_expectation": 0.03961352657004831,
+      "rejected_standard_error": 0.031074110709644543
+    }
+  ],
+  "accepted_minus_all": {
+    "difference": 0.1865618804646808,
+    "bootstrap_95_interval": [
+      0.17723442738071105,
+      0.195856822445306
+    ]
+  },
+  "conservative_primary_95_interval": [
+    0.6100311305934474,
+    0.8743536643941308
+  ],
+  "saved_readout_calibration": [
+    {
+      "role": "data",
+      "bit": 0,
+      "physical_qubit": 5,
+      "readout_error": 0.00341796875,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    },
+    {
+      "role": "data",
+      "bit": 1,
+      "physical_qubit": 3,
+      "readout_error": 0.0107421875,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    },
+    {
+      "role": "data",
+      "bit": 2,
+      "physical_qubit": 2,
+      "readout_error": 0.033935546875,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    },
+    {
+      "role": "data",
+      "bit": 3,
+      "physical_qubit": 16,
+      "readout_error": 0.028076171875,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    },
+    {
+      "role": "syndrome",
+      "bit": 0,
+      "physical_qubit": 1,
+      "readout_error": 0.00439453125,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    },
+    {
+      "role": "syndrome",
+      "bit": 1,
+      "physical_qubit": 4,
+      "readout_error": 0.009765625,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    },
+    {
+      "role": "syndrome",
+      "bit": 2,
+      "physical_qubit": 23,
+      "readout_error": 0.0068359375,
+      "calibration_date": "2026-10-14 19:34:05-07:00"
+    }
+  ],
+  "execution_spans": "ExecutionSpans([DoubleSliceSpan(<start='2026-10-15 03:46:23', stop='2026-10-15 03:46:42', size=49152>)])",
+  "earlier_snapshot_simulation": {
+    "calibration_date": "2026-04-17T12:29:46+02:00",
+    "acceptance": 0.9050514554992978,
+    "raw_measurement_score": 0.8103998881363093,
+    "exact_preparation_fidelity": 0.943087830703684,
+    "comparison_note": "Different calibration and schedule timing; raw compared with raw only"
+  },
+  "input_sha256": {
+    "manifest.json": "025ff88c6d932f457da8e6f4bb411be7695d7ca1306e8148e9288e4a3c14710b",
+    "runtime_result.json": "c97938364084d82d2faaa5b75d9d7df16bad3fd975b532846e2eb1359e57d66d",
+    "joint_counts.json": "7da8f0db8330e4cea044f087f6f56b89101f5fc0d52b2d3d723bc881dddbcd13",
+    "analysis.json": "4605960ac58c89a341dcc583d8ee96caa7e24d7285efafcf4fe06faa7b88c4ab",
+    "calibration.json": "6ec8b84d3c0c29381d2637426f318e337d75ffbf48e01292d37c5a8908e83203"
+  },
+  "saved_calibration_replay": {
+    "dt_seconds": 4e-09,
+    "dt_source": "Live backend inspection at preparation: 4 ns",
+    "calibration_date": "2026-10-14T20:06:27-07:00",
+    "acceptance": 0.9116527716709325,
+    "raw_measurement_score": 0.8398047055683291,
+    "exact_model_preparation_fidelity": 0.9427225769248577,
+    "syndrome_probabilities": [
+      0.9116527716709325,
+      0.018633663873048375,
+      0.027312581310099407,
+      0.008653812423081978,
+      0.020549645616616877,
+      0.009973611021070588,
+      0.0015787458319788073,
+      0.0016451682531947551
+    ],
+    "terms": [
+      {
+        "pauli": "IIXX",
+        "expectation": 0.6541529046965968
+      },
+      {
+        "pauli": "IIYY",
+        "expectation": -0.6540086229848335
+      },
+      {
+        "pauli": "IIZZ",
+        "expectation": 0.9429221186305135
+      },
+      {
+        "pauli": "IZIZ",
+        "expectation": 0.6274946760297649
+      },
+      {
+        "pauli": "IZZI",
+        "expectation": 0.6201651174946599
+      },
+      {
+        "pauli": "XXII",
+        "expectation": 0.5927675416025202
+      },
+      {
+        "pauli": "XXXX",
+        "expectation": 0.7877881405437549
+      },
+      {
+        "pauli": "XXYY",
+        "expectation": -0.7875560153309084
+      },
+      {
+        "pauli": "XXZZ",
+        "expectation": 0.5589231062201289
+      },
+      {
+        "pauli": "XYXY",
+        "expectation": -0.5568098666858892
+      },
+      {
+        "pauli": "XYYX",
+        "expectation": -0.5568925711942972
+      },
+      {
+        "pauli": "YXXY",
+        "expectation": -0.5568249652894073
+      },
+      {
+        "pauli": "YXYX",
+        "expectation": -0.5569181063559947
+      },
+      {
+        "pauli": "YYII",
+        "expectation": -0.5933841140820688
+      },
+      {
+        "pauli": "YYXX",
+        "expectation": -0.7878612162787454
+      },
+      {
+        "pauli": "YYYY",
+        "expectation": 0.787614333329718
+      },
+      {
+        "pauli": "YYZZ",
+        "expectation": -0.559503289466212
+      },
+      {
+        "pauli": "ZIIZ",
+        "expectation": 0.6394534655992471
+      },
+      {
+        "pauli": "ZIZI",
+        "expectation": 0.6318093397173328
+      },
+      {
+        "pauli": "ZZII",
+        "expectation": 0.8470335335906748
+      },
+      {
+        "pauli": "ZZXX",
+        "expectation": 0.5561672296005338
+      },
+      {
+        "pauli": "ZZYY",
+        "expectation": -0.556045798341258
+      },
+      {
+        "pauli": "ZZZZ",
+        "expectation": 0.7988648267647507
+      }
+    ],
+    "assumptions": "Saved gate errors, T1/T2, asymmetric independent assignment, zero temperature. Frozen circuit delays retained; ancilla readout deferred only in this independent-channel model. No added initialization error, coherent/correlated noise, crosstalk, or unreported runtime latency. Model predictions, not hardware-corrected estimates."
+  },
+  "baseline_comparison": {
+    "baseline_job_id": "db84dj8331ic73fu5jfg",
+    "xy4_job_id": "db84p30331ic73fu5tm0",
+    "baseline_bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/four_pilot_20261014",
+    "submission_gap_minutes": 24.5026298,
+    "identical_saved_calibration": true,
+    "matched_layout_timing_and_measurement_settings": true,
+    "metrics": {
+      "raw_fidelity_accepted": {
+        "no_dd": 0.6970853078159385,
+        "xy4": 0.7421923974937891,
+        "difference": 0.0451070896778506,
+        "standard_error": 0.008554100637246662,
+        "normal_95_interval": [
+          0.02834136037647008,
+          0.061872818979231116
+        ],
+        "independent_bootstrap_95_interval": [
+          0.028628130900174093,
+          0.0619380207903492
+        ]
+      },
+      "raw_fidelity_all": {
+        "no_dd": 0.5252001804485433,
+        "xy4": 0.5556305170291083,
+        "difference": 0.030430336580564932,
+        "standard_error": 0.00676983533977121,
+        "normal_95_interval": [
+          0.01716170302868559,
+          0.043698970132444274
+        ]
+      },
+      "raw_fidelity_rejected": {
+        "no_dd": 0.3620702509934494,
+        "xy4": 0.36869667986644394,
+        "difference": 0.0066264288729945275,
+        "standard_error": 0.010044013430478378,
+        "normal_95_interval": [
+          -0.013059475866259596,
+          0.02631233361224865
+        ]
+      },
+      "primary_acceptance": {
+        "no_dd": 0.484375,
+        "xy4": 0.509765625,
+        "difference": 0.025390625,
+        "standard_error": 0.015619694285795687,
+        "normal_95_interval": [
+          -0.005223413491165261,
+          0.05600466349116526
+        ]
+      },
+      "pooled_acceptance": {
+        "no_dd": 0.4887288411458333,
+        "xy4": 0.5004069010416666,
+        "difference": 0.011678059895833315,
+        "standard_error": 0.0031890340320621037,
+        "normal_95_interval": [
+          0.005427667998216746,
+          0.017928451793449884
+        ]
+      },
+      "accepted_codespace_score": {
+        "no_dd": 0.7105841635472094,
+        "xy4": 0.760347107338825,
+        "difference": 0.04976294379161561,
+        "standard_error": 0.010410124968571646,
+        "normal_95_interval": [
+          0.02935947361771405,
+          0.07016641396551718
+        ]
+      }
+    },
+    "baseline_summary": {
+      "groups": {
+        "accepted": {
+          "raw_fidelity": 0.6970853078159385,
+          "raw_codespace_score": 0.7105841635472094,
+          "standard_error": 0.0061946803894117886,
+          "normal_95_interval": [
+            0.6849439572611854,
+            0.7092266583706915
+          ],
+          "bootstrap_95_interval": [
+            0.6850637873901779,
+            0.7092619198001279
+          ],
+          "codespace_standard_error": 0.007667868157590997
+        },
+        "all": {
+          "raw_fidelity": 0.5252001804485433,
+          "raw_codespace_score": 0.54052734375,
+          "standard_error": 0.004815988166778611,
+          "normal_95_interval": [
+            0.5157610170172312,
+            0.5346393438798555
+          ],
+          "bootstrap_95_interval": [
+            0.5158442330251468,
+            0.5348638577370295
+          ],
+          "codespace_standard_error": 0.006367118626289949
+        },
+        "rejected": {
+          "raw_fidelity": 0.3620702509934494,
+          "raw_codespace_score": 0.3794975648051456,
+          "standard_error": 0.007074824178036219,
+          "normal_95_interval": [
+            0.34820385029816886,
+            0.37593665168873
+          ],
+          "bootstrap_95_interval": [
+            0.3482976759812762,
+            0.37607440412988163
+          ],
+          "codespace_standard_error": 0.009575225365317203
+        }
+      },
+      "primary_acceptance": {
+        "kind": "acceptance",
+        "pauli": null,
+        "coefficient": null,
+        "pub_index": 0,
+        "circuit_name": "four_B2_ED",
+        "estimated_circuit_seconds": 5.020000000000001e-06,
+        "shots": 2048,
+        "accepted_shots": 992,
+        "acceptance": 0.484375,
+        "acceptance_wilson_95_interval": [
+          0.4627803328889163,
+          0.5060281733799917
+        ]
+      },
+      "pooled_acceptance": {
+        "accepted": 24022,
+        "attempted": 49152,
+        "estimate": 0.4887288411458333,
+        "wilson_95_interval": [
+          0.4843107610200506,
+          0.49314868292155695
+        ]
+      },
+      "syndrome_bit_one_probabilities": [
+        0.06949869791666667,
+        0.19950358072916666,
+        0.3615519205729167
+      ],
+      "saved_calibration_replay": {
+        "dt_seconds": 4e-09,
+        "dt_source": "Live backend inspection at preparation: 4 ns",
+        "calibration_date": "2026-10-14T20:06:27-07:00",
+        "acceptance": 0.9144135958191795,
+        "raw_measurement_score": 0.8427659835124981,
+        "exact_model_preparation_fidelity": 0.9460292255109916,
+        "syndrome_probabilities": [
+          0.9144135958191795,
+          0.01791163810637624,
+          0.02675654768438311,
+          0.008336419780992685,
+          0.019884079243270143,
+          0.009539895816802833,
+          0.0015407791422138322,
+          0.0016170444067954953
+        ],
+        "terms": [
+          {
+            "pauli": "IIXX",
+            "expectation": 0.6550361564850995
+          },
+          {
+            "pauli": "IIYY",
+            "expectation": -0.6548970812743082
+          },
+          {
+            "pauli": "IIZZ",
+            "expectation": 0.9440820640987672
+          },
+          {
+            "pauli": "IZIZ",
+            "expectation": 0.6289092088568704
+          },
+          {
+            "pauli": "IZZI",
+            "expectation": 0.6217143242036142
+          },
+          {
+            "pauli": "XXII",
+            "expectation": 0.5948174522355216
+          },
+          {
+            "pauli": "XXXX",
+            "expectation": 0.7915387327238033
+          },
+          {
+            "pauli": "XXYY",
+            "expectation": -0.7913125801811353
+          },
+          {
+            "pauli": "XXZZ",
+            "expectation": 0.5615346858404843
+          },
+          {
+            "pauli": "XYXY",
+            "expectation": -0.5594620121360626
+          },
+          {
+            "pauli": "XYYX",
+            "expectation": -0.5595451342382292
+          },
+          {
+            "pauli": "YXXY",
+            "expectation": -0.5594830945960986
+          },
+          {
+            "pauli": "YXYX",
+            "expectation": -0.5595767038509756
+          },
+          {
+            "pauli": "YYII",
+            "expectation": -0.5954406171684201
+          },
+          {
+            "pauli": "YYXX",
+            "expectation": -0.791618906894008
+          },
+          {
+            "pauli": "YYYY",
+            "expectation": 0.7913779233339051
+          },
+          {
+            "pauli": "YYZZ",
+            "expectation": -0.5621216935505365
+          },
+          {
+            "pauli": "ZIIZ",
+            "expectation": 0.6411043318104215
+          },
+          {
+            "pauli": "ZIZI",
+            "expectation": 0.6335870676523887
+          },
+          {
+            "pauli": "ZZII",
+            "expectation": 0.8500316307384524
+          },
+          {
+            "pauli": "ZZXX",
+            "expectation": 0.5588833899319359
+          },
+          {
+            "pauli": "ZZYY",
+            "expectation": -0.5587659689417673
+          },
+          {
+            "pauli": "ZZZZ",
+            "expectation": 0.803329557580217
+          }
+        ],
+        "assumptions": "Saved gate errors, T1/T2, asymmetric independent assignment, zero temperature. Frozen circuit delays retained; ancilla readout deferred only in this independent-channel model. No added initialization error, coherent/correlated noise, crosstalk, or unreported runtime latency. Model predictions, not hardware-corrected estimates."
+      }
+    },
+    "bootstrap_samples": 10000,
+    "independent_bootstrap_seeds": [
+      20261015,
+      20261016
+    ],
+    "interpretation": "Observed difference between two independent sequential jobs. Sampling intervals are pointwise; they omit drift and systematic readout/basis error. This was not an interleaved randomized DD/no-DD comparison. Identical saved calibration does not imply identical physical noise during execution."
+  }
+}

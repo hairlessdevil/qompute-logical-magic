@@ -1,0 +1,9 @@
+{
+  "job_id": "db84dj8331ic73fu5jfg",
+  "submitted_at_utc": "2026-10-15T03:21:50.250258+00:00",
+  "instance": "qzh-eu",
+  "backend": "ibm_aachen",
+  "bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/four_pilot_20261014",
+  "manifest_sha256": "1e707e27a488b3cc5e03bd666fefeee294426ce3fc1e86686128b8aadb549ba7",
+  "total_shots": 49152
+}

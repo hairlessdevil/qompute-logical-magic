@@ -1,0 +1,1721 @@
+{
+  "created_at_utc": "2026-10-15T03:58:55.443070+00:00",
+  "runs": [
+    {
+      "bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/four_pilot_20261014",
+      "job_id": "db84dj8331ic73fu5jfg",
+      "variant": "no DD",
+      "input_sha256": {
+        "manifest.json": "1e707e27a488b3cc5e03bd666fefeee294426ce3fc1e86686128b8aadb549ba7",
+        "runtime_result.json": "9eb9f80e4c65d7c1c526ddea330273b641c2870264befdbcec9772c3b0426752",
+        "joint_counts.json": "d59c3345a1d9f098048dbeb3ebb43cb0af380acfde6fbc71b89f5d1b4bd61a62",
+        "analysis.json": "5af2705a97a4ad0709b9521e2d15c058e073dfff1dd4691c8c74ca2b1c4cbb17",
+        "calibration.json": "6ec8b84d3c0c29381d2637426f318e337d75ffbf48e01292d37c5a8908e83203",
+        "analysis_extended.json": "b22de555ab327fa297622baaab0a5260005a845b04770e406b239933e336eba1",
+        "submission.json": "9b90b7d69114141579809579be36d1b346397ee86bd8aa37a6ec54094a7609ac"
+      },
+      "calibration": {
+        "data": [
+          {
+            "bit": 0,
+            "physical_qubit": 5,
+            "p_record_1_given_0": 0.00244140625,
+            "p_record_0_given_1": 0.00439453125,
+            "matrix_true_recorded": [
+              [
+                0.99755859375,
+                0.00244140625
+              ],
+              [
+                0.00439453125,
+                0.99560546875
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0071593993026196
+          },
+          {
+            "bit": 1,
+            "physical_qubit": 3,
+            "p_record_1_given_0": 0.00732421875,
+            "p_record_0_given_1": 0.01416015625,
+            "matrix_true_recorded": [
+              [
+                0.99267578125,
+                0.00732421875
+              ],
+              [
+                0.01416015625,
+                0.98583984375
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0230530741823194
+          },
+          {
+            "bit": 2,
+            "physical_qubit": 2,
+            "p_record_1_given_0": 0.0234375,
+            "p_record_0_given_1": 0.04443359375,
+            "matrix_true_recorded": [
+              [
+                0.9765625,
+                0.0234375
+              ],
+              [
+                0.04443359375,
+                0.95556640625
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.076342747018842
+          },
+          {
+            "bit": 3,
+            "physical_qubit": 16,
+            "p_record_1_given_0": 0.03125,
+            "p_record_0_given_1": 0.02490234375,
+            "matrix_true_recorded": [
+              [
+                0.96875,
+                0.03125
+              ],
+              [
+                0.02490234375,
+                0.97509765625
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0598829514634105
+          }
+        ],
+        "syndrome": [
+          {
+            "bit": 0,
+            "physical_qubit": 1,
+            "p_record_1_given_0": 0.0009765625,
+            "p_record_0_given_1": 0.0078125,
+            "matrix_true_recorded": [
+              [
+                0.9990234375,
+                0.0009765625
+              ],
+              [
+                0.0078125,
+                0.9921875
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0112464949186795
+          },
+          {
+            "bit": 1,
+            "physical_qubit": 4,
+            "p_record_1_given_0": 0.0068359375,
+            "p_record_0_given_1": 0.0126953125,
+            "matrix_true_recorded": [
+              [
+                0.9931640625,
+                0.0068359375
+              ],
+              [
+                0.0126953125,
+                0.9873046875
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0208064560754153
+          },
+          {
+            "bit": 2,
+            "physical_qubit": 23,
+            "p_record_1_given_0": 0.00341796875,
+            "p_record_0_given_1": 0.01025390625,
+            "matrix_true_recorded": [
+              [
+                0.99658203125,
+                0.00341796875
+              ],
+              [
+                0.01025390625,
+                0.98974609375
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0155100964963508
+          }
+        ],
+        "matrix_orientation": "rows=true, columns=recorded",
+        "data_tensor_condition_number": 1.1754519207271652,
+        "joint_tensor_condition_number": 1.2322236870872885
+      },
+      "bootstrap_samples": 10000,
+      "seed": 20261017,
+      "fidelity": {
+        "raw_recorded_zero": {
+          "estimate": 0.6970853078159385,
+          "standard_error": 0.0061946803894117886,
+          "normal_95_interval": [
+            0.6849439573569548,
+            0.7092266582749222
+          ],
+          "bootstrap_95_interval": [
+            0.6848978588364696,
+            0.7088577520862932
+          ]
+        },
+        "data_corrected_recorded_zero": {
+          "estimate": 0.7765876198362589,
+          "standard_error": 0.0071174653974424365,
+          "normal_95_interval": [
+            0.7626376439960617,
+            0.7905375956764561
+          ],
+          "bootstrap_95_interval": [
+            0.7625838709466984,
+            0.7901370051891182
+          ]
+        },
+        "joint_corrected_true_zero": {
+          "estimate": 0.7794413450349682,
+          "standard_error": 0.007180462727065782,
+          "normal_95_interval": [
+            0.765367896697587,
+            0.7935147933723494
+          ],
+          "bootstrap_95_interval": [
+            0.7653226986638475,
+            0.7931421419096808
+          ]
+        }
+      },
+      "codespace_score": {
+        "raw_recorded_zero": {
+          "estimate": 0.7105841635472094,
+          "standard_error": 0.007667868157590997,
+          "normal_95_interval": [
+            0.6955554181201296,
+            0.7256129089742893
+          ],
+          "bootstrap_95_interval": [
+            0.6957387666725432,
+            0.7255823534567858
+          ]
+        },
+        "data_corrected_recorded_zero": {
+          "estimate": 0.7901833628778397,
+          "standard_error": 0.008952378032034298,
+          "normal_95_interval": [
+            0.772637024359065,
+            0.8077297013966145
+          ],
+          "bootstrap_95_interval": [
+            0.7727986318239505,
+            0.8076033570537673
+          ]
+        },
+        "joint_corrected_true_zero": {
+          "estimate": 0.7930155014401319,
+          "standard_error": 0.009031314643306641,
+          "normal_95_interval": [
+            0.7753144500062017,
+            0.8107165528740621
+          ],
+          "bootstrap_95_interval": [
+            0.7754837190479209,
+            0.8105596952004265
+          ]
+        }
+      },
+      "dedicated_acceptance": {
+        "recorded_zero": {
+          "estimate": 0.484375,
+          "standard_error": 0.011045844410328092,
+          "normal_95_interval": [
+            0.46272554277692385,
+            0.5060244572230761
+          ],
+          "bootstrap_95_interval": [
+            0.46240234375,
+            0.505859375
+          ]
+        },
+        "true_zero_diagnostic": {
+          "estimate": 0.48544532667748747,
+          "standard_error": 0.011268601299434015,
+          "normal_95_interval": [
+            0.46335927397445553,
+            0.5075313793805194
+          ],
+          "bootstrap_95_interval": [
+            0.463034304977573,
+            0.507395145464331
+          ]
+        }
+      },
+      "paired_mitigation_shift": {
+        "estimate": 0.07950231202032043,
+        "bootstrap_95_interval": [
+          0.07759301019855518,
+          0.08139061364388166
+        ]
+      },
+      "paired_syndrome_estimand_shift": {
+        "estimate": 0.0028537251987093004,
+        "bootstrap_95_interval": [
+          0.0026406144204948493,
+          0.003074363789190321
+        ]
+      },
+      "assignment_rate_sensitivity": [
+        {
+          "rate_multiplier": 0.0,
+          "fidelity": {
+            "raw_recorded_zero": 0.6970853078159385,
+            "data_corrected_recorded_zero": 0.6970853078159385,
+            "joint_corrected_true_zero": 0.6970853078159385
+          }
+        },
+        {
+          "rate_multiplier": 0.5,
+          "fidelity": {
+            "raw_recorded_zero": 0.6970853078159385,
+            "data_corrected_recorded_zero": 0.7349102122907254,
+            "joint_corrected_true_zero": 0.7362423922931904
+          }
+        },
+        {
+          "rate_multiplier": 1.0,
+          "fidelity": {
+            "raw_recorded_zero": 0.6970853078159385,
+            "data_corrected_recorded_zero": 0.7765876198362589,
+            "joint_corrected_true_zero": 0.7794413450349682
+          }
+        },
+        {
+          "rate_multiplier": 1.5,
+          "fidelity": {
+            "raw_recorded_zero": 0.6970853078159385,
+            "data_corrected_recorded_zero": 0.8226662970820597,
+            "joint_corrected_true_zero": 0.8272625929167685
+          }
+        }
+      ],
+      "per_pauli": [
+        {
+          "pauli": "IIXX",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.611336032388664,
+            "data_corrected_recorded_zero": 0.6292596674413385,
+            "joint_corrected_true_zero": 0.6298896548080916
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02518962040590937,
+            "data_corrected_recorded_zero": 0.025920908487560634,
+            "joint_corrected_true_zero": 0.02615372332826415
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.482421875,
+            "data_corrected_recorded_zero": 0.482421875,
+            "joint_corrected_true_zero": 0.4835059731808753
+          },
+          "minimum_joint_quasiprobability": -0.004424979777807249,
+          "joint_negative_mass": 0.018133586377085086,
+          "minimum_bootstrap_joint_denominator": 0.44017418158415456
+        },
+        {
+          "pauli": "IIYY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.6093117408906883,
+            "data_corrected_recorded_zero": -0.6267789978663527,
+            "joint_corrected_true_zero": -0.6308397805370035
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.025239264420804774,
+            "data_corrected_recorded_zero": 0.025965116582929573,
+            "joint_corrected_true_zero": 0.02620066057909384
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.482421875,
+            "data_corrected_recorded_zero": 0.482421875,
+            "joint_corrected_true_zero": 0.483489090752048
+          },
+          "minimum_joint_quasiprobability": -0.004440401813592852,
+          "joint_negative_mass": 0.014420780066365749,
+          "minimum_bootstrap_joint_denominator": 0.4377224523842879
+        },
+        {
+          "pauli": "IIZZ",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.9165009940357853,
+            "data_corrected_recorded_zero": 0.9431621927711051,
+            "joint_corrected_true_zero": 0.9482929583631048
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.012618628254934693,
+            "data_corrected_recorded_zero": 0.012978547864307853,
+            "joint_corrected_true_zero": 0.01309866342717928
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4912109375,
+            "data_corrected_recorded_zero": 0.4912109375,
+            "joint_corrected_true_zero": 0.4924021528381909
+          },
+          "minimum_joint_quasiprobability": -0.005941271187994796,
+          "joint_negative_mass": 0.01581876250685837,
+          "minimum_bootstrap_joint_denominator": 0.4529275375209884
+        },
+        {
+          "pauli": "IZIZ",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.5262135922330097,
+            "data_corrected_recorded_zero": 0.5674663134770861,
+            "joint_corrected_true_zero": 0.5678161492400194
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.026508873321415913,
+            "data_corrected_recorded_zero": 0.028805348407974184,
+            "joint_corrected_true_zero": 0.02904929708377199
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.5029296875,
+            "data_corrected_recorded_zero": 0.5029296875,
+            "joint_corrected_true_zero": 0.5043237538554747
+          },
+          "minimum_joint_quasiprobability": -0.004828839992107847,
+          "joint_negative_mass": 0.01935916840475278,
+          "minimum_bootstrap_joint_denominator": 0.46408499786155066
+        },
+        {
+          "pauli": "IZZI",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.49690721649484537,
+            "data_corrected_recorded_zero": 0.5463124859244481,
+            "joint_corrected_true_zero": 0.5499381356695462
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.027877870502825097,
+            "data_corrected_recorded_zero": 0.03069703076743012,
+            "joint_corrected_true_zero": 0.030986857175691423
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4736328125,
+            "data_corrected_recorded_zero": 0.4736328125,
+            "joint_corrected_true_zero": 0.4744909789219456
+          },
+          "minimum_joint_quasiprobability": -0.004027652113821458,
+          "joint_negative_mass": 0.015085659953885982,
+          "minimum_bootstrap_joint_denominator": 0.4291885877938763
+        },
+        {
+          "pauli": "XXII",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.4619188921859545,
+            "data_corrected_recorded_zero": 0.5232811534870144,
+            "joint_corrected_true_zero": 0.523170318421094
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02790775003332364,
+            "data_corrected_recorded_zero": 0.031954139669485924,
+            "joint_corrected_true_zero": 0.03223034559399158
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.49365234375,
+            "data_corrected_recorded_zero": 0.49365234375,
+            "joint_corrected_true_zero": 0.49492870419507157
+          },
+          "minimum_joint_quasiprobability": -0.0007856806074787388,
+          "joint_negative_mass": 0.004369041357921679,
+          "minimum_bootstrap_joint_denominator": 0.4535485599911237
+        },
+        {
+          "pauli": "XXXX",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.6039408866995074,
+            "data_corrected_recorded_zero": 0.7051768580118793,
+            "joint_corrected_true_zero": 0.7062985297247246
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.025029674801783783,
+            "data_corrected_recorded_zero": 0.029510471525810968,
+            "joint_corrected_true_zero": 0.029759101977396788
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.49560546875,
+            "data_corrected_recorded_zero": 0.49560546875,
+            "joint_corrected_true_zero": 0.4970004836528634
+          },
+          "minimum_joint_quasiprobability": -0.0026086350635308227,
+          "joint_negative_mass": 0.005325946271718187,
+          "minimum_bootstrap_joint_denominator": 0.45474348035356976
+        },
+        {
+          "pauli": "XXYY",
+          "coefficient": -0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": -0.5959798994974874,
+            "data_corrected_recorded_zero": -0.6957463104027881,
+            "joint_corrected_true_zero": -0.7006318458395897
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.025469592858094678,
+            "data_corrected_recorded_zero": 0.029961388427764656,
+            "joint_corrected_true_zero": 0.03022789899181227
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48583984375,
+            "data_corrected_recorded_zero": 0.48583984375,
+            "joint_corrected_true_zero": 0.4870015635647913
+          },
+          "minimum_joint_quasiprobability": -0.0015174482251344627,
+          "joint_negative_mass": 0.0055495631983250105,
+          "minimum_bootstrap_joint_denominator": 0.439072939087915
+        },
+        {
+          "pauli": "XXZZ",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.4268292682926829,
+            "data_corrected_recorded_zero": 0.4975264269854018,
+            "joint_corrected_true_zero": 0.5009914119559001
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.0288437185082691,
+            "data_corrected_recorded_zero": 0.03389894526643042,
+            "joint_corrected_true_zero": 0.03421055502213391
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48046875,
+            "data_corrected_recorded_zero": 0.48046875,
+            "joint_corrected_true_zero": 0.481456348434482
+          },
+          "minimum_joint_quasiprobability": -0.0005378495711382131,
+          "joint_negative_mass": 0.00438475718169767,
+          "minimum_bootstrap_joint_denominator": 0.43905302411288355
+        },
+        {
+          "pauli": "XYXY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.4057142857142857,
+            "data_corrected_recorded_zero": -0.47257514502988324,
+            "joint_corrected_true_zero": -0.4730813159126089
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.028220092335219927,
+            "data_corrected_recorded_zero": 0.03308978844731394,
+            "joint_corrected_true_zero": 0.03334182291490693
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.5126953125,
+            "data_corrected_recorded_zero": 0.5126953125,
+            "joint_corrected_true_zero": 0.5145531372534534
+          },
+          "minimum_joint_quasiprobability": -0.00018426247784403594,
+          "joint_negative_mass": 0.0008381970317607142,
+          "minimum_bootstrap_joint_denominator": 0.4718317975719421
+        },
+        {
+          "pauli": "XYYX",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.3613613613613614,
+            "data_corrected_recorded_zero": -0.42254685255746327,
+            "joint_corrected_true_zero": -0.42564636536549183
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.029515424562239354,
+            "data_corrected_recorded_zero": 0.03466188799472711,
+            "joint_corrected_true_zero": 0.0349730850301833
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48779296875,
+            "data_corrected_recorded_zero": 0.48779296875,
+            "joint_corrected_true_zero": 0.488899396560954
+          },
+          "minimum_joint_quasiprobability": -0.0017710762579671076,
+          "joint_negative_mass": 0.003970406219663423,
+          "minimum_bootstrap_joint_denominator": 0.44146969625278815
+        },
+        {
+          "pauli": "YXXY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.38783649052841473,
+            "data_corrected_recorded_zero": -0.4538033291622984,
+            "joint_corrected_true_zero": -0.4546012579091185
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.029118500690277712,
+            "data_corrected_recorded_zero": 0.034229063434797126,
+            "joint_corrected_true_zero": 0.03452281179600094
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48974609375,
+            "data_corrected_recorded_zero": 0.48974609375,
+            "joint_corrected_true_zero": 0.49104245870733476
+          },
+          "minimum_joint_quasiprobability": -0.00044721052369459374,
+          "joint_negative_mass": 0.001106926834643097,
+          "minimum_bootstrap_joint_denominator": 0.4482092497687149
+        },
+        {
+          "pauli": "YXYX",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.3226773226773227,
+            "data_corrected_recorded_zero": -0.3779425458823076,
+            "joint_corrected_true_zero": -0.38115189569689795
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.029931243633196984,
+            "data_corrected_recorded_zero": 0.03519457229287303,
+            "joint_corrected_true_zero": 0.03551264038271253
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48876953125,
+            "data_corrected_recorded_zero": 0.48876953125,
+            "joint_corrected_true_zero": 0.4898493289680858
+          },
+          "minimum_joint_quasiprobability": -0.0007660214096589488,
+          "joint_negative_mass": 0.002415489149003758,
+          "minimum_bootstrap_joint_denominator": 0.4484813314658255
+        },
+        {
+          "pauli": "YYII",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.4903100775193798,
+            "data_corrected_recorded_zero": -0.5582664007321856,
+            "joint_corrected_true_zero": -0.5587940889684206
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.027143260196340925,
+            "data_corrected_recorded_zero": 0.03099534716879673,
+            "joint_corrected_true_zero": 0.03125305028995708
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50390625,
+            "data_corrected_recorded_zero": 0.50390625,
+            "joint_corrected_true_zero": 0.5053807984178001
+          },
+          "minimum_joint_quasiprobability": -0.0009975550274427091,
+          "joint_negative_mass": 0.006068889644767064,
+          "minimum_bootstrap_joint_denominator": 0.4655385141383447
+        },
+        {
+          "pauli": "YYXX",
+          "coefficient": -0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": -0.5531707317073171,
+            "data_corrected_recorded_zero": -0.6475204912292422,
+            "joint_corrected_true_zero": -0.6482138604025297
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.026033372167067678,
+            "data_corrected_recorded_zero": 0.030594648213346766,
+            "joint_corrected_true_zero": 0.030845812966783483
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50048828125,
+            "data_corrected_recorded_zero": 0.50048828125,
+            "joint_corrected_true_zero": 0.5020034933669211
+          },
+          "minimum_joint_quasiprobability": -0.001244951002405776,
+          "joint_negative_mass": 0.0032455895423242906,
+          "minimum_bootstrap_joint_denominator": 0.4580763120274107
+        },
+        {
+          "pauli": "YYYY",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.5861365953109072,
+            "data_corrected_recorded_zero": 0.6862769004953404,
+            "joint_corrected_true_zero": 0.691059891144663
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02588128099133398,
+            "data_corrected_recorded_zero": 0.03038492260828601,
+            "joint_corrected_true_zero": 0.03067247385728851
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.47900390625,
+            "data_corrected_recorded_zero": 0.47900390625,
+            "joint_corrected_true_zero": 0.4798751370657447
+          },
+          "minimum_joint_quasiprobability": -0.0006565642822905816,
+          "joint_negative_mass": 0.0023057503387492943,
+          "minimum_bootstrap_joint_denominator": 0.4390165825504495
+        },
+        {
+          "pauli": "YYZZ",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.4881422924901186,
+            "data_corrected_recorded_zero": -0.5732786782678544,
+            "joint_corrected_true_zero": -0.576838624112647
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02744866807537766,
+            "data_corrected_recorded_zero": 0.03228399823828212,
+            "joint_corrected_true_zero": 0.03256823296308486
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.494140625,
+            "data_corrected_recorded_zero": 0.494140625,
+            "joint_corrected_true_zero": 0.49535498449065735
+          },
+          "minimum_joint_quasiprobability": -0.0006968425803702167,
+          "joint_negative_mass": 0.004575299317635539,
+          "minimum_bootstrap_joint_denominator": 0.44462554406089244
+        },
+        {
+          "pauli": "ZIIZ",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.6471794871794871,
+            "data_corrected_recorded_zero": 0.6904092994862995,
+            "joint_corrected_true_zero": 0.6913637457170259
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.024426874304116202,
+            "data_corrected_recorded_zero": 0.026068332998052588,
+            "joint_corrected_true_zero": 0.026307040453223993
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.47607421875,
+            "data_corrected_recorded_zero": 0.47607421875,
+            "joint_corrected_true_zero": 0.4770610209020037
+          },
+          "minimum_joint_quasiprobability": -0.0037939090834184135,
+          "joint_negative_mass": 0.014697058346276624,
+          "minimum_bootstrap_joint_denominator": 0.43222867030633727
+        },
+        {
+          "pauli": "ZIZI",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.6330097087378641,
+            "data_corrected_recorded_zero": 0.6854215716854329,
+            "joint_corrected_true_zero": 0.6897859253545023
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.024133148404993067,
+            "data_corrected_recorded_zero": 0.026124273168687977,
+            "joint_corrected_true_zero": 0.026350244426481654
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.5029296875,
+            "data_corrected_recorded_zero": 0.5029296875,
+            "joint_corrected_true_zero": 0.5042663586982605
+          },
+          "minimum_joint_quasiprobability": -0.00804554005247921,
+          "joint_negative_mass": 0.017309053183275296,
+          "minimum_bootstrap_joint_denominator": 0.4609940251674371
+        },
+        {
+          "pauli": "ZZII",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.7364798426745329,
+            "data_corrected_recorded_zero": 0.8351465068449494,
+            "joint_corrected_true_zero": 0.8359094291392697
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.021222421690642375,
+            "data_corrected_recorded_zero": 0.024367038054925412,
+            "joint_corrected_true_zero": 0.024578203973201786
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.49658203125,
+            "data_corrected_recorded_zero": 0.49658203125,
+            "joint_corrected_true_zero": 0.49786239449362474
+          },
+          "minimum_joint_quasiprobability": -0.006741885185913311,
+          "joint_negative_mass": 0.015456521568725222,
+          "minimum_bootstrap_joint_denominator": 0.4565541198129979
+        },
+        {
+          "pauli": "ZZXX",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.39438085327783556,
+            "data_corrected_recorded_zero": 0.4588019353859468,
+            "joint_corrected_true_zero": 0.45812893477614763
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.029658889592186464,
+            "data_corrected_recorded_zero": 0.03487334953368413,
+            "joint_corrected_true_zero": 0.03520638797458536
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.46923828125,
+            "data_corrected_recorded_zero": 0.46923828125,
+            "joint_corrected_true_zero": 0.4700187658379794
+          },
+          "minimum_joint_quasiprobability": -0.004477434677937202,
+          "joint_negative_mass": 0.01638435112075474,
+          "minimum_bootstrap_joint_denominator": 0.4272545758049594
+        },
+        {
+          "pauli": "ZZYY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.4707692307692308,
+            "data_corrected_recorded_zero": -0.5485968777769744,
+            "joint_corrected_true_zero": -0.5527605166500782
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.028269318073011366,
+            "data_corrected_recorded_zero": 0.03320126083356321,
+            "joint_corrected_true_zero": 0.03351366922617629
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.47607421875,
+            "data_corrected_recorded_zero": 0.47607421875,
+            "joint_corrected_true_zero": 0.4769530484121163
+          },
+          "minimum_joint_quasiprobability": -0.0034026734036433077,
+          "joint_negative_mass": 0.008521512629290625,
+          "minimum_bootstrap_joint_denominator": 0.435606440987258
+        },
+        {
+          "pauli": "ZZZZ",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.6924643584521385,
+            "data_corrected_recorded_zero": 0.808437643267414,
+            "joint_corrected_true_zero": 0.8137174969071725
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.023034192380619482,
+            "data_corrected_recorded_zero": 0.027189347910154843,
+            "joint_corrected_true_zero": 0.02743864566145601
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4794921875,
+            "data_corrected_recorded_zero": 0.4794921875,
+            "joint_corrected_true_zero": 0.4805218991371002
+          },
+          "minimum_joint_quasiprobability": -0.004916508692561399,
+          "joint_negative_mass": 0.014235323057405519,
+          "minimum_bootstrap_joint_denominator": 0.43718522850508895
+        }
+      ],
+      "validation": {
+        "previous_raw_fidelity_and_se_reproduced": true,
+        "max_distribution_vs_observable_solve_error": 6.661338147750939e-16,
+        "minimum_bootstrap_joint_denominator": 0.4272545758049594,
+        "quasiprobabilities_clipped": false,
+        "fidelity_clipped": false
+      }
+    },
+    {
+      "bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/four_xy4_20261014",
+      "job_id": "db84p30331ic73fu5tm0",
+      "variant": "XY4",
+      "input_sha256": {
+        "manifest.json": "025ff88c6d932f457da8e6f4bb411be7695d7ca1306e8148e9288e4a3c14710b",
+        "runtime_result.json": "c97938364084d82d2faaa5b75d9d7df16bad3fd975b532846e2eb1359e57d66d",
+        "joint_counts.json": "7da8f0db8330e4cea044f087f6f56b89101f5fc0d52b2d3d723bc881dddbcd13",
+        "analysis.json": "4605960ac58c89a341dcc583d8ee96caa7e24d7285efafcf4fe06faa7b88c4ab",
+        "calibration.json": "6ec8b84d3c0c29381d2637426f318e337d75ffbf48e01292d37c5a8908e83203",
+        "analysis_extended.json": "1d8040f0679334fc834bd12041ba370570dee9c62bafa9e79c69bbfba3fe1da9",
+        "submission.json": "bd8a466c44cd9e3e2b7bc8292426511833ee6d9824c0febee00659e8c555c9cd"
+      },
+      "calibration": {
+        "data": [
+          {
+            "bit": 0,
+            "physical_qubit": 5,
+            "p_record_1_given_0": 0.00244140625,
+            "p_record_0_given_1": 0.00439453125,
+            "matrix_true_recorded": [
+              [
+                0.99755859375,
+                0.00244140625
+              ],
+              [
+                0.00439453125,
+                0.99560546875
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0071593993026196
+          },
+          {
+            "bit": 1,
+            "physical_qubit": 3,
+            "p_record_1_given_0": 0.00732421875,
+            "p_record_0_given_1": 0.01416015625,
+            "matrix_true_recorded": [
+              [
+                0.99267578125,
+                0.00732421875
+              ],
+              [
+                0.01416015625,
+                0.98583984375
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0230530741823194
+          },
+          {
+            "bit": 2,
+            "physical_qubit": 2,
+            "p_record_1_given_0": 0.0234375,
+            "p_record_0_given_1": 0.04443359375,
+            "matrix_true_recorded": [
+              [
+                0.9765625,
+                0.0234375
+              ],
+              [
+                0.04443359375,
+                0.95556640625
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.076342747018842
+          },
+          {
+            "bit": 3,
+            "physical_qubit": 16,
+            "p_record_1_given_0": 0.03125,
+            "p_record_0_given_1": 0.02490234375,
+            "matrix_true_recorded": [
+              [
+                0.96875,
+                0.03125
+              ],
+              [
+                0.02490234375,
+                0.97509765625
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0598829514634105
+          }
+        ],
+        "syndrome": [
+          {
+            "bit": 0,
+            "physical_qubit": 1,
+            "p_record_1_given_0": 0.0009765625,
+            "p_record_0_given_1": 0.0078125,
+            "matrix_true_recorded": [
+              [
+                0.9990234375,
+                0.0009765625
+              ],
+              [
+                0.0078125,
+                0.9921875
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0112464949186795
+          },
+          {
+            "bit": 1,
+            "physical_qubit": 4,
+            "p_record_1_given_0": 0.0068359375,
+            "p_record_0_given_1": 0.0126953125,
+            "matrix_true_recorded": [
+              [
+                0.9931640625,
+                0.0068359375
+              ],
+              [
+                0.0126953125,
+                0.9873046875
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0208064560754153
+          },
+          {
+            "bit": 2,
+            "physical_qubit": 23,
+            "p_record_1_given_0": 0.00341796875,
+            "p_record_0_given_1": 0.01025390625,
+            "matrix_true_recorded": [
+              [
+                0.99658203125,
+                0.00341796875
+              ],
+              [
+                0.01025390625,
+                0.98974609375
+              ]
+            ],
+            "calibration_dates": [
+              "2026-10-14 19:34:05-07:00",
+              "2026-10-14 19:34:04-07:00"
+            ],
+            "condition_number": 1.0155100964963508
+          }
+        ],
+        "matrix_orientation": "rows=true, columns=recorded",
+        "data_tensor_condition_number": 1.1754519207271652,
+        "joint_tensor_condition_number": 1.2322236870872885
+      },
+      "bootstrap_samples": 10000,
+      "seed": 20261018,
+      "fidelity": {
+        "raw_recorded_zero": {
+          "estimate": 0.7421923974937891,
+          "standard_error": 0.005899031495523716,
+          "normal_95_interval": [
+            0.7306305082188951,
+            0.7537542867686831
+          ],
+          "bootstrap_95_interval": [
+            0.7306170687934256,
+            0.7538039235069257
+          ]
+        },
+        "data_corrected_recorded_zero": {
+          "estimate": 0.8301105184415347,
+          "standard_error": 0.006772518276051875,
+          "normal_95_interval": [
+            0.8168366265358338,
+            0.8433844103472357
+          ],
+          "bootstrap_95_interval": [
+            0.8167797182276669,
+            0.8434569592233234
+          ]
+        },
+        "joint_corrected_true_zero": {
+          "estimate": 0.8331507625449969,
+          "standard_error": 0.006830109336266832,
+          "normal_95_interval": [
+            0.8197639942354431,
+            0.8465375308545506
+          ],
+          "bootstrap_95_interval": [
+            0.819740659308843,
+            0.8466368836815493
+          ]
+        }
+      },
+      "codespace_score": {
+        "raw_recorded_zero": {
+          "estimate": 0.760347107338825,
+          "standard_error": 0.007040916117884153,
+          "normal_95_interval": [
+            0.7465471653296045,
+            0.7741470493480456
+          ],
+          "bootstrap_95_interval": [
+            0.7466782991139844,
+            0.773742928403645
+          ]
+        },
+        "data_corrected_recorded_zero": {
+          "estimate": 0.8485738168716983,
+          "standard_error": 0.00823799792514903,
+          "normal_95_interval": [
+            0.8324276376336905,
+            0.8647199961097061
+          ],
+          "bootstrap_95_interval": [
+            0.8324885486406133,
+            0.8643324261625362
+          ]
+        },
+        "joint_corrected_true_zero": {
+          "estimate": 0.851853293589333,
+          "standard_error": 0.00830787292203747,
+          "normal_95_interval": [
+            0.835570161874004,
+            0.8681364253046621
+          ],
+          "bootstrap_95_interval": [
+            0.8356787430015044,
+            0.8677307712011174
+          ]
+        }
+      },
+      "dedicated_acceptance": {
+        "recorded_zero": {
+          "estimate": 0.509765625,
+          "standard_error": 0.011049133784402181,
+          "normal_95_interval": [
+            0.488109720722207,
+            0.5314215292777931
+          ],
+          "bootstrap_95_interval": [
+            0.48828125,
+            0.53125
+          ]
+        },
+        "true_zero_diagnostic": {
+          "estimate": 0.5114648730833871,
+          "standard_error": 0.011269321164558425,
+          "normal_95_interval": [
+            0.48937740947063757,
+            0.5335523366961366
+          ],
+          "bootstrap_95_interval": [
+            0.48955624818192955,
+            0.5334604716164362
+          ]
+        }
+      },
+      "paired_mitigation_shift": {
+        "estimate": 0.08791812094774565,
+        "bootstrap_95_interval": [
+          0.08611746401887414,
+          0.0897252106808044
+        ]
+      },
+      "paired_syndrome_estimand_shift": {
+        "estimate": 0.003040244103462153,
+        "bootstrap_95_interval": [
+          0.00283308845814928,
+          0.003256792469885242
+        ]
+      },
+      "assignment_rate_sensitivity": [
+        {
+          "rate_multiplier": 0.0,
+          "fidelity": {
+            "raw_recorded_zero": 0.7421923974937891,
+            "data_corrected_recorded_zero": 0.7421923974937891,
+            "joint_corrected_true_zero": 0.7421923974937891
+          }
+        },
+        {
+          "rate_multiplier": 0.5,
+          "fidelity": {
+            "raw_recorded_zero": 0.7421923974937891,
+            "data_corrected_recorded_zero": 0.7839960320487004,
+            "joint_corrected_true_zero": 0.7854134299638589
+          }
+        },
+        {
+          "rate_multiplier": 1.0,
+          "fidelity": {
+            "raw_recorded_zero": 0.7421923974937891,
+            "data_corrected_recorded_zero": 0.8301105184415347,
+            "joint_corrected_true_zero": 0.8331507625449969
+          }
+        },
+        {
+          "rate_multiplier": 1.5,
+          "fidelity": {
+            "raw_recorded_zero": 0.7421923974937891,
+            "data_corrected_recorded_zero": 0.881153503857264,
+            "joint_corrected_true_zero": 0.8860568287296914
+          }
+        }
+      ],
+      "per_pauli": [
+        {
+          "pauli": "IIXX",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.5592556317335945,
+            "data_corrected_recorded_zero": 0.5758868113725888,
+            "joint_corrected_true_zero": 0.5758337432390706
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02595684839880012,
+            "data_corrected_recorded_zero": 0.02670953944034979,
+            "joint_corrected_true_zero": 0.026944341592975738
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.49853515625,
+            "data_corrected_recorded_zero": 0.49853515625,
+            "joint_corrected_true_zero": 0.4997548879252534
+          },
+          "minimum_joint_quasiprobability": -0.00395173177183204,
+          "joint_negative_mass": 0.013262424606920557,
+          "minimum_bootstrap_joint_denominator": 0.45586187586385635
+        },
+        {
+          "pauli": "IIYY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.6241610738255033,
+            "data_corrected_recorded_zero": -0.6421734854108094,
+            "joint_corrected_true_zero": -0.6462139711144362
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.024203689260534896,
+            "data_corrected_recorded_zero": 0.024900904567847285,
+            "joint_corrected_true_zero": 0.02510427507384341
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50927734375,
+            "data_corrected_recorded_zero": 0.50927734375,
+            "joint_corrected_true_zero": 0.5108752100800326
+          },
+          "minimum_joint_quasiprobability": -0.005118091927174004,
+          "joint_negative_mass": 0.016661711339958904,
+          "minimum_bootstrap_joint_denominator": 0.47050693582301517
+        },
+        {
+          "pauli": "IIZZ",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.9423459244532804,
+            "data_corrected_recorded_zero": 0.9695266305124407,
+            "joint_corrected_true_zero": 0.9760006805956845
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.010555899940249039,
+            "data_corrected_recorded_zero": 0.010854403208074253,
+            "joint_corrected_true_zero": 0.010960848827822538
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4912109375,
+            "data_corrected_recorded_zero": 0.4912109375,
+            "joint_corrected_true_zero": 0.49233768263044947
+          },
+          "minimum_joint_quasiprobability": -0.006192671885260708,
+          "joint_negative_mass": 0.0180195327354057,
+          "minimum_bootstrap_joint_denominator": 0.4420366777051186
+        },
+        {
+          "pauli": "IZIZ",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.4853801169590643,
+            "data_corrected_recorded_zero": 0.5251627534217457,
+            "joint_corrected_true_zero": 0.5251764646562999
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02730864496483521,
+            "data_corrected_recorded_zero": 0.029637265360151665,
+            "joint_corrected_true_zero": 0.02988921577637628
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.5009765625,
+            "data_corrected_recorded_zero": 0.5009765625,
+            "joint_corrected_true_zero": 0.502347124208623
+          },
+          "minimum_joint_quasiprobability": -0.004482657113386354,
+          "joint_negative_mass": 0.0140420450989296,
+          "minimum_bootstrap_joint_denominator": 0.4620120000415837
+        },
+        {
+          "pauli": "IZZI",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.5323671497584541,
+            "data_corrected_recorded_zero": 0.5864566365582189,
+            "joint_corrected_true_zero": 0.5904362555255129
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.026325319644938436,
+            "data_corrected_recorded_zero": 0.02902332673516161,
+            "joint_corrected_true_zero": 0.02926782329421448
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50537109375,
+            "data_corrected_recorded_zero": 0.50537109375,
+            "joint_corrected_true_zero": 0.5068158668063927
+          },
+          "minimum_joint_quasiprobability": -0.008853675776582776,
+          "joint_negative_mass": 0.021229650926136587,
+          "minimum_bootstrap_joint_denominator": 0.4664013746992227
+        },
+        {
+          "pauli": "XXII",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.46360917248255235,
+            "data_corrected_recorded_zero": 0.5250911191520092,
+            "joint_corrected_true_zero": 0.5249092097994433
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02799106171830228,
+            "data_corrected_recorded_zero": 0.032034653683704825,
+            "joint_corrected_true_zero": 0.0323173892191112
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48974609375,
+            "data_corrected_recorded_zero": 0.48974609375,
+            "joint_corrected_true_zero": 0.49092248598154786
+          },
+          "minimum_joint_quasiprobability": -0.0006416658499172876,
+          "joint_negative_mass": 0.005011342500504517,
+          "minimum_bootstrap_joint_denominator": 0.44747352199746093
+        },
+        {
+          "pauli": "XXXX",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.6846153846153846,
+            "data_corrected_recorded_zero": 0.8007307349934567,
+            "joint_corrected_true_zero": 0.8019499584182326
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02261324352289015,
+            "data_corrected_recorded_zero": 0.02667762284126392,
+            "joint_corrected_true_zero": 0.026896683753733698
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.5078125,
+            "data_corrected_recorded_zero": 0.5078125,
+            "joint_corrected_true_zero": 0.5093582107214704
+          },
+          "minimum_joint_quasiprobability": -0.004550996415890839,
+          "joint_negative_mass": 0.012773873589725461,
+          "minimum_bootstrap_joint_denominator": 0.46199080792374536
+        },
+        {
+          "pauli": "XXYY",
+          "coefficient": -0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": -0.6676328502415458,
+            "data_corrected_recorded_zero": -0.7798957339956911,
+            "joint_corrected_true_zero": -0.7844044859480986
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02315255890453993,
+            "data_corrected_recorded_zero": 0.027300168595507365,
+            "joint_corrected_true_zero": 0.027528236816669494
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50537109375,
+            "data_corrected_recorded_zero": 0.50537109375,
+            "joint_corrected_true_zero": 0.506863909285066
+          },
+          "minimum_joint_quasiprobability": -0.005120556933668019,
+          "joint_negative_mass": 0.010239244666860645,
+          "minimum_bootstrap_joint_denominator": 0.46160795436990737
+        },
+        {
+          "pauli": "XXZZ",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.45367717287488063,
+            "data_corrected_recorded_zero": 0.5296042319416685,
+            "joint_corrected_true_zero": 0.5323671829309191
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.027554517884431525,
+            "data_corrected_recorded_zero": 0.03240239955223855,
+            "joint_corrected_true_zero": 0.03266490263302876
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.51123046875,
+            "data_corrected_recorded_zero": 0.51123046875,
+            "joint_corrected_true_zero": 0.5128462201042192
+          },
+          "minimum_joint_quasiprobability": -0.0005635742412446834,
+          "joint_negative_mass": 0.005094197160406734,
+          "minimum_bootstrap_joint_denominator": 0.4663640283522787
+        },
+        {
+          "pauli": "XYXY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.46487006737247355,
+            "data_corrected_recorded_zero": -0.54519272699172,
+            "joint_corrected_true_zero": -0.545696621743296
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.0274808712672653,
+            "data_corrected_recorded_zero": 0.032298709876705224,
+            "joint_corrected_true_zero": 0.03256367926759867
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50732421875,
+            "data_corrected_recorded_zero": 0.50732421875,
+            "joint_corrected_true_zero": 0.5088657176881894
+          },
+          "minimum_joint_quasiprobability": -0.00023763300077094703,
+          "joint_negative_mass": 0.0011389910082291591,
+          "minimum_bootstrap_joint_denominator": 0.46941558426101443
+        },
+        {
+          "pauli": "XYYX",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.45120772946859905,
+            "data_corrected_recorded_zero": -0.5281961995727344,
+            "joint_corrected_true_zero": -0.5318692762242639
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.027752909214918013,
+            "data_corrected_recorded_zero": 0.03259990345305655,
+            "joint_corrected_true_zero": 0.03287449551109763
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50537109375,
+            "data_corrected_recorded_zero": 0.50537109375,
+            "joint_corrected_true_zero": 0.5068085593051872
+          },
+          "minimum_joint_quasiprobability": -0.0007540058485780919,
+          "joint_negative_mass": 0.0019518613527504324,
+          "minimum_bootstrap_joint_denominator": 0.46743663205054226
+        },
+        {
+          "pauli": "YXXY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.45054945054945056,
+            "data_corrected_recorded_zero": -0.5267645655664427,
+            "joint_corrected_true_zero": -0.5271970730832758
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.028231280392670616,
+            "data_corrected_recorded_zero": 0.03323267248731006,
+            "joint_corrected_true_zero": 0.033524679930962815
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48876953125,
+            "data_corrected_recorded_zero": 0.48876953125,
+            "joint_corrected_true_zero": 0.4899633701938088
+          },
+          "minimum_joint_quasiprobability": -0.0012681953345673,
+          "joint_negative_mass": 0.002382145671988673,
+          "minimum_bootstrap_joint_denominator": 0.4505459088389161
+        },
+        {
+          "pauli": "YXYX",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.4338883447600392,
+            "data_corrected_recorded_zero": -0.5074042079756556,
+            "joint_corrected_true_zero": -0.5109807615862668
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.028210360082107255,
+            "data_corrected_recorded_zero": 0.033227530822618236,
+            "joint_corrected_true_zero": 0.03350697084036588
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.49853515625,
+            "data_corrected_recorded_zero": 0.49853515625,
+            "joint_corrected_true_zero": 0.4999552997588728
+          },
+          "minimum_joint_quasiprobability": -0.0009162049292718069,
+          "joint_negative_mass": 0.0015915576018320486,
+          "minimum_bootstrap_joint_denominator": 0.4575988444893787
+        },
+        {
+          "pauli": "YYII",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.5170399221032133,
+            "data_corrected_recorded_zero": -0.5889432369555015,
+            "joint_corrected_true_zero": -0.5893249054851438
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02672270644814529,
+            "data_corrected_recorded_zero": 0.030521844919347223,
+            "joint_corrected_true_zero": 0.030782145300956982
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50146484375,
+            "data_corrected_recorded_zero": 0.50146484375,
+            "joint_corrected_true_zero": 0.5028245128057246
+          },
+          "minimum_joint_quasiprobability": -0.0006072375887766641,
+          "joint_negative_mass": 0.00453468961169448,
+          "minimum_bootstrap_joint_denominator": 0.457574231435959
+        },
+        {
+          "pauli": "YYXX",
+          "coefficient": -0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": -0.6712871287128713,
+            "data_corrected_recorded_zero": -0.7871046485767061,
+            "joint_corrected_true_zero": -0.7889446445567369
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.023333952319459464,
+            "data_corrected_recorded_zero": 0.027506409997958944,
+            "joint_corrected_true_zero": 0.027745315872840803
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4931640625,
+            "data_corrected_recorded_zero": 0.4931640625,
+            "joint_corrected_true_zero": 0.4944303010365016
+          },
+          "minimum_joint_quasiprobability": -0.0050825906881928895,
+          "joint_negative_mass": 0.008508714674367871,
+          "minimum_bootstrap_joint_denominator": 0.451051984084342
+        },
+        {
+          "pauli": "YYYY",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.6592015579357352,
+            "data_corrected_recorded_zero": 0.7718810379449091,
+            "joint_corrected_true_zero": 0.7774420931814754
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.023476032031345163,
+            "data_corrected_recorded_zero": 0.027629865287635152,
+            "joint_corrected_true_zero": 0.02786133597208935
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50146484375,
+            "data_corrected_recorded_zero": 0.50146484375,
+            "joint_corrected_true_zero": 0.5029413881322972
+          },
+          "minimum_joint_quasiprobability": -0.00370321121223465,
+          "joint_negative_mass": 0.013204779867410504,
+          "minimum_bootstrap_joint_denominator": 0.46565906786937966
+        },
+        {
+          "pauli": "YYZZ",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.4878286270691334,
+            "data_corrected_recorded_zero": -0.5693359546860994,
+            "joint_corrected_true_zero": -0.5730557179193165
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02725275583131746,
+            "data_corrected_recorded_zero": 0.03199191901064024,
+            "joint_corrected_true_zero": 0.03226151655653402
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50146484375,
+            "data_corrected_recorded_zero": 0.50146484375,
+            "joint_corrected_true_zero": 0.5028897440040355
+          },
+          "minimum_joint_quasiprobability": -0.0007646771754522733,
+          "joint_negative_mass": 0.005158479209041564,
+          "minimum_bootstrap_joint_denominator": 0.45705847293166496
+        },
+        {
+          "pauli": "ZIIZ",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.6191425722831505,
+            "data_corrected_recorded_zero": 0.6606800717042954,
+            "joint_corrected_true_zero": 0.661257530769561
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.024807894146071294,
+            "data_corrected_recorded_zero": 0.026462004065293063,
+            "joint_corrected_true_zero": 0.0266969295414614
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.48974609375,
+            "data_corrected_recorded_zero": 0.48974609375,
+            "joint_corrected_true_zero": 0.49090101720611085
+          },
+          "minimum_joint_quasiprobability": -0.007568402883435717,
+          "joint_negative_mass": 0.016336240246088533,
+          "minimum_bootstrap_joint_denominator": 0.4460195808970137
+        },
+        {
+          "pauli": "ZIZI",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.6404715127701375,
+            "data_corrected_recorded_zero": 0.6935910777639558,
+            "joint_corrected_true_zero": 0.6974781288111459
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.024081887532107556,
+            "data_corrected_recorded_zero": 0.026065298292296486,
+            "joint_corrected_true_zero": 0.026290516636927674
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4970703125,
+            "data_corrected_recorded_zero": 0.4970703125,
+            "joint_corrected_true_zero": 0.4983896057481044
+          },
+          "minimum_joint_quasiprobability": -0.008278040379915733,
+          "joint_negative_mass": 0.018582329031250275,
+          "minimum_bootstrap_joint_denominator": 0.45611743607436317
+        },
+        {
+          "pauli": "ZZII",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.7419980601357905,
+            "data_corrected_recorded_zero": 0.8413582858965306,
+            "joint_corrected_true_zero": 0.8417640811928285
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.020888954640562077,
+            "data_corrected_recorded_zero": 0.024020733530720095,
+            "joint_corrected_true_zero": 0.02421975002361683
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.50341796875,
+            "data_corrected_recorded_zero": 0.50341796875,
+            "joint_corrected_true_zero": 0.5049067214534535
+          },
+          "minimum_joint_quasiprobability": -0.006879097580445794,
+          "joint_negative_mass": 0.018481735074830065,
+          "minimum_bootstrap_joint_denominator": 0.4615242247611999
+        },
+        {
+          "pauli": "ZZXX",
+          "coefficient": 0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": 0.46107784431137727,
+            "data_corrected_recorded_zero": 0.5387223267755203,
+            "joint_corrected_true_zero": 0.5393610877832424
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.02804675740409734,
+            "data_corrected_recorded_zero": 0.03297264467124658,
+            "joint_corrected_true_zero": 0.033270790662019684
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.4892578125,
+            "data_corrected_recorded_zero": 0.4892578125,
+            "joint_corrected_true_zero": 0.4903306923017579
+          },
+          "minimum_joint_quasiprobability": -0.004205582252400726,
+          "joint_negative_mass": 0.01407621658653799,
+          "minimum_bootstrap_joint_denominator": 0.44100006839927997
+        },
+        {
+          "pauli": "ZZYY",
+          "coefficient": -0.04419417382415921,
+          "expectations": {
+            "raw_recorded_zero": -0.5470249520153551,
+            "data_corrected_recorded_zero": -0.6395346453710453,
+            "joint_corrected_true_zero": -0.6432719480409504
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.025945403807689924,
+            "data_corrected_recorded_zero": 0.030505532240476904,
+            "joint_corrected_true_zero": 0.030753652314781638
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.5087890625,
+            "data_corrected_recorded_zero": 0.5087890625,
+            "joint_corrected_true_zero": 0.5103884763341404
+          },
+          "minimum_joint_quasiprobability": -0.006471783761558646,
+          "joint_negative_mass": 0.01764474375013394,
+          "minimum_bootstrap_joint_denominator": 0.46700487519754647
+        },
+        {
+          "pauli": "ZZZZ",
+          "coefficient": 0.06249999999999998,
+          "expectations": {
+            "raw_recorded_zero": 0.7156959526159921,
+            "data_corrected_recorded_zero": 0.8380934630538518,
+            "joint_corrected_true_zero": 0.8443204048216069
+          },
+          "standard_errors": {
+            "raw_recorded_zero": 0.021954392706241933,
+            "data_corrected_recorded_zero": 0.025913596955937514,
+            "joint_corrected_true_zero": 0.02614000089573604
+          },
+          "conditional_probability": {
+            "raw_recorded_zero": 0.49462890625,
+            "data_corrected_recorded_zero": 0.49462890625,
+            "joint_corrected_true_zero": 0.4959249975176113
+          },
+          "minimum_joint_quasiprobability": -0.006253591914627014,
+          "joint_negative_mass": 0.02071060865692608,
+          "minimum_bootstrap_joint_denominator": 0.448222534920067
+        }
+      ],
+      "validation": {
+        "previous_raw_fidelity_and_se_reproduced": true,
+        "max_distribution_vs_observable_solve_error": 8.881784197001252e-16,
+        "minimum_bootstrap_joint_denominator": 0.44100006839927997,
+        "quasiprobabilities_clipped": false,
+        "fidelity_clipped": false
+      }
+    }
+  ],
+  "comparison": {
+    "raw_recorded_zero": {
+      "estimate": 0.0451070896778506,
+      "standard_error": 0.008554100637246664,
+      "normal_95_interval": [
+        0.028341360508716013,
+        0.061872818846985186
+      ],
+      "bootstrap_95_interval": [
+        0.028994784364433115,
+        0.06173375245814185
+      ]
+    },
+    "data_corrected_recorded_zero": {
+      "estimate": 0.053522898605275815,
+      "standard_error": 0.009824729893653416,
+      "normal_95_interval": [
+        0.034266781855881084,
+        0.07277901535467055
+      ],
+      "bootstrap_95_interval": [
+        0.03492069372481303,
+        0.0725918696325463
+      ]
+    },
+    "joint_corrected_true_zero": {
+      "estimate": 0.05370941751002867,
+      "standard_error": 0.009910067533581207,
+      "normal_95_interval": [
+        0.03428604205984982,
+        0.07313279296020751
+      ],
+      "bootstrap_95_interval": [
+        0.034946383228500986,
+        0.07299528428247229
+      ]
+    }
+  },
+  "script_sha256": "456de719f1450fa79eee963e5e2d27300d6076eae8579c53c03d58b633fed06a",
+  "bootstrap_samples": 10000,
+  "scope": "Offline correction using archived calibration; no new hardware or calibration jobs",
+  "uncertainty": "Experimental shot uncertainty only, fixed calibration, independent shots/jobs"
+}

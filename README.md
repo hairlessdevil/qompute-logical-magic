@@ -1,7 +1,9 @@
 # Qompute: local logical magic-state models
 
-This workspace implements the **model, ideal simulation, and local Aachen noisy simulation** of the supplied
-[project plan](docs/project_plan_original.md). All execution is local. The first
+This workspace implements the **model, ideal simulation, local Aachen noisy simulation,
+and an IBM Aachen hardware pilot** of the supplied
+[project plan](docs/project_plan_original.md). Simulations and analysis run locally;
+the hardware pilot uses IBM Quantum. The first
 reference results are in [the ideal report](results/ideal/ideal_report.md), and an
 executable walkthrough is in [the notebook](notebooks/01_ideal_magic_states.ipynb).
 Section 6 injects X/Y/Z on every data qubit and runs actual syndrome-controlled
@@ -22,6 +24,36 @@ Sections 7–8 of the noisy notebook isolate syndrome readout error and estimate
 target fidelity using finite-shot Pauli measurements, with raw and data-readout-
 mitigated estimates. The [readout and measurement report](results/noisy_aachen/readout_and_fidelity.md)
 separates statistical uncertainty from residual analysis-gate bias.
+
+## IBM Aachen hardware results
+
+Two four-qubit B2_ED H-state jobs were completed on October 14, 2026 (Pacific),
+with 24 circuits and 49,152 shots per job. The second adds explicit native XY4
+decoupling while preserving the original gate times, mapping and total duration.
+
+| Run | Raw accepted-state fidelity | Data-readout-mitigated fidelity | Recorded-000 acceptance |
+|---|---:|---:|---:|
+| No DD | 69.71% | 77.66% | 48.44% |
+| XY4 | 74.22% | 83.01% | 50.98% |
+
+The corrected XY4-minus-no-DD difference is **+5.35 percentage points**, with an
+approximate 95% sampling interval of **[+3.43, +7.28] points**. Correction uses the
+saved backend assignment matrices and preserves the actual recorded-000 accepted
+ensemble. These intervals exclude calibration uncertainty and systematic errors.
+The jobs ran about 24.5 minutes apart, so hardware drift is not separated from a
+DD effect. Acceptance comes from each dedicated acceptance-only circuit.
+
+- [Raw hardware comparison and plots](results/hardware_b2ed/four_xy4_20261014/xy4_vs_no_dd.md)
+- [Readout mitigation, uncertainty and sensitivity analysis](results/hardware_b2ed/readout_mitigation_20261014/readout_mitigation.md)
+- [Hardware protocol and separate preparation/submission/retrieval scripts](docs/ibm_b2ed_pilot.md)
+
+The bundles include submitted QPY circuits, calibration snapshots, job receipts,
+archived Runtime results, joint counts and reports. Reproduce the readout
+analysis without contacting IBM:
+
+```bash
+conda run -n quantum-jax python -B scripts/mitigate_ibm_b2ed_readout.py
+```
 
 ## Run in the existing environment
 
@@ -79,7 +111,7 @@ tetrahedral logical state used by five-qubit B1/B2_ED.
 magic-state preparation protocol.** Passing stabilizers only establishes the
 codespace. B2_BK is a known distillation primitive under ideal Clifford operations;
 our bare ancilla checks are not fault tolerant against their own faults. No B3
-improvement or hardware result is claimed. The first noisy comparison does not
+improvement is claimed. The first noisy comparison does not
 show a B2_ED fidelity improvement over B1 at each circuit's own completion time.
 
 ## What is validated

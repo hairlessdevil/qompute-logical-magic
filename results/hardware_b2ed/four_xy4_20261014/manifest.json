@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-15T03:42:23.551051+00:00",
+  "instance": "qzh-eu",
+  "backend": "ibm_aachen",
+  "calibration_source": "live",
+  "calibration_date": "2026-10-14T20:06:27-07:00",
+  "backend_status_at_preparation": {
+    "backend_name": "ibm_aachen",
+    "backend_version": "",
+    "operational": true,
+    "pending_jobs": 0,
+    "status_msg": "active"
+  },
+  "code": "[[4,1,2]]",
+  "strategy": "B2_ED",
+  "target": "encoded H state",
+  "stabilizers_in_syndrome_bit_order": [
+    "XXXX",
+    "IIZZ",
+    "ZZII"
+  ],
+  "shots_per_circuit": 2048,
+  "number_of_circuits": 24,
+  "total_shots": 49152,
+  "physical_patch": [
+    3,
+    2,
+    4,
+    16,
+    1,
+    5,
+    23,
+    0,
+    6
+  ],
+  "resources": {
+    "duration_seconds": 5.02e-06,
+    "syndrome_readout_wait_seconds": 2.1800000000000003e-06,
+    "delay_count": 67,
+    "idle_seconds_by_local_wire": [
+      2.42e-06,
+      3.0200000000000003e-06,
+      1.616e-06,
+      3.928e-06,
+      2.012e-06,
+      4.492e-06,
+      2.5120000000000003e-06,
+      5.02e-06,
+      5.02e-06
+    ],
+    "operation_counts": {
+      "rz": 76,
+      "sx": 67,
+      "delay": 67,
+      "cz": 39,
+      "x": 36,
+      "measure": 3,
+      "barrier": 1
+    },
+    "two_qubit_gates": 39,
+    "initial_logical_to_physical": [
+      3,
+      2,
+      4,
+      16,
+      1,
+      5,
+      23
+    ],
+    "final_data_local_wires": [
+      5,
+      0,
+      1,
+      3
+    ],
+    "final_data_physical_qubits": [
+      5,
+      3,
+      2,
+      16
+    ],
+    "syndrome_local_wires_in_bit_order": [
+      4,
+      2,
+      6
+    ],
+    "syndrome_physical_qubits_in_bit_order": [
+      1,
+      4,
+      23
+    ],
+    "seed_transpiler": 20261014,
+    "optimization_level": 1,
+    "scheduling_method": "alap",
+    "dd": {
+      "sequence": "XY4",
+      "axes_in_time_order": "X Y X Y",
+      "implementation": "Explicit native X pulses with virtual Rz frames for Y; Runtime DD disabled",
+      "minimum_idle_seconds": 5e-07,
+      "free_delay_fractions": [
+        0.125,
+        0.25,
+        0.25,
+        0.25,
+        0.125
+      ],
+      "skip_initial_and_post_measurement_idles": true,
+      "protected_idle_count": 9,
+      "added_native_x_pulses": 36,
+      "added_virtual_rz_gates": 36,
+      "windows": [
+        {
+          "local_wire": 2,
+          "physical_qubit": 4,
+          "start_dt": 142,
+          "duration_dt": 167,
+          "pulse_starts_dt": [
+            158,
+            199,
+            244,
+            285
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            16,
+            33,
+            37,
+            33,
+            16
+          ]
+        },
+        {
+          "local_wire": 3,
+          "physical_qubit": 16,
+          "start_dt": 125,
+          "duration_dt": 310,
+          "pulse_starts_dt": [
+            159,
+            236,
+            316,
+            393
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            34,
+            69,
+            72,
+            69,
+            34
+          ]
+        },
+        {
+          "local_wire": 2,
+          "physical_qubit": 4,
+          "start_dt": 326,
+          "duration_dt": 259,
+          "pulse_starts_dt": [
+            354,
+            418,
+            485,
+            549
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            28,
+            56,
+            59,
+            56,
+            28
+          ]
+        },
+        {
+          "local_wire": 4,
+          "physical_qubit": 1,
+          "start_dt": 234,
+          "duration_dt": 159,
+          "pulse_starts_dt": [
+            249,
+            288,
+            331,
+            370
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            15,
+            31,
+            35,
+            31,
+            15
+          ]
+        },
+        {
+          "local_wire": 6,
+          "physical_qubit": 23,
+          "start_dt": 535,
+          "duration_dt": 150,
+          "pulse_starts_dt": [
+            549,
+            586,
+            626,
+            663
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            14,
+            29,
+            32,
+            29,
+            14
+          ]
+        },
+        {
+          "local_wire": 0,
+          "physical_qubit": 3,
+          "start_dt": 710,
+          "duration_dt": 545,
+          "pulse_starts_dt": [
+            774,
+            910,
+            1047,
+            1183
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            64,
+            128,
+            129,
+            128,
+            64
+          ]
+        },
+        {
+          "local_wire": 1,
+          "physical_qubit": 2,
+          "start_dt": 710,
+          "duration_dt": 545,
+          "pulse_starts_dt": [
+            774,
+            910,
+            1047,
+            1183
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            64,
+            128,
+            129,
+            128,
+            64
+          ]
+        },
+        {
+          "local_wire": 3,
+          "physical_qubit": 16,
+          "start_dt": 710,
+          "duration_dt": 545,
+          "pulse_starts_dt": [
+            774,
+            910,
+            1047,
+            1183
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            64,
+            128,
+            129,
+            128,
+            64
+          ]
+        },
+        {
+          "local_wire": 5,
+          "physical_qubit": 5,
+          "start_dt": 710,
+          "duration_dt": 545,
+          "pulse_starts_dt": [
+            774,
+            910,
+            1047,
+            1183
+          ],
+          "pulse_duration_dt": 8,
+          "gap_lengths_dt": [
+            64,
+            128,
+            129,
+            128,
+            64
+          ]
+        }
+      ],
+      "original_gate_timestamps_preserved": true,
+      "original_total_duration_preserved": true
+    }
+  },
+  "sampler_options": {
+    "max_execution_time": 300,
+    "environment": {
+      "job_tags": [
+        "b2ed-four-xy4-20261015T034223Z"
+      ]
+    },
+    "execution": {
+      "init_qubits": true,
+      "rep_delay": 0.00025,
+      "meas_type": "classified"
+    },
+    "twirling": {
+      "enable_gates": false,
+      "enable_measure": false
+    },
+    "dynamical_decoupling": {
+      "enable": false
+    }
+  },
+  "settings": [
+    {
+      "kind": "acceptance",
+      "pauli": null,
+      "coefficient": null,
+      "pub_index": 0,
+      "circuit_name": "four_B2_ED",
+      "estimated_circuit_seconds": 5.020000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIXX",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 1,
+      "circuit_name": "four_B2_ED_IIXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIYY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 2,
+      "circuit_name": "four_B2_ED_IIYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIZZ",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 3,
+      "circuit_name": "four_B2_ED_IIZZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZIZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 4,
+      "circuit_name": "four_B2_ED_IZIZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZZI",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 5,
+      "circuit_name": "four_B2_ED_IZZI",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXII",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 6,
+      "circuit_name": "four_B2_ED_XXII",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXXX",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 7,
+      "circuit_name": "four_B2_ED_XXXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXYY",
+      "coefficient": -0.06249999999999998,
+      "pub_index": 8,
+      "circuit_name": "four_B2_ED_XXYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXZZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 9,
+      "circuit_name": "four_B2_ED_XXZZ",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYXY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 10,
+      "circuit_name": "four_B2_ED_XYXY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYYX",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 11,
+      "circuit_name": "four_B2_ED_XYYX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXXY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 12,
+      "circuit_name": "four_B2_ED_YXXY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXYX",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 13,
+      "circuit_name": "four_B2_ED_YXYX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYII",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 14,
+      "circuit_name": "four_B2_ED_YYII",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYXX",
+      "coefficient": -0.06249999999999998,
+      "pub_index": 15,
+      "circuit_name": "four_B2_ED_YYXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYYY",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 16,
+      "circuit_name": "four_B2_ED_YYYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYZZ",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 17,
+      "circuit_name": "four_B2_ED_YYZZ",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIIZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 18,
+      "circuit_name": "four_B2_ED_ZIIZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIZI",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 19,
+      "circuit_name": "four_B2_ED_ZIZI",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZII",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 20,
+      "circuit_name": "four_B2_ED_ZZII",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZXX",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 21,
+      "circuit_name": "four_B2_ED_ZZXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZYY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 22,
+      "circuit_name": "four_B2_ED_ZZYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZZZ",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 23,
+      "circuit_name": "four_B2_ED_ZZZZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    }
+  ],
+  "identity_coefficient": 0.06249999999999998,
+  "estimated_usage_seconds": 14.747202560000002,
+  "usage_estimate_note": "Approximation including one 2 s subjob overhead; not a bill or queue estimate",
+  "ideal_validation": {
+    "method": "exact local statevector, noise disabled",
+    "max_absolute_error": 1.5543122344752192e-15,
+    "acceptance": 0.9999999999999991,
+    "settings_verified": 24
+  },
+  "isa_validation": "passed",
+  "environment": {
+    "qiskit": "2.4.1",
+    "qiskit-ibm-runtime": "0.47.0",
+    "qiskit-aer": "0.17.2",
+    "numpy": "1.26.4"
+  },
+  "acceptance": "Only recorded syndrome 000; no correction and no extra codespace filtering",
+  "analysis": "Raw full-target-projector estimate; analysis/readout errors are not corrected",
+  "timing": "Original frozen schedule; explicit XY4 in noninitial idles >= 500 ns; analysis suffix unchanged",
+  "files": {
+    "circuits.qpy": "be266946828cae9d929f92c3e66fbb75fcad9db3dcc84a8017cbbf3e9b5a7aa1",
+    "local_circuits.qpy": "918e91825812d572d5bd1410e3d468f09ca1882b5bd77f885e8899d3583c7ef9",
+    "calibration.json": "6ec8b84d3c0c29381d2637426f318e337d75ffbf48e01292d37c5a8908e83203",
+    "preparation.txt": "f2be1fb9a19d6f2c173b99a2c10c9fc6bd8385e4b50c18540cef6a6dc1422b90"
+  },
+  "dt_seconds": 4e-09,
+  "source_no_dd_bundle": "/Users/runzhemo/Desktop/Zhuang_group/hackathon/results/hardware_b2ed/four_pilot_20261014",
+  "source_manifest_sha256": "1e707e27a488b3cc5e03bd666fefeee294426ce3fc1e86686128b8aadb549ba7",
+  "source_circuits_sha256": "7cfc8ee7cb84527c15c1cea5a8ae1e597416866298ebe0d33b095069fe47cc7c",
+  "comparison_limit": "Separate jobs; changes between runs can include calibration drift"
+}

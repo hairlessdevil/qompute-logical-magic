@@ -1,0 +1,113 @@
+{
+  "dt_seconds": 4e-09,
+  "dt_source": "Live backend inspection at preparation: 4 ns",
+  "calibration_date": "2026-10-14T20:06:27-07:00",
+  "acceptance": 0.9116527716709325,
+  "raw_measurement_score": 0.8398047055683291,
+  "exact_model_preparation_fidelity": 0.9427225769248577,
+  "syndrome_probabilities": [
+    0.9116527716709325,
+    0.018633663873048375,
+    0.027312581310099407,
+    0.008653812423081978,
+    0.020549645616616877,
+    0.009973611021070588,
+    0.0015787458319788073,
+    0.0016451682531947551
+  ],
+  "terms": [
+    {
+      "pauli": "IIXX",
+      "expectation": 0.6541529046965968
+    },
+    {
+      "pauli": "IIYY",
+      "expectation": -0.6540086229848335
+    },
+    {
+      "pauli": "IIZZ",
+      "expectation": 0.9429221186305135
+    },
+    {
+      "pauli": "IZIZ",
+      "expectation": 0.6274946760297649
+    },
+    {
+      "pauli": "IZZI",
+      "expectation": 0.6201651174946599
+    },
+    {
+      "pauli": "XXII",
+      "expectation": 0.5927675416025202
+    },
+    {
+      "pauli": "XXXX",
+      "expectation": 0.7877881405437549
+    },
+    {
+      "pauli": "XXYY",
+      "expectation": -0.7875560153309084
+    },
+    {
+      "pauli": "XXZZ",
+      "expectation": 0.5589231062201289
+    },
+    {
+      "pauli": "XYXY",
+      "expectation": -0.5568098666858892
+    },
+    {
+      "pauli": "XYYX",
+      "expectation": -0.5568925711942972
+    },
+    {
+      "pauli": "YXXY",
+      "expectation": -0.5568249652894073
+    },
+    {
+      "pauli": "YXYX",
+      "expectation": -0.5569181063559947
+    },
+    {
+      "pauli": "YYII",
+      "expectation": -0.5933841140820688
+    },
+    {
+      "pauli": "YYXX",
+      "expectation": -0.7878612162787454
+    },
+    {
+      "pauli": "YYYY",
+      "expectation": 0.787614333329718
+    },
+    {
+      "pauli": "YYZZ",
+      "expectation": -0.559503289466212
+    },
+    {
+      "pauli": "ZIIZ",
+      "expectation": 0.6394534655992471
+    },
+    {
+      "pauli": "ZIZI",
+      "expectation": 0.6318093397173328
+    },
+    {
+      "pauli": "ZZII",
+      "expectation": 0.8470335335906748
+    },
+    {
+      "pauli": "ZZXX",
+      "expectation": 0.5561672296005338
+    },
+    {
+      "pauli": "ZZYY",
+      "expectation": -0.556045798341258
+    },
+    {
+      "pauli": "ZZZZ",
+      "expectation": 0.7988648267647507
+    }
+  ],
+  "assumptions": "Saved gate errors, T1/T2, asymmetric independent assignment, zero temperature. Frozen circuit delays retained; ancilla readout deferred only in this independent-channel model. No added initialization error, coherent/correlated noise, crosstalk, or unreported runtime latency. Model predictions, not hardware-corrected estimates."
+}

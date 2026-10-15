@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-15T03:17:19.291649+00:00",
+  "instance": "qzh-eu",
+  "backend": "ibm_aachen",
+  "calibration_source": "live",
+  "calibration_date": "2026-10-14T20:06:27-07:00",
+  "backend_status_at_preparation": {
+    "backend_name": "ibm_aachen",
+    "backend_version": "",
+    "operational": true,
+    "pending_jobs": 0,
+    "status_msg": "active"
+  },
+  "code": "[[4,1,2]]",
+  "strategy": "B2_ED",
+  "target": "encoded H state",
+  "stabilizers_in_syndrome_bit_order": [
+    "XXXX",
+    "IIZZ",
+    "ZZII"
+  ],
+  "shots_per_circuit": 2048,
+  "number_of_circuits": 24,
+  "total_shots": 49152,
+  "physical_patch": [
+    3,
+    2,
+    4,
+    16,
+    1,
+    5,
+    23,
+    0,
+    6
+  ],
+  "resources": {
+    "duration_seconds": 5.02e-06,
+    "syndrome_readout_wait_seconds": 2.1800000000000003e-06,
+    "delay_count": 31,
+    "idle_seconds_by_local_wire": [
+      2.548e-06,
+      3.148e-06,
+      1.872e-06,
+      4.184e-06,
+      2.1400000000000003e-06,
+      4.620000000000001e-06,
+      2.64e-06,
+      5.02e-06,
+      5.02e-06
+    ],
+    "operation_counts": {
+      "sx": 67,
+      "rz": 40,
+      "cz": 39,
+      "delay": 31,
+      "measure": 3,
+      "barrier": 1
+    },
+    "two_qubit_gates": 39,
+    "initial_logical_to_physical": [
+      3,
+      2,
+      4,
+      16,
+      1,
+      5,
+      23
+    ],
+    "final_data_local_wires": [
+      5,
+      0,
+      1,
+      3
+    ],
+    "final_data_physical_qubits": [
+      5,
+      3,
+      2,
+      16
+    ],
+    "syndrome_local_wires_in_bit_order": [
+      4,
+      2,
+      6
+    ],
+    "syndrome_physical_qubits_in_bit_order": [
+      1,
+      4,
+      23
+    ],
+    "seed_transpiler": 20261014,
+    "optimization_level": 1,
+    "scheduling_method": "alap"
+  },
+  "sampler_options": {
+    "max_execution_time": 300,
+    "environment": {
+      "job_tags": [
+        "b2ed-four-20261015T031719Z"
+      ]
+    },
+    "execution": {
+      "init_qubits": true,
+      "rep_delay": 0.00025,
+      "meas_type": "classified"
+    },
+    "twirling": {
+      "enable_gates": false,
+      "enable_measure": false
+    },
+    "dynamical_decoupling": {
+      "enable": false
+    }
+  },
+  "settings": [
+    {
+      "kind": "acceptance",
+      "pauli": null,
+      "coefficient": null,
+      "pub_index": 0,
+      "circuit_name": "four_B2_ED",
+      "estimated_circuit_seconds": 5.020000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIXX",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 1,
+      "circuit_name": "four_B2_ED_IIXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIYY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 2,
+      "circuit_name": "four_B2_ED_IIYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IIZZ",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 3,
+      "circuit_name": "four_B2_ED_IIZZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZIZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 4,
+      "circuit_name": "four_B2_ED_IZIZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "IZZI",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 5,
+      "circuit_name": "four_B2_ED_IZZI",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXII",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 6,
+      "circuit_name": "four_B2_ED_XXII",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXXX",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 7,
+      "circuit_name": "four_B2_ED_XXXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXYY",
+      "coefficient": -0.06249999999999998,
+      "pub_index": 8,
+      "circuit_name": "four_B2_ED_XXYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XXZZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 9,
+      "circuit_name": "four_B2_ED_XXZZ",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYXY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 10,
+      "circuit_name": "four_B2_ED_XYXY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "XYYX",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 11,
+      "circuit_name": "four_B2_ED_XYYX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXXY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 12,
+      "circuit_name": "four_B2_ED_YXXY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YXYX",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 13,
+      "circuit_name": "four_B2_ED_YXYX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYII",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 14,
+      "circuit_name": "four_B2_ED_YYII",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYXX",
+      "coefficient": -0.06249999999999998,
+      "pub_index": 15,
+      "circuit_name": "four_B2_ED_YYXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYYY",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 16,
+      "circuit_name": "four_B2_ED_YYYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "YYZZ",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 17,
+      "circuit_name": "four_B2_ED_YYZZ",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIIZ",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 18,
+      "circuit_name": "four_B2_ED_ZIIZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZIZI",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 19,
+      "circuit_name": "four_B2_ED_ZIZI",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZII",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 20,
+      "circuit_name": "four_B2_ED_ZZII",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZXX",
+      "coefficient": 0.04419417382415921,
+      "pub_index": 21,
+      "circuit_name": "four_B2_ED_ZZXX",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZYY",
+      "coefficient": -0.04419417382415921,
+      "pub_index": 22,
+      "circuit_name": "four_B2_ED_ZZYY",
+      "estimated_circuit_seconds": 7.232000000000001e-06
+    },
+    {
+      "kind": "pauli",
+      "pauli": "ZZZZ",
+      "coefficient": 0.06249999999999998,
+      "pub_index": 23,
+      "circuit_name": "four_B2_ED_ZZZZ",
+      "estimated_circuit_seconds": 7.2000000000000005e-06
+    }
+  ],
+  "identity_coefficient": 0.06249999999999998,
+  "estimated_usage_seconds": 14.747202560000002,
+  "usage_estimate_note": "Approximation including one 2 s subjob overhead; not a bill or queue estimate",
+  "ideal_validation": {
+    "method": "exact local statevector, noise disabled",
+    "max_absolute_error": 1.1102230246251565e-15,
+    "acceptance": 0.9999999999999991,
+    "settings_verified": 24
+  },
+  "isa_validation": "passed",
+  "environment": {
+    "qiskit": "2.4.1",
+    "qiskit-ibm-runtime": "0.47.0",
+    "qiskit-aer": "0.17.2",
+    "numpy": "1.26.4"
+  },
+  "acceptance": "Only recorded syndrome 000; no correction and no extra codespace filtering",
+  "analysis": "Raw full-target-projector estimate; analysis/readout errors are not corrected",
+  "timing": "Frozen ALAP preparation, ordinary syndrome measure, then data analysis/readout",
+  "files": {
+    "circuits.qpy": "7cfc8ee7cb84527c15c1cea5a8ae1e597416866298ebe0d33b095069fe47cc7c",
+    "local_circuits.qpy": "6768f8de75d6d02cf0f82429d8e335fe5521a01c58ddc81857a41e603cf23a92",
+    "calibration.json": "6ec8b84d3c0c29381d2637426f318e337d75ffbf48e01292d37c5a8908e83203",
+    "preparation.txt": "400f536d841a903c037febae7e31a3c4dfcdb0147312e6bd6f0ced6ddf083cfc"
+  }
+}
