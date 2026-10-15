@@ -83,6 +83,13 @@ overhead; it is not a guaranteed usage or monetary quote.
 
 ## Completed runs and offline analysis
 
+The executed [hardware-results notebook](../notebooks/03_ibm_aachen_hardware_results.ipynb)
+displays both jobs, raw and readout-corrected estimates, uncertainty, syndrome
+distributions and the previously saved noise-model comparison. Its cells only
+read archived files and recompute statistics from existing counts; Run All does
+not contact IBM, submit jobs, or run simulations. Use the Python (quantum-jax)
+kernel. Plot and table outputs are embedded for viewing on GitHub.
+
 | Variant | Job ID | Saved bundle |
 |---|---|---|
 | No DD | `db84dj8331ic73fu5jfg` | [`four_pilot_20261014`](../results/hardware_b2ed/four_pilot_20261014/) |

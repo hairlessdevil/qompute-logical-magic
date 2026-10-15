@@ -43,6 +43,7 @@ ensemble. These intervals exclude calibration uncertainty and systematic errors.
 The jobs ran about 24.5 minutes apart, so hardware drift is not separated from a
 DD effect. Acceptance comes from each dedicated acceptance-only circuit.
 
+- [Executed hardware-results notebook](notebooks/03_ibm_aachen_hardware_results.ipynb) — saved data only; tables, plots and count-based verification
 - [Raw hardware comparison and plots](results/hardware_b2ed/four_xy4_20261014/xy4_vs_no_dd.md)
 - [Readout mitigation, uncertainty and sensitivity analysis](results/hardware_b2ed/readout_mitigation_20261014/readout_mitigation.md)
 - [Hardware protocol and separate preparation/submission/retrieval scripts](docs/ibm_b2ed_pilot.md)
@@ -156,6 +157,7 @@ calibrated durations plus explicit delay channels.
 | `docs/model.md` | Equations, assumptions, fidelity definition, limitations |
 | `notebooks/01_ideal_magic_states.ipynb` | Executed, editable walkthrough |
 | `notebooks/02_noisy_aachen.ipynb` | Executed noisy walkthrough, calibration, delay checks, and QPY replay |
+| `notebooks/03_ibm_aachen_hardware_results.ipynb` | Executed hardware results: no DD/XY4, readout mitigation, acceptance, syndrome diagnostics, and archive checks; no new hardware or simulation runs |
 | `results/noisy_aachen/` | Report, exact states, raw counts, calibration snapshots, QPY circuits, and plots |
 | `results/noisy_aachen/timelines/timing_report.md` | Full circuit timing, individual-check diagnostics, and PNG/PDF/SVG exports |
 | `results/noisy_aachen/syndrome_delay_ablation/report.md` | Extraction-phase delay suppression, matched noisy baseline, and conditional logical-state quality |
